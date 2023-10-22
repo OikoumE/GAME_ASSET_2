@@ -43,6 +43,7 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
         #region Setting From/To cam
 
         pC = _pC;
+        var fromCamObject = _pC.playerCam.gameObject;
         fromCam = _pC.playerCam;
         switch (camID)
         {
@@ -61,6 +62,7 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
 
         if (interactModeEnabled)
         {
+            fromCamObject = toCamObject;
             fromCam = toCam;
             toCamObject = playerCam.gameObject;
             toCam = playerCam;
@@ -68,10 +70,23 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
 
         #endregion
 
+        #region Variables
+
+        var lerpCamGameObject = lerpCam.gameObject;
+        lerpCamObjectTransform = lerpCamGameObject.transform;
+        lerpCamPosition = lerpCamObjectTransform.position;
+        lerpCamRotation = lerpCamObjectTransform.rotation;
+
 
         toCamObjectTransform = toCamObject.transform;
         toCamObjectPosition = toCamObjectTransform.position;
         toCamObjectRotation = toCamObjectTransform.rotation;
+
+        fromCamTransform = fromCam.transform;
+        fromCamPos = fromCamTransform.position;
+        fromCamRotation = fromCamTransform.rotation;
+
+        #endregion
 
         //deactivate playercam, activate lerpcam and enable lerp
         doLerp = true;
