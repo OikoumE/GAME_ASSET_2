@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 //v. 0.3
@@ -7,7 +6,6 @@ public class OpenDoor : MonoBehaviour
     public bool canBeOpened;
     public float openSpeed = 10;
 
-    public DockingSide dockingSide;
     private bool animate;
     private float blendShapeAlpha;
     private bool isOpen;

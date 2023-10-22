@@ -240,7 +240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7872391067174985733, guid: 7149bea6d51027e4d9541bebb0365353, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7872391067174985733, guid: 7149bea6d51027e4d9541bebb0365353, type: 3}
       propertyPath: m_LocalScale.x
@@ -379,8 +379,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 136831601}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.134211, y: 1.8989217, z: 16.362915}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.134211, y: 0.048921704, z: 16.362915}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -396,8 +396,8 @@ Transform:
   - {fileID: 728481746}
   - {fileID: 816106163}
   - {fileID: 1446445316}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1585908279}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &154537132
 PrefabInstance:
@@ -481,6 +481,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 323774581}
     m_Modifications:
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 3166395656301718601, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
     - target: {fileID: 7383093772452746160, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -1208,8 +1236,19 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &281880120 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+  m_PrefabInstance: {fileID: 816106162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da0c2e206fca8f428ecc6332f0fd775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &286757770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1586,7 +1625,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &449253740
 PrefabInstance:
@@ -2672,7 +2711,7 @@ Transform:
   - {fileID: 1879341667}
   - {fileID: 1498581050}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &617263722 stripped
 Transform:
@@ -3170,6 +3209,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -3178,12 +3245,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -3231,6 +3342,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3799,6 +3950,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985549210638768178, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: canBeOpened
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (9)
@@ -3822,6 +4041,10 @@ PrefabInstance:
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3863,6 +4086,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
     - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Color.g
       value: 1
@@ -3872,7 +4123,19 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: leftDoor
+      value: 
+      objectReference: {fileID: 1995658331}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: rightDoor
+      value: 
+      objectReference: {fileID: 281880120}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: leftDocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
@@ -4132,6 +4395,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -4140,12 +4431,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -4193,6 +4528,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4446,6 +4821,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -4454,12 +4857,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -4507,6 +4954,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4875,6 +5362,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -4883,12 +5398,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -4936,6 +5495,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5156,10 +5755,74 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[0]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door
       objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
     - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -5214,6 +5877,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
@@ -5859,6 +6562,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -5867,12 +6598,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -5922,6 +6697,46 @@ PrefabInstance:
       propertyPath: canBeOpened
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5941,12 +6756,84 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -5990,6 +6877,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6233,12 +7160,68 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1985549210638768178, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
@@ -6248,6 +7231,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceDock Segment w door (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
     - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -6308,8 +7295,48 @@ PrefabInstance:
       propertyPath: canBeOpened
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8789588466580649201, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
@@ -6335,6 +7362,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -6343,12 +7398,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -6396,6 +7495,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -6694,6 +7833,7 @@ Transform:
   - {fileID: 456009661}
   - {fileID: 771824791}
   - {fileID: 1550533932}
+  - {fileID: 136831602}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9029,6 +10169,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1516504243917499284, guid: d18fc95d5624b8a4d8e8105a599e992c, type: 3}
   m_PrefabInstance: {fileID: 1989387237}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1995658331 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1985549210638768178, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+  m_PrefabInstance: {fileID: 816106162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1da0c2e206fca8f428ecc6332f0fd775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1996302298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9039,7 +10190,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3253a743158ad4142b6e6680cfed23f5, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3253a743158ad4142b6e6680cfed23f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9286,7 +10437,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2018052240
 PrefabInstance:
@@ -9297,6 +10448,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 136831602}
     m_Modifications:
     - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 310274024681400439, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -9305,12 +10484,56 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 2613189486843443332, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2965708963211317498, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_Name
       value: SpaceDock Segment w door (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474287845763818889, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 4366549365111403478, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c86f1dea3f0e65e43880efbc51c5d1f4, type: 2}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022201981037292891, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5301322872773100006, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: m_RootOrder
@@ -9358,6 +10581,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6482752782344659970, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
       propertyPath: canBeOpened
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_DirtyAABB
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.x
+      value: -0.0001298624
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: -0.000000034458935
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -0.0021917229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.x
+      value: 0.0006718137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 0.01872009
+      objectReference: {fileID: 0}
+    - target: {fileID: 7366379139595289780, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 0.01596423
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7908442546854552628, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8957665464443264696, guid: 222df3e8d0302c842be2ee806a19799c, type: 3}
+      propertyPath: dockingSide
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9983,7 +11246,7 @@ Transform:
   m_Children:
   - {fileID: 56065049}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135405745
 GameObject:
@@ -10115,7 +11378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0, type: 3}
       propertyPath: m_LocalPosition.x
