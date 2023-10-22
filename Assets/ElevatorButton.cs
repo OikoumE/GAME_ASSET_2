@@ -10,13 +10,7 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
     [SerializeField] private float lerpSpeed = 1f;
     [SerializeField] [Range(0, 1)] private float lerpAlpha;
     private Camera fromCam;
-    private Vector3 fromCamPos;
-    private Quaternion fromCamRotation;
-    private Transform fromCamTransform;
     private bool interactModeEnabled;
-    private Transform lerpCamObjectTransform;
-    private Vector3 lerpCamPosition;
-    private Quaternion lerpCamRotation;
 
     private PlayerController pC;
     private Camera targetCam;
@@ -43,7 +37,6 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
         #region Setting From/To cam
 
         pC = _pC;
-        var fromCamObject = _pC.playerCam.gameObject;
         fromCam = _pC.playerCam;
         switch (camID)
         {
@@ -62,7 +55,6 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
 
         if (interactModeEnabled)
         {
-            fromCamObject = toCamObject;
             fromCam = toCam;
             toCamObject = playerCam.gameObject;
             toCam = playerCam;
@@ -70,23 +62,11 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
 
         #endregion
 
-        #region Variables
-
-        var lerpCamGameObject = lerpCam.gameObject;
-        lerpCamObjectTransform = lerpCamGameObject.transform;
-        lerpCamPosition = lerpCamObjectTransform.position;
-        lerpCamRotation = lerpCamObjectTransform.rotation;
-
 
         toCamObjectTransform = toCamObject.transform;
         toCamObjectPosition = toCamObjectTransform.position;
         toCamObjectRotation = toCamObjectTransform.rotation;
 
-        fromCamTransform = fromCam.transform;
-        fromCamPos = fromCamTransform.position;
-        fromCamRotation = fromCamTransform.rotation;
-
-        #endregion
 
         //deactivate playercam, activate lerpcam and enable lerp
         doLerp = true;
