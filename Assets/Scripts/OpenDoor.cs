@@ -3,6 +3,14 @@ using UnityEngine;
 //v. 0.3
 public class OpenDoor : MonoBehaviour
 {
+    public enum DoorPosition
+    {
+        middle,
+        left,
+        right
+    }
+
+    public DoorPosition doorPosition;
     public bool canBeOpened;
     public float openSpeed = 10;
 
@@ -47,10 +55,16 @@ public class OpenDoor : MonoBehaviour
             }
         }
 
-        m_skinnedMeshRenderer.SetBlendShapeWeight(0, blendShapeAlpha);
+        SetBlendShape(blendShapeAlpha);
     }
 
+    public void SetBlendShape(float value)
+    {
+        m_skinnedMeshRenderer.SetBlendShapeWeight(0, value);
 
+    }
+    
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out IPlayer iP))
@@ -70,5 +84,20 @@ public class OpenDoor : MonoBehaviour
                 animate = true;
             m_collider.enabled = true;
         }
+    }
+
+    public void SetAnimate(bool enabled)
+    {
+        animate = enabled;
+    }
+
+    public bool GetAnimate()
+    {
+        return animate;
+    }
+
+    public float GetAlpha()
+    {
+        return blendShapeAlpha;
     }
 }

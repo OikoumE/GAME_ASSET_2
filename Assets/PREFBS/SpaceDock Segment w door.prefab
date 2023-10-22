@@ -295,6 +295,10 @@ PrefabInstance:
       propertyPath: dockingSide
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6216648237344272591, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: doorPosition
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7383093772452746160, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -624,6 +628,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6216648237344272591, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
       propertyPath: dockingSide
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6216648237344272591, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
+      propertyPath: doorPosition
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7383093772452746160, guid: ffa00c543052c0343841ddc3ebe1e790, type: 3}
