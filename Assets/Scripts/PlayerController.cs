@@ -16,16 +16,16 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private readonly float mouseSensMultiplier = 0.01f;
 
+
     private float mouseX, mouseY;
     private Rigidbody mRigidbody;
     private float yRot, xRot;
 
     private void Start()
     {
-        playerCam = GetComponentInChildren<Camera>();
-        mRigidbody = GetComponent<Rigidbody>();
-
         Cursor.lockState = CursorLockMode.Locked;
+        mRigidbody = GetComponent<Rigidbody>();
+        playerCam = GetComponentInChildren<Camera>();
     }
 
     private void Update()
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void FixedUpdate()
     {
+        Input.GetKeyDown(KeyCode.Space);
         if (!playerHasControl) return;
         var horizontalMovement = Input.GetAxisRaw("Horizontal");
         var verticalMovement = Input.GetAxisRaw("Vertical");
@@ -45,6 +46,7 @@ public class PlayerController : MonoBehaviour, IPlayer
         mRigidbody.AddForce(moveDirection.normalized * (playerSpeed * movementMultiplier), ForceMode.Acceleration);
         GroundChecker();
     }
+
 
     private void OnDrawGizmos()
     {
@@ -72,8 +74,9 @@ public class PlayerController : MonoBehaviour, IPlayer
 
         if (!Physics.Raycast(ray, out hit)) return;
         var objectHit = hit.transform;
-        if (!objectHit.gameObject.TryGetComponent(out ElevatorButton eB)) return;
-        if (Input.GetMouseButtonDown(0)) eB.Interact(eB.interactibleID, this);
+        if (!objectHit.gameObject.TryGetComponent(out ElevatorPanel ePanel)) return;
+        if (playerHasControl && Input.GetMouseButtonDown(0))
+            ePanel.elevatorButton.Interact(ePanel.panelId, this);
     }
 
     private void GroundChecker()
@@ -94,13 +97,25 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void CursorLockHandler()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (Cursor.lockState == CursorLockMode.Locked)
-                Cursor.lockState = CursorLockMode.None;
-            else
-                Cursor.lockState = CursorLockMode.Locked;
-        }
+        if (Input.GetKeyDown(KeyCode.Escape)) ToggleCursorLockMode();
+    }
+
+    /// <summary>
+    ///     if setState is passed, defaults to CursorLockMode.Locked;
+    /// </summary>
+    /// <param name="setState">whether or not to toggle or set state</param>
+    /// <param name="state">what state to set if setState = true</param>
+    public void SetCursorLockMode(CursorLockMode state)
+    {
+        Cursor.lockState = state;
+    }
+
+    public void ToggleCursorLockMode()
+    {
+        if (Cursor.lockState == CursorLockMode.Locked)
+            Cursor.lockState = CursorLockMode.None;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void InputHandler()
