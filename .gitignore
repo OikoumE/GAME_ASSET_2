@@ -74,3 +74,940 @@ crashlytics-build.properties
 
 
 /Assets/GIT_IGNORED/*
+Assets/Plugins/CW/READ ME.txt
+Assets/Plugins/CW/READ ME.txt.meta
+Assets/Plugins/CW/Shared.meta
+Assets/Plugins/CW/Shared/Common.meta
+Assets/Plugins/CW/Shared/Common/CW.Common.asmdef
+Assets/Plugins/CW/Shared/Common/CW.Common.asmdef.meta
+Assets/Plugins/CW/Shared/Common/Examples.meta
+Assets/Plugins/CW/Shared/Common/Examples/Fonts.meta
+Assets/Plugins/CW/Shared/Common/Examples/Fonts/VarelaRound-Regular.ttf
+Assets/Plugins/CW/Shared/Common/Examples/Fonts/VarelaRound-Regular.ttf.meta
+Assets/Plugins/CW/Shared/Common/Examples/Fonts/VarelaRound-Regular.txt
+Assets/Plugins/CW/Shared/Common/Examples/Fonts/VarelaRound-Regular.txt.meta
+Assets/Plugins/CW/Shared/Common/Examples/Materials.meta
+Assets/Plugins/CW/Shared/Common/Examples/Materials/Grid.mat
+Assets/Plugins/CW/Shared/Common/Examples/Materials/Grid.mat.meta
+Assets/Plugins/CW/Shared/Common/Examples/Materials/Skybox.mat
+Assets/Plugins/CW/Shared/Common/Examples/Materials/Skybox.mat.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwCameraLook.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwCameraLook.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwCameraMove.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwCameraMove.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwCameraPivot.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwCameraPivot.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwDemo.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwDemo.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwDemoButton.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwDemoButton.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwDemoButtonBuilder.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwDemoButtonBuilder.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwLightIntensity.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwLightIntensity.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwRotate.cs
+Assets/Plugins/CW/Shared/Common/Examples/Scripts/CwRotate.cs.meta
+Assets/Plugins/CW/Shared/Common/Examples/Shaders.meta
+Assets/Plugins/CW/Shared/Common/Examples/Shaders/RimAlpha.shader
+Assets/Plugins/CW/Shared/Common/Examples/Shaders/RimAlpha.shader.meta
+Assets/Plugins/CW/Shared/Common/Examples/Shaders/RimOpaque.shader
+Assets/Plugins/CW/Shared/Common/Examples/Shaders/RimOpaque.shader.meta
+Assets/Plugins/CW/Shared/Common/Examples/Shaders/Skybox.shader
+Assets/Plugins/CW/Shared/Common/Examples/Shaders/Skybox.shader.meta
+Assets/Plugins/CW/Shared/Common/Examples/Textures.meta
+Assets/Plugins/CW/Shared/Common/Examples/Textures/DemoDescription.png
+Assets/Plugins/CW/Shared/Common/Examples/Textures/DemoDescription.png.meta
+Assets/Plugins/CW/Shared/Common/Examples/Textures/DemoLeft.png
+Assets/Plugins/CW/Shared/Common/Examples/Textures/DemoLeft.png.meta
+Assets/Plugins/CW/Shared/Common/Examples/Textures/DemoRight.png
+Assets/Plugins/CW/Shared/Common/Examples/Textures/DemoRight.png.meta
+Assets/Plugins/CW/Shared/Common/Examples/Textures/Grid.png
+Assets/Plugins/CW/Shared/Common/Examples/Textures/Grid.png.meta
+Assets/Plugins/CW/Shared/Common/Extras.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwChild.cs
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwChild.cs.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwDepthTextureMode.cs
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwDepthTextureMode.cs.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwFollow.cs
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwFollow.cs.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwInputManager.cs
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwInputManager.cs.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwRenderTextureManager.cs
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwRenderTextureManager.cs.meta
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwSeedAttribute.cs
+Assets/Plugins/CW/Shared/Common/Extras/Scripts/CwSeedAttribute.cs.meta
+Assets/Plugins/CW/Shared/Common/Extras/Shaders.meta
+Assets/Plugins/CW/Shared/Common/Extras/Shaders/CW_Fog.surfshader
+Assets/Plugins/CW/Shared/Common/Extras/Shaders/CW_Fog.surfshader.meta
+Assets/Plugins/CW/Shared/Common/Extras/Shaders/CW_HDRP.surfshader
+Assets/Plugins/CW/Shared/Common/Extras/Shaders/CW_HDRP.surfshader.meta
+Assets/Plugins/CW/Shared/Common/package.json
+Assets/Plugins/CW/Shared/Common/package.json.meta
+Assets/Plugins/CW/Shared/Common/Required.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwCommon.cs
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwCommon.cs.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwEditor.cs
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwEditor.cs.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwGuide.cs
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwGuide.cs.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwHelper.cs
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwHelper.cs.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwInput.cs
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwInput.cs.meta
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwShaderBundle.cs
+Assets/Plugins/CW/Shared/Common/Required/Scripts/CwShaderBundle.cs.meta
+Assets/Plugins/CW/Shared/Common/Required/Shaders.meta
+Assets/Plugins/CW/Shared/Common/Required/Shaders/ShapeOutline.shader
+Assets/Plugins/CW/Shared/Common/Required/Shaders/ShapeOutline.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/01 Corona.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/01 Corona.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/02 Atmosphere.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/02 Atmosphere.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/03    Sunset.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/03    Sunset.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/04    Scattering.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/04    Scattering.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/05    Customize.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/05    Customize.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials/Atmosphere + Lighting + Scattering.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials/Atmosphere + Lighting + Scattering.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials/Atmosphere + Lighting.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials/Atmosphere + Lighting.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials/Corona.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Examples/Materials/Corona.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphere.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphere.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereDepthTex.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereDepthTex.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereHeight.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereHeight.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereLightingTex.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereLightingTex.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereModel.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereModel.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereScatteringTex.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Scripts/SgtAtmosphereScatteringTex.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/Atmosphere.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/Atmosphere.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/SGT_Atmosphere.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/SGT_Atmosphere.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/SGT_Atmosphere_Bundle.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/SGT_Atmosphere_Bundle.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/SGT_Atmosphere_Bundle.stackedshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Atmosphere/Required/Shaders/SGT_Atmosphere_Bundle.stackedshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/01 Sprite Billboard Flare.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/01 Sprite Billboard Flare.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/02    Overlay.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/02    Overlay.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/03    Depth.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/03    Depth.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/04    Pointer.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/04    Pointer.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials/Billboard + Near Fade.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials/Billboard + Near Fade.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials/Billboard Overlay.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials/Billboard Overlay.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials/Billboard.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Examples/Materials/Billboard.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts/SgtBillboard.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts/SgtBillboard.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts/SgtFastBillboard.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts/SgtFastBillboard.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts/SgtFastBillboardManager.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Billboard/Required/Scripts/SgtFastBillboardManager.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/01 Cloudsphere.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/01 Cloudsphere.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/02    Lighting.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/02    Lighting.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/03    Sunset.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/03    Sunset.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/04    Detail.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/04    Detail.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/05    Rim.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/05    Rim.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials/Cloudsphere + Lighting + Detail.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials/Cloudsphere + Lighting + Detail.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials/Cloudsphere + Lighting.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials/Cloudsphere + Lighting.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials/Cloudsphere.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Materials/Cloudsphere.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/Cloudsphere1.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/Cloudsphere1.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/CloudsphereDetail1.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/CloudsphereDetail1.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/CloudsphereDetail2.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/CloudsphereDetail2.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/CloudsphereDetail3.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Examples/Textures/CloudsphereDetail3.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphere.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphere.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereDepthTex.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereDepthTex.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereLightingTex.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereLightingTex.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereModel.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereModel.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereNearTex.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Scripts/SgtCloudsphereNearTex.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/Cloudsphere.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/Cloudsphere.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/SGT_Cloudsphere.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/SGT_Cloudsphere.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/SGT_Cloudsphere_Bundle.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/SGT_Cloudsphere_Bundle.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/SGT_Cloudsphere_Bundle.stackedshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Cloudsphere/Required/Shaders/SGT_Cloudsphere_Bundle.stackedshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtCommon.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtCommon.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtLight.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtLight.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadow.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadow.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowLayer.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowLayer.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowRing.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowRing.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowRingFilter.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowRingFilter.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowSphere.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Scripts/SgtShadowSphere.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/Resources.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/Resources/SgtShadowLayer.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/Resources/SgtShadowLayer.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_LightAndShadow.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_LightAndShadow.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_ShadowLayer.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_ShadowLayer.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_ShadowLayer_Bundle.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_ShadowLayer_Bundle.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_ShadowLayer_Bundle.stackedshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/LightAndShadow/Required/Shaders/SGT_ShadowLayer_Bundle.stackedshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/01 Planet.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/01 Planet.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/02    Displace.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/02    Displace.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/03    Detail.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/03    Detail.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/04       Secondary.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/04       Secondary.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/05    Water.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/05    Water.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/06       Clamp.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/06       Clamp.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/07       Gradient.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/07       Gradient.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/08       Texture.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/08       Texture.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/09       Coast.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/09       Coast.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/10       Emission.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/10       Emission.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/11    Atmosphere.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/11    Atmosphere.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/12    Collider.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/12    Collider.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (01).mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (01).mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (03).mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (03).mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (04).mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (04).mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (05).mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (05).mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (09).mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (09).mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (10).mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet (10).mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet HD2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet HD2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Materials/Planet.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/Planet_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/Planet_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/Planet_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/Planet_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/Planet_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/Planet_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail1.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail1.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail10.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail10.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail11.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail11.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail11_2.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail11_2.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail12.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail12.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail13.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail13.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail14.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail14.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail15.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail15.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail16.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail16.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail2.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail2.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail3.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail3.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail4.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail4.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail5.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail5.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail6.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail6.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail7.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail7.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail8.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail8.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail9.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Examples/Textures/PlanetDetail9.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts/SgtPlanet.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts/SgtPlanet.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts/SgtPlanetWaterGradient.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts/SgtPlanetWaterGradient.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts/SgtPlanetWaterTexture.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Scripts/SgtPlanetWaterTexture.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/Planet.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/Planet.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/PlanetWaterOffset.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/PlanetWaterOffset.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/Resources.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/Resources/PlanetWater.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/Resources/PlanetWater.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Base.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Base.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Bundle.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Bundle.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Bundle.stackedshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Bundle.stackedshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Detail.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Detail.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Night.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Night.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Water.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Planet/Required/Shaders/SGT_Planet_Water.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShape.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShape.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeBox.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeBox.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeGroup.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeGroup.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeSphere.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeSphere.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeTorus.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shapes/Required/Scripts/SgtShapeTorus.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/01 Stars.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/01 Stars.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/02 Clouds.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/02 Clouds.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/03 Camera Controls.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/03 Camera Controls.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/04 Rigidbody Controls.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/04 Rigidbody Controls.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/05 Procedural Spin + Scale.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/05 Procedural Spin + Scale.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/06 Newtonian Gravity.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/06 Newtonian Gravity.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/07 Planet Gravity.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/07 Planet Gravity.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/08 Simple Orbit.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/08 Simple Orbit.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/09 Shadow Layer.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/09 Shadow Layer.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/BackgroundBillboard6.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/BackgroundBillboard6.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/BackgroundBillboard8.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/BackgroundBillboard8.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Basic Grey.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Basic Grey.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Depth.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Depth.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Glowy.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Glowy.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Rocky.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Materials/Rocky.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid_MOS.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid_MOS.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Asteroid_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Probe.FBX
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Probe.FBX.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Probe.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Probe.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Probe.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Models/Probe.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs/Demo.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs/Demo.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs/Player Asteroid.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs/Player Asteroid.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs/Text.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Prefabs/Text.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtCameraMove.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtCameraMove.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtCameraPath.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtCameraPath.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtDemo.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtDemo.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtDragPitchYaw.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtDragPitchYaw.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtPrefabSwitcher.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Scripts/SgtPrefabSwitcher.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/Additive.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/Additive.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Additive.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Additive.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Additive_Bundle.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Additive_Bundle.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Additive_Bundle.stackedshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Additive_Bundle.stackedshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Solid.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Solid.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Solid_Bundle.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Solid_Bundle.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Solid_Bundle.stackedshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/SGT_Solid_Bundle.stackedshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/Solid.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Shaders/Solid.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard1.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard1.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard10.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard10.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard2.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard2.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard3.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard3.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard4.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard4.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard5.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard5.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard6.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard6.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard7.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard7.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard8.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard8.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard9.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Billboard9.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Glowy.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Glowy.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Rocky_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Rocky_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Rocky_Displacement.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Rocky_Displacement.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Rocky_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Examples/Textures/Rocky_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere10.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere10.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere100.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere100.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere2.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere2.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere20.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere20.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere3.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere3.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere30.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere30.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere40.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere40.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere5.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere5.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere50.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Geosphere50.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Plane100.dae
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Meshes/Plane100.dae.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtBackgroundMesh.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtBackgroundMesh.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtDragReceiver.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtDragReceiver.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtDragSource.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtDragSource.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtGravityReceiver.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtGravityReceiver.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtGravitySource.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtGravitySource.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtLightFlicker.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtLightFlicker.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralForce.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralForce.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralScale.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralScale.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralSpin.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralSpin.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralTint.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralTint.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralTorque.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProceduralTorque.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProximityDrag.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtProximityDrag.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtRaycastTranslate.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtRaycastTranslate.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtSimpleOrbit.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtSimpleOrbit.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtSimpleScaler.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Scripts/SgtSimpleScaler.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Shaders/Background.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Shaders/Background.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Shaders/Depth.shader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Shaders/Depth.shader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise2D.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise2D.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise2D_Alpha.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise2D_Alpha.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise3D.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise3D.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise3D_Alpha.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Extras/Textures/Noise3D_Alpha.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Documentation.html
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Documentation.html.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/IOverridableSharedMaterial.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/IOverridableSharedMaterial.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtAtlas.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtAtlas.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtCamera.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtCamera.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtCameraState.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtCameraState.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtCommon.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtCommon.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtEase.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtEase.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLightPointer.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLightPointer.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLong3.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLong3.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLongBounds.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLongBounds.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLongRect.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtLongRect.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtOcclusion.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtOcclusion.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtOcclusionScaler.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtOcclusionScaler.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtPoolClass.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtPoolClass.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtPoolComponent.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtPoolComponent.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtProcedural.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtProcedural.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtProperties.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtProperties.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtRenderQueue.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtRenderQueue.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtShaderProperties.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtShaderProperties.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtSharedMaterial.cs
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Scripts/SgtSharedMaterial.cs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders/SGT_Matrix.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders/SGT_Matrix.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders/SGT_Output.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders/SGT_Output.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders/SGT_Stackable_Faceted.surfshader
+Assets/Plugins/CW/SpaceGraphicsToolkit/Features/Shared/Required/Shaders/SGT_Stackable_Faceted.surfshader.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/GUIDE.asset
+Assets/Plugins/CW/SpaceGraphicsToolkit/GUIDE.asset.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/01 Orbit.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/01 Orbit.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/02 Water Level.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/02 Water Level.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/03 Zoom.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/03 Zoom.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/04 Eclipse.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/04 Eclipse.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Alien Planets.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Alien Planets.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Barren Planets.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Barren Planets.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Desert Planets.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Desert Planets.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Frozen Planets.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Frozen Planets.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Lava Planets.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Lava Planets.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Tropical Planets.unity
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/All Tropical Planets.unity.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien1.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien1.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien3.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien3.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien3_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien3_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien4.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien4.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien4_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien4_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien5.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Alien5.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren1.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren1.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren1_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren1_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren2_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren2_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren3.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren3.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren4.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren4.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren4_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren4_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren5.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Barren5.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert1.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert1.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert1_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert1_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert3.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert3.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert3_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert3_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert4.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Desert4.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen1.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen1.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen3.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen3.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen4.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen4.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen5.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Frozen5.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Lava1.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Lava1.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Lava2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Lava2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Lava3.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Lava3.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical1.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical1.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical1_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical1_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical2_2.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical2_2.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical3.mat
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Materials/Tropical3.mat.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien1.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien1.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien1_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien1_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien2_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien2_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien3_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien3_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien4.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien4.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien4_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien4_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien5.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien5.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien5_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Alien5_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren1.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren1.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren1_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren1_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren2_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren2_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren4.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren4.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren4_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren4_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren5.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren5.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren5_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Barren5_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert1.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert1.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert1_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert1_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert2_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert2_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert3_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert3_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert4.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert4.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert4_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Desert4_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen1.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen1.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen2_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen2_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen3_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen3_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen4.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen4.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen5.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen5.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen5_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Frozen5_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava1.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava1.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava1_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava1_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava3_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Lava3_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical1.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical1.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical1_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical1_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical1_3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical1_3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical2_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical2_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical3.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical3.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical3_2.prefab
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Prefabs/Tropical3_2.prefab.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/READ ME.pdf
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/READ ME.pdf.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien1_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien1_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien1_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien1_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien1_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien1_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien2_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien2_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien2_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien2_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien2_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien2_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien3_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien3_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien3_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien3_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien3_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien3_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien4_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien4_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien4_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien4_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien4_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien4_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien5_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien5_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien5_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien5_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien5_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Alien5_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren1_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren1_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren1_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren1_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren1_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren1_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren2_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren2_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren2_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren2_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren2_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren2_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren3_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren3_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren3_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren3_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren3_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren3_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren4_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren4_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren4_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren4_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren4_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren4_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren5_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren5_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren5_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren5_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren5_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Barren5_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert1_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert1_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert1_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert1_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert1_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert1_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert2_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert2_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert2_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert2_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert2_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert2_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert3_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert3_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert3_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert3_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert3_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert3_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert4_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert4_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert4_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert4_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert4_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Desert4_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen1_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen1_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen1_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen1_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen1_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen1_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen2_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen2_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen2_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen2_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen2_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen2_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen3_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen3_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen3_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen3_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen3_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen3_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen4_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen4_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen4_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen4_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen4_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen4_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen5_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen5_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen5_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen5_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen5_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Frozen5_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava1_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava1_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava1_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava1_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava1_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava1_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava2_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava2_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava2_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava2_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava2_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava2_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava3_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava3_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava3_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava3_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava3_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Lava3_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical1_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical1_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical1_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical1_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical1_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical1_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical2_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical2_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical2_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical2_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical2_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical2_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical3_Albedo.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical3_Albedo.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical3_Height.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical3_Height.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical3_Normal.png
+Assets/Plugins/CW/SpaceGraphicsToolkit/Packs/PLANETS/Textures/Tropical3_Normal.png.meta
+Assets/Plugins/CW/SpaceGraphicsToolkit/SpaceGraphicsToolkit.asmdef
+Assets/Plugins/CW/SpaceGraphicsToolkit/SpaceGraphicsToolkit.asmdef.meta
+Assets/Plugins/CW/Third-Party Notices.txt
+Assets/Plugins/CW/Third-Party Notices.txt.meta
