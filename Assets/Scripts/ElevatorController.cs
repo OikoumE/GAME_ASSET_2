@@ -119,7 +119,10 @@ public class ElevatorController : MonoBehaviour
 
     public IEnumerator MoveElevatorToFloor()
     {
+        //TODO if door is open (when move) close door
+
         CloseElevatorDoor();
+        if (isOpen) CloseElevatorDoor();
         yield return new WaitForSeconds(runtimeValues.waitForClosingDoors);
         PlayElevatorMoveAudio();
         yield return new WaitForSeconds(.5f);
@@ -156,9 +159,11 @@ public class ElevatorController : MonoBehaviour
 
     public void CloseElevatorDoor()
     {
+        //TODO if door is open (when move) close door
         if (isOpen)
             PlayDoorAudio(closeDoorAudio);
         // PlayAudio(closeDoorAudio, true, audioSettings.openCloseVolume);
+        alpha = 1;
         animateDoors = true;
         isOpen = true;
     }
@@ -168,6 +173,7 @@ public class ElevatorController : MonoBehaviour
         if (!isOpen)
             PlayDoorAudio(openDoorAudio);
         // PlayAudio(openDoorAudio, true, audioSettings.openCloseVolume);
+        alpha = 0;
         animateDoors = true;
         isOpen = false;
     }
