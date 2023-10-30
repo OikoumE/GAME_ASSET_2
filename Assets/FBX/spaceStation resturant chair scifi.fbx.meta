@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: eb5f634308a9cf84d9906e52d0eb947c
+guid: e13d6de1675784445800d5f52c12c604
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: d7897fb9cb747d44ba025ac4d7632c93, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chair padding
+    second: {fileID: 2100000, guid: 4235220d881b65048a8d8ac0bdf60110, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof emit
+    second: {fileID: 2100000, guid: 39968aad650dd4240874a5a0db0b7444, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

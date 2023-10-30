@@ -3,7 +3,32 @@ guid: aee012a596ed1ef44bfef6b0d0815dcc
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: d94af2baec7a9d64da736be9176f6598, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RED LED
+    second: {fileID: 2100000, guid: 366e0d4fbb9b52543b955512863449ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: exterior metal
+    second: {fileID: 2100000, guid: 7cfd45263b343b04fb27e7c0deffeaeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: exterior metal.001
+    second: {fileID: 2100000, guid: a21c32302ae85ab4e9642d89a4db8567, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox red wire
+    second: {fileID: 2100000, guid: 0a7ec73a50952554bbe76f19dbbec480, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

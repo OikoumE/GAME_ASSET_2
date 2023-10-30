@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: e9e4b8deb1d140943bff0480770b97fa
+guid: 1d1df20298d4cd7408a53f220295a472
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: particle accel emit
+    second: {fileID: 2100000, guid: 400c6ebed4743464586b4750119a60c8, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

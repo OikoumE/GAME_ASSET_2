@@ -36,6 +36,8 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
 
     public bool InteractModeEnabled { get; private set; }
 
+    
+    
     private void Start()
     {
         boxColliders = GetComponentsInChildren<BoxCollider>();

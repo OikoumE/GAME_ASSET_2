@@ -74,9 +74,24 @@ public class PlayerController : MonoBehaviour, IPlayer
 
         if (!Physics.Raycast(ray, out hit)) return;
         var objectHit = hit.transform;
-        if (!objectHit.gameObject.TryGetComponent(out ElevatorPanel ePanel)) return;
+
+        var isElevator = objectHit.gameObject.TryGetComponent(out ElevatorPanel ePanel);
+        var isTablet = objectHit.gameObject.TryGetComponent(out ReadingTabletController readingTablet);
+
+
+        if (!(isElevator || isTablet)) return;
         if (playerHasControl && Input.GetMouseButtonDown(0))
-            ePanel.elevatorButton.Interact(ePanel.panelId, this);
+        {
+            Debug.Log("isElevator: " + isElevator);
+            Debug.Log("isTablet: " + isTablet);
+            if (isElevator)
+                // asd
+                ePanel.elevatorButton.Interact(ePanel.panelId, this);
+
+            if (isTablet)
+                // asd
+                readingTablet.Interact(0, this);
+        }
     }
 
     private void GroundChecker()
