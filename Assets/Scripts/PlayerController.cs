@@ -82,8 +82,6 @@ public class PlayerController : MonoBehaviour, IPlayer
         if (!(isElevator || isTablet)) return;
         if (playerHasControl && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("isElevator: " + isElevator);
-            Debug.Log("isTablet: " + isTablet);
             if (isElevator)
                 // asd
                 ePanel.elevatorButton.Interact(ePanel.panelId, this);
