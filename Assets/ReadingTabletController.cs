@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class ReadingTabletController : MonoBehaviour, I_Interactible
 {
@@ -11,10 +13,14 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
 
     private bool doLerp;
     private Camera fromCam, toCam;
+
+    [SerializeField] private TextField inputText;
     private int lastPanel;
     [Range(0, 1)] private float lerpAlpha;
 
     private PlayerController pC;
+
+    private TextMeshProUGUI tmpText;
     private GameObject toCamObject;
     private Vector3 toCamObjectPosition;
     private Quaternion toCamObjectRotation;
@@ -25,6 +31,8 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
 
     private void Start()
     {
+        tmpText = GetComponentInChildren<TextMeshProUGUI>();
+        if (tmpText == null) throw new Exception("TMP not found");
     }
 
     private void Update()
