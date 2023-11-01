@@ -3,57 +3,7 @@ guid: 49c062d046ed9a74a90e798d7cfe895d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: bb904d6d5e5a1a6458f342e552c3175c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator buttons light green
-    second: {fileID: 2100000, guid: 9b9faacbf6bbd854281ea8903be5d77b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator buttons light red
-    second: {fileID: 2100000, guid: edbfd1f3bb9e2b743a67b392319ccbf2, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator buttons rim
-    second: {fileID: 2100000, guid: 01e9b6c4987928f4984b40208537308f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator panel rim
-    second: {fileID: 2100000, guid: 335513d1413c47f44af3b3adb5cc934d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator panel.001
-    second: {fileID: 2100000, guid: 24378072e4643674781219e5004ce231, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator plaque
-    second: {fileID: 2100000, guid: 65e2dcd1b85c47e458575fd22aed2101, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator screws
-    second: {fileID: 2100000, guid: 880cacb91bef16340aebfb4c298a5730, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: elevator text
-    second: {fileID: 2100000, guid: 48c255fad8583294a8b427b5bf1bb318, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: roof emit
-    second: {fileID: 2100000, guid: a1dec7c75c8a6594d913baee4e28c7bb, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

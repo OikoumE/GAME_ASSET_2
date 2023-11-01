@@ -3,42 +3,7 @@ guid: 72aa05f0c4e10fb4e9d579ac4be435a8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Glass
-    second: {fileID: 2100000, guid: 9faa2aa8582721c46a24c040e4805fd7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 7141229aa00e9f446bfedcec5594df6f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: RED LED
-    second: {fileID: 2100000, guid: 5366f338fad03c14eb40dcb086b080d7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: exterior metal
-    second: {fileID: 2100000, guid: e82a953be07c11d4c9645d191d6a2904, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: exterior metal.001
-    second: {fileID: 2100000, guid: af16b02403ae9594e8a734672434ecef, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: fuxebox red wire
-    second: {fileID: 2100000, guid: 2d34bf5bc2a57ab419ff24a380a4f3dd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: spacedock emit
-    second: {fileID: 2100000, guid: 407075526085d05469e45e210e00f8db, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0

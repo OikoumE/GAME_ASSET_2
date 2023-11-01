@@ -3,7 +3,72 @@ guid: 40ddea0c5d4a62f44b940612701b3a2e
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: f6950dafd58b6bb4aa739f280cad063d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: b2e2dd22f5397054abc5cad1c4034a4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue emit
+    second: {fileID: 2100000, guid: d1baf6f16f3ce574bb165af4622fc6cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: exterior metal.shiny
+    second: {fileID: 2100000, guid: 1fc7ee3884b4f28449cbd6a7e7933824, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox box
+    second: {fileID: 2100000, guid: 62757d4abc05ca7409bd96a4fa64d63b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green emit
+    second: {fileID: 2100000, guid: 8c2b7863c99e19e4b8693fff2d76fdad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: orange emit
+    second: {fileID: 2100000, guid: 854b6b8989c8d5b4abbf6366d9eda3ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic
+    second: {fileID: 2100000, guid: 52d331ade1b1a1c429016fffe6b28aec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: purple emit
+    second: {fileID: 2100000, guid: c5e22806bc879eb48ae5ce1fddd41d78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red emit
+    second: {fileID: 2100000, guid: 5f1fe7f8fa064c640a130c54ad6594fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: roof emit
+    second: {fileID: 2100000, guid: 8a71077cc9a88854aa6b6764427f2770, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: toolbox metal
+    second: {fileID: 2100000, guid: f26db08dbfde84046b92a190082fd867, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: yellow emit
+    second: {fileID: 2100000, guid: e9a8db0275f6be6439c295728aba9f01, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

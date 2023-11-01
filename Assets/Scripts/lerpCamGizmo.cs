@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class lerpCamGizmo : MonoBehaviour
 {
+
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;

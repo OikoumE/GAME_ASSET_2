@@ -5,7 +5,7 @@ public class PlayerController : MonoBehaviour, IPlayer
 {
     [SerializeField] private float playerSpeed = 10, movementMultiplier = 0.1f;
     [SerializeField] private float sensX = 100f, sensY = 100f;
-
+    [SerializeField] private LayerMask interactableLayerMask;
     [DoNotSerialize] public bool playerHasControl = true;
 
     public Camera playerCam;
@@ -72,24 +72,18 @@ public class PlayerController : MonoBehaviour, IPlayer
         RaycastHit hit;
         var ray = playerCam.ScreenPointToRay(Input.mousePosition);
 
-        if (!Physics.Raycast(ray, out hit)) return;
+        if (!Physics.Raycast(ray, out hit, interactableLayerMask)) return;
         var objectHit = hit.transform;
 
         var isElevator = objectHit.gameObject.TryGetComponent(out ElevatorPanel ePanel);
         var isTablet = objectHit.gameObject.TryGetComponent(out ReadingTabletController readingTablet);
 
-
         if (!(isElevator || isTablet)) return;
-        if (playerHasControl && Input.GetMouseButtonDown(0))
-        {
-            if (isElevator)
-                // asd
-                ePanel.elevatorButton.Interact(ePanel.panelId, this);
-
-            if (isTablet)
-                // asd
-                readingTablet.Interact(0, this);
-        }
+        if (!playerHasControl || !Input.GetMouseButtonDown(0)) return;
+        if (isElevator)
+            ePanel.elevatorButton.Interact(ePanel.panelId, this);
+        if (isTablet)
+            readingTablet.Interact(0, this);
     }
 
     private void GroundChecker()

@@ -9,7 +9,10 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     [SerializeField] private float lerpSpeed = 1f;
     [SerializeField] private AudioSettings audioSettings;
     [SerializeField] private Color textColor = Color.red;
+    [SerializeField] private Material readingTabledEmit;
     [TextAreaAttribute] [SerializeField] private string dialogueText;
+
+    [SerializeField] private Color screenOnColor;
     private readonly float textLerpSpeed = 2.5f;
     private readonly float textLerpWait = 1f;
     private readonly float waitAmount = .5f;
@@ -18,6 +21,8 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     private bool doLerp;
     private bool doTextLerp;
     private Camera fromCam, toCam;
+
+    private bool isReturning;
     private int lastPanel;
     private float lerpAlpha, colorLerpAlpha;
     private Color lerpToColor = Color.clear, lerpFromColor = Color.red;
@@ -35,6 +40,7 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     private void Start()
     {
         SetText();
+        if (playerCam == null) playerCam = Camera.main;
     }
 
     private void Update()
@@ -104,9 +110,9 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
 
     private void DoRay()
     {
-        if (!InteractModeEnabled) return;
-        if (!Input.GetMouseButtonDown(0))
-            return; // mouse is not clicked or we are hovering activeFloor;
+        if (!InteractModeEnabled || isReturning) return;
+        if (!Input.GetMouseButtonDown(0)) return;
+        isReturning = true;
         PlayAudio(audioSettings.clickSettings);
         // button has been clicked and cursor is not over activeFloor;
         StartCoroutine(ReturnToPlayer());
@@ -151,6 +157,7 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
         {
             lerpCam.enabled = false;
             toCam.enabled = true;
+            isReturning = false;
             lerpAlpha = 0;
             doLerp = false;
             if (InteractModeEnabled)

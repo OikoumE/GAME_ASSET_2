@@ -13,8 +13,8 @@ public class OpenDoor : MonoBehaviour
     public DoorPosition doorPosition;
     public bool canBeOpened;
     public float openSpeed = 10;
+    [SerializeField] [Range(0, 100)] private float allowThroughDoorThreshold;
 
-    private bool animate;
     private float blendShapeAlpha;
     private bool isOpen;
     private BoxCollider m_collider, triggerBox;
@@ -22,26 +22,37 @@ public class OpenDoor : MonoBehaviour
 
     private bool playerInRange;
 
+    public float AllowThroughDoorThreshold
+    {
+        set => allowThroughDoorThreshold = value;
+    }
+
+    public float OpenSpeed
+    {
+        get => openSpeed;
+        set => openSpeed = value;
+    }
+
+    private bool Animate { get; set; }
+
     private void Start()
     {
         m_skinnedMeshRenderer = gameObject.GetComponent<SkinnedMeshRenderer>();
-        var boxes = gameObject.GetComponents<BoxCollider>();
-        foreach (var box in boxes)
-            if (!box.isTrigger)
-                m_collider = box;
+        SetColliders();
     }
 
     private void Update()
     {
-        if (!animate || !canBeOpened) return;
+        if (!Animate || !canBeOpened) return;
         if (!isOpen) // 0 == closed
         {
             blendShapeAlpha += Time.deltaTime * openSpeed;
+            if (blendShapeAlpha >= allowThroughDoorThreshold)
+                m_collider.enabled = false;
             if (blendShapeAlpha >= 100)
             {
                 isOpen = true;
-                animate = false;
-                m_collider.enabled = false;
+                Animate = false;
             }
         }
         else if (isOpen) // 100 == open
@@ -50,51 +61,63 @@ public class OpenDoor : MonoBehaviour
             if (blendShapeAlpha <= 0)
             {
                 isOpen = false;
-                animate = false;
-                m_collider.enabled = true;
+                Animate = false;
             }
+
+            if (blendShapeAlpha <= allowThroughDoorThreshold)
+                m_collider.enabled = true;
         }
 
         SetBlendShape(blendShapeAlpha);
     }
 
-    public void SetBlendShape(float value)
-    {
-        m_skinnedMeshRenderer.SetBlendShapeWeight(0, value);
 
-    }
-    
-    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out IPlayer iP))
-        {
-            if (animate) isOpen = !isOpen;
-            animate = true;
-        }
+        if (other.TryGetComponent(out IPlayer iP)) OpenAnimation();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out IPlayer iP))
-        {
-            if (animate)
-                isOpen = true;
-            else
-                animate = true;
-            m_collider.enabled = true;
-        }
+        if (other.TryGetComponent(out IPlayer iP)) CloseAnimation();
     }
 
-    public void SetAnimate(bool enabled)
+    public void OpenAnimation()
     {
-        animate = enabled;
+        if (Animate) isOpen = !isOpen;
+        Animate = true;
     }
 
-    public bool GetAnimate()
+    public void CloseAnimation()
     {
-        return animate;
+        if (Animate)
+            isOpen = true;
+        else
+            Animate = true;
+        m_collider.enabled = true;
     }
+
+
+    private void SetColliders()
+    {
+        var boxes = gameObject.GetComponents<BoxCollider>();
+        foreach (var box in boxes)
+            if (box.isTrigger)
+                triggerBox = box;
+            else m_collider = box;
+    }
+
+    public void SetTriggerBoxActive(bool enable)
+    {
+        if (triggerBox == null) SetColliders();
+        triggerBox.enabled = enable;
+    }
+
+    public void SetBlendShape(float value)
+    {
+        m_skinnedMeshRenderer.SetBlendShapeWeight(0, value);
+    }
+
 
     public float GetAlpha()
     {
