@@ -11,7 +11,8 @@ public enum Floor
 
 public class ElevatorButton : Interactable
 {
-    public Camera playerCam, lerpCam, buttonCam1, buttonCam2;
+    public Camera playerCam, lerpCam, buttonCam;
+    // public int panelId;
 
     [SerializeField] private Texture2D greenHand, redHand;
     [SerializeField] private float lerpSpeed = 1f;
@@ -57,34 +58,38 @@ public class ElevatorButton : Interactable
         Gizmos.DrawRay(toCamObject.transform.position, hitPoint);
     }
 
-    public override void Interact(PlayerController _pC, int panelId)
+    public override void Interact(PlayerController _pC)
     {
         _pC.SetPlayerControl(false);
 
         #region Setting From/To cam
 
-        lastPanel = panelId;
+        // lastPanel = panelId;
         pC = _pC;
         fromCam = _pC.PlayerCam;
-        switch (panelId)
-        {
-            case 1:
-                toCamObject = buttonCam1.gameObject;
-                toCam = buttonCam1;
-                break;
-            case 2:
-                toCamObject = buttonCam2.gameObject;
-                toCam = buttonCam2;
-                break;
-            default:
-                throw new NotImplementedException();
-        }
+        toCamObject = buttonCam.gameObject;
+        toCam = buttonCam;
+        // switch (panelId)
+        // {
+        //     case 1:
+        //         toCamObject = buttonCam1.gameObject;
+        //         toCam = buttonCam1;
+        //         break;
+        //     case 2:
+        //         toCamObject = buttonCam2.gameObject;
+        //         toCam = buttonCam2;
+        //         break;
+        //     default:
+        //         throw new NotImplementedException();
+        // }
 
         if (InteractModeEnabled)
         {
             fromCam = toCam;
-            toCamObject = playerCam.gameObject;
-            toCam = playerCam;
+            // toCamObject = playerCam.gameObject;
+            // toCam = playerCam;
+            toCamObject = _pC.PlayerCam.gameObject;
+            toCam = _pC.PlayerCam;
         }
 
         #endregion
@@ -96,10 +101,6 @@ public class ElevatorButton : Interactable
         doLerp = true; // trigger lerp
     }
 
-    public override void Interact(PlayerController pC)
-    {
-        throw new NotImplementedException();
-    }
 
     private void SetColliderState(bool state)
     {
@@ -156,7 +157,7 @@ public class ElevatorButton : Interactable
         pC.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
         var waitAmount = elevatorController.runtimeValues.returnToPlayerCooldown;
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
-        Interact(pC, lastPanel); // trigger lerp back to player
+        Interact(pC); // trigger lerp back to player
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
         StartCoroutine(elevatorController.MoveElevatorToFloor()); // close doors.
     }

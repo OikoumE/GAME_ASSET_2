@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33ca09df188d34347b7d1f1186eb5962, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactableType: 1
   playerCam: {fileID: 0}
   lerpCam: {fileID: 5507959044136530950}
   fixedCam: {fileID: 7937215886549618315}
@@ -70,7 +71,9 @@ MonoBehaviour:
     buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
       type: 3}
   textColor: {r: 1, g: 0, b: 0, a: 1}
+  readingTabledEmit: {fileID: 0}
   dialogueText: Hello World!
+  screenOnColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1262129202296911917
 BoxCollider:
   m_ObjectHideFlags: 0

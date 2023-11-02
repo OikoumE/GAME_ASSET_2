@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : CameraController, IPlayer
@@ -52,8 +53,8 @@ public class PlayerController : CameraController, IPlayer
 
     private void OnDrawGizmos()
     {
-        // var playerCamTransform = playerCam.transform;
-        // Gizmos.DrawRay(playerCamTransform.position, playerCamTransform.forward * 10);
+        var camTransform = cameraToControl.transform;
+        Gizmos.DrawRay(camTransform.position, camTransform.forward * 10);
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, Vector3.down * groundCheckDistance);
     }
@@ -64,9 +65,9 @@ public class PlayerController : CameraController, IPlayer
         GroundChecker();
     }
 
-    public void SetPlayerControl(bool enabled)
+    public void SetPlayerControl(bool enable)
     {
-        playerHasControl = enabled;
+        playerHasControl = enable;
     }
 
     private void DoRay()
@@ -76,23 +77,42 @@ public class PlayerController : CameraController, IPlayer
 
         if (!Physics.Raycast(ray, out var hit, interactableLayerMask)) return;
         var objectHit = hit.transform;
-
+        //
         var isElevator = objectHit.gameObject.TryGetComponent(out ElevatorPanel ePanel);
-        var isTablet = objectHit.gameObject.TryGetComponent(out ReadingTabletController readingTablet);
+        // var isTablet = objectHit.gameObject.TryGetComponent(out ReadingTabletController readingTablet);
+        //
+        //
+        // if (!(isElevator || isTablet)) return;
+        // if (isElevator)
+        //     ePanel.elevatorButton.Interact(this, ePanel.panelId);
+        // if (isTablet)
+        //     readingTablet.Interact(this);
 
-
-        if (!(isElevator || isTablet)) return;
-        if (isElevator)
-            ePanel.elevatorButton.Interact(this, ePanel.panelId);
-        if (isTablet)
-            readingTablet.Interact(this);
+        InteractWithObject(hit.transform.gameObject);
     }
 
     private void InteractWithObject(GameObject objectToInteractWith)
     {
-        if (objectToInteractWith.TryGetComponent(out IInteractable interactableObject))
-            interactableObject.Interact(this);
+        if (objectToInteractWith.TryGetComponent(out Interactable interactableObject))
+            switch (interactableObject.interactableType)
+            {
+                case InteractableType.Elevator:
+                    interactableObject.Interact(this);
+                    break;
+                case InteractableType.ReadingTablet:
+                    interactableObject.Interact(this);
+                    break;
+                case InteractableType.CabinetDoor:
+                    break;
+                case InteractableType.Bolts:
+                    break;
+                case InteractableType.WirePuzzle:
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
     }
+
 
     private void GroundChecker()
     {
@@ -100,7 +120,6 @@ public class PlayerController : CameraController, IPlayer
         if (Physics.Raycast(gameObject.transform.position, Vector3.down * groundCheckDistance, out var hit))
         {
             var hitObject = hit.transform.gameObject;
-            Debug.Log("hitObject: " + hitObject.name);
             var dst = Vector3.Distance(transform.position, hit.point);
             if (dst > maxGroundDistance)
             {

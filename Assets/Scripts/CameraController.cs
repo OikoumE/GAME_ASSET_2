@@ -16,12 +16,6 @@ public class CameraController : MonoBehaviour
 
     public Camera PlayerCam => cameraToControl;
 
-    private void OnDrawGizmos()
-    {
-        var camTransform = cameraToControl.transform;
-        Gizmos.DrawRay(camTransform.position, camTransform.forward * 10);
-    }
-
 
     public void InputHandler()
     {

@@ -57,11 +57,6 @@ public class ReadingTabletController : Interactable
     }
 
 
-    public override void Interact(PlayerController pC, int panelId)
-    {
-        throw new NotImplementedException();
-    }
-
     public override void Interact(PlayerController pC)
     {
         pC.SetPlayerControl(false);
