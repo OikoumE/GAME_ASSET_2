@@ -3,7 +3,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class ReadingTabletController : MonoBehaviour, I_Interactible
+public class ReadingTabletController : Interactable
 {
     public Camera playerCam, lerpCam, fixedCam;
     [SerializeField] private float lerpSpeed = 1f;
@@ -21,13 +21,13 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     private bool doLerp;
     private bool doTextLerp;
     private Camera fromCam, toCam;
+    private bool hasLerpedText;
 
     private bool isReturning;
-    private int lastPanel;
     private float lerpAlpha, colorLerpAlpha;
     private Color lerpToColor = Color.clear, lerpFromColor = Color.red;
 
-    private PlayerController pC;
+    private PlayerController playerController;
 
     private TextMeshProUGUI tmpText;
     private GameObject toCamObject;
@@ -47,7 +47,7 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     {
         DoRay();
         LerpTextAlpha();
-        if (!doLerp || !pC) return;
+        if (!doLerp || !playerController) return;
         LerpToCam();
     }
 
@@ -57,15 +57,20 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     }
 
 
-    public void Interact(int panelId, PlayerController _pC)
+    public override void Interact(PlayerController pC, int panelId)
     {
-        _pC.SetPlayerControl(false);
+        throw new NotImplementedException();
+    }
+
+    public override void Interact(PlayerController pC)
+    {
+        pC.SetPlayerControl(false);
         if (!InteractModeEnabled) StartCoroutine(FadeText());
 
         #region Setting From/To cam
 
-        pC = _pC;
-        fromCam = _pC.playerCam;
+        playerController = pC;
+        fromCam = pC.PlayerCam;
         toCamObject = fixedCam.gameObject;
         toCam = fixedCam;
         if (InteractModeEnabled)
@@ -122,9 +127,9 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
     {
         StartCoroutine(FadeText());
         yield return new WaitForSeconds(textLerpWait); // cooldown before returning to playerCam.
-        pC.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+        playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
-        Interact(lastPanel, pC); // trigger lerp back to player
+        Interact(playerController); // trigger lerp back to player
     }
 
 
@@ -161,8 +166,8 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
             lerpAlpha = 0;
             doLerp = false;
             if (InteractModeEnabled)
-                pC.SetPlayerControl(true);
-            else pC.SetCursorLockMode(CursorLockMode.None); // toggle cursor on / unlock mouse
+                playerController.SetPlayerControl(true);
+            else playerController.SetCursorLockMode(CursorLockMode.None); // toggle cursor on / unlock mouse
             InteractModeEnabled = !InteractModeEnabled;
         }
     }
@@ -178,12 +183,14 @@ public class ReadingTabletController : MonoBehaviour, I_Interactible
         {
             doTextLerp = false;
             colorLerpAlpha = 0;
-            if (!InteractModeEnabled) SetTextEnabled(false);
+            if (hasLerpedText) SetTextEnabled(false);
+            hasLerpedText = !hasLerpedText;
             return;
         }
 
         tmpText.color = Color.Lerp(lerpFromColor, lerpToColor, colorLerpAlpha);
     }
+
 
     private IEnumerator FadeText()
     {

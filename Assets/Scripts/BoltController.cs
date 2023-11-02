@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class BoltController : MonoBehaviour
 {
-    public float unScrewSpeed = 10, unScrewDistance = 1f, unScrewRotationSpeed = 1f, impulseForce = 0.01f;
-
+    public float unScrewSpeed = 10;
+    public float unScrewDistance = 1f;
+    public float unScrewRotationSpeed = 1f;
+    public float impulseForce = 0.01f;
     public bool startTest;
     private float lerpAlpha;
     private List<BoltAnimator> screwList = new();
-
 
     private void Start()
     {
         GetAllScrew();
     }
-
 
     private void Update()
     {
@@ -36,7 +36,6 @@ public class BoltController : MonoBehaviour
             bA.SetStartEndPos(unScrewDistance);
         }
     }
-
 
     private void GetAllScrew()
     {

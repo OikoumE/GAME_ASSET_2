@@ -9,7 +9,7 @@ public enum Floor
     Kitchen
 }
 
-public class ElevatorButton : MonoBehaviour, I_Interactible
+public class ElevatorButton : Interactable
 {
     public Camera playerCam, lerpCam, buttonCam1, buttonCam2;
 
@@ -57,7 +57,7 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
         Gizmos.DrawRay(toCamObject.transform.position, hitPoint);
     }
 
-    public void Interact(int panelId, PlayerController _pC)
+    public override void Interact(PlayerController _pC, int panelId)
     {
         _pC.SetPlayerControl(false);
 
@@ -65,7 +65,7 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
 
         lastPanel = panelId;
         pC = _pC;
-        fromCam = _pC.playerCam;
+        fromCam = _pC.PlayerCam;
         switch (panelId)
         {
             case 1:
@@ -94,6 +94,11 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
         toCamObjectRotation = toCamObjectTransform.rotation;
 
         doLerp = true; // trigger lerp
+    }
+
+    public override void Interact(PlayerController pC)
+    {
+        throw new NotImplementedException();
     }
 
     private void SetColliderState(bool state)
@@ -151,7 +156,7 @@ public class ElevatorButton : MonoBehaviour, I_Interactible
         pC.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
         var waitAmount = elevatorController.runtimeValues.returnToPlayerCooldown;
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
-        Interact(lastPanel, pC); // trigger lerp back to player
+        Interact(pC, lastPanel); // trigger lerp back to player
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
         StartCoroutine(elevatorController.MoveElevatorToFloor()); // close doors.
     }

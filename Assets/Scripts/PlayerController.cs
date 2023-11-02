@@ -1,37 +1,39 @@
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour, IPlayer
+public class PlayerController : CameraController, IPlayer
 {
     [SerializeField] private float playerSpeed = 10, movementMultiplier = 0.1f;
-    [SerializeField] private float sensX = 100f, sensY = 100f;
-    [SerializeField] private LayerMask interactableLayerMask;
-    [DoNotSerialize] public bool playerHasControl = true;
+    // [SerializeField] private LayerMask interactableLayerMask;
 
-    public Camera playerCam;
 
     [SerializeField] private bool useGroundChecker;
     [SerializeField] private float groundCheckDistance = 1f;
     [SerializeField] private float maxGroundDistance;
-
-    private readonly float mouseSensMultiplier = 0.01f;
-
-
-    private float mouseX, mouseY;
     private Rigidbody mRigidbody;
-    private float yRot, xRot;
+
+
+    // public Camera playerCam;
+    // [SerializeField] private float sensX = 100f, sensY = 100f;
+    // [DoNotSerialize] public bool playerHasControl = true;
+    // private readonly float mouseSensMultiplier = 0.01f;
+    // private float mouseX, mouseY;
+    // private float yRot, xRot;
 
     private void Start()
     {
+        playerToControl = gameObject;
+        if (cameraToControl == null)
+            cameraToControl = Camera.main;
         Cursor.lockState = CursorLockMode.Locked;
         mRigidbody = GetComponent<Rigidbody>();
-        playerCam = GetComponentInChildren<Camera>();
+        // playerCam = GetComponentInChildren<Camera>();
     }
 
     private void Update()
     {
-        CursorLockHandler();
         InputHandler();
+        CursorLockHandler();
+        // InputHandler();
         DoRay();
     }
 
@@ -50,15 +52,15 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void OnDrawGizmos()
     {
-        var playerCamTransform = playerCam.transform;
-        Gizmos.DrawRay(playerCamTransform.position, playerCamTransform.forward * 10);
+        // var playerCamTransform = playerCam.transform;
+        // Gizmos.DrawRay(playerCamTransform.position, playerCamTransform.forward * 10);
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, Vector3.down * groundCheckDistance);
     }
 
     private void OnValidate()
     {
-        playerCam = GetComponentInChildren<Camera>();
+        // playerCam = GetComponentInChildren<Camera>();
         GroundChecker();
     }
 
@@ -69,21 +71,27 @@ public class PlayerController : MonoBehaviour, IPlayer
 
     private void DoRay()
     {
-        RaycastHit hit;
-        var ray = playerCam.ScreenPointToRay(Input.mousePosition);
+        if (!Input.GetMouseButtonDown(0) || !playerHasControl) return;
+        var ray = cameraToControl.ScreenPointToRay(Input.mousePosition);
 
-        if (!Physics.Raycast(ray, out hit, interactableLayerMask)) return;
+        if (!Physics.Raycast(ray, out var hit, interactableLayerMask)) return;
         var objectHit = hit.transform;
 
         var isElevator = objectHit.gameObject.TryGetComponent(out ElevatorPanel ePanel);
         var isTablet = objectHit.gameObject.TryGetComponent(out ReadingTabletController readingTablet);
 
+
         if (!(isElevator || isTablet)) return;
-        if (!playerHasControl || !Input.GetMouseButtonDown(0)) return;
         if (isElevator)
-            ePanel.elevatorButton.Interact(ePanel.panelId, this);
+            ePanel.elevatorButton.Interact(this, ePanel.panelId);
         if (isTablet)
-            readingTablet.Interact(0, this);
+            readingTablet.Interact(this);
+    }
+
+    private void InteractWithObject(GameObject objectToInteractWith)
+    {
+        if (objectToInteractWith.TryGetComponent(out IInteractable interactableObject))
+            interactableObject.Interact(this);
     }
 
     private void GroundChecker()
@@ -125,21 +133,21 @@ public class PlayerController : MonoBehaviour, IPlayer
             Cursor.lockState = CursorLockMode.Locked;
     }
 
-    private void InputHandler()
-    {
-        if (!playerHasControl) return;
-        mouseX = Input.GetAxisRaw("Mouse X");
-        mouseY = Input.GetAxisRaw("Mouse Y");
-
-        yRot += mouseX * sensX * mouseSensMultiplier;
-        xRot -= mouseY * sensY * mouseSensMultiplier;
-
-        xRot = Mathf.Clamp(xRot, -90f, 90f);
-
-
-        playerCam.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
-        transform.rotation = Quaternion.Euler(0, yRot, 0);
-    }
+    // private void InputHandler()
+    // {
+    //     if (!playerHasControl) return;
+    //     mouseX = Input.GetAxisRaw("Mouse X");
+    //     mouseY = Input.GetAxisRaw("Mouse Y");
+    //
+    //     yRot += mouseX * sensX * mouseSensMultiplier;
+    //     xRot -= mouseY * sensY * mouseSensMultiplier;
+    //
+    //     xRot = Mathf.Clamp(xRot, -90f, 90f);
+    //
+    //
+    //     playerCam.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
+    //     transform.rotation = Quaternion.Euler(0, yRot, 0);
+    // }
 }
 
 public interface IPlayer

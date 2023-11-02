@@ -265,12 +265,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd1e58519bf4dc945b6a6833ac0086a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 6
-  movementMultiplier: 10
+  playerToControl: {fileID: 7193295067102001727}
+  cameraToControl: {fileID: 3674900935272719400}
+  playerHasControl: 1
   sensX: 100
   sensY: 100
-  playerHasControl: 1
-  playerCam: {fileID: 3674900935272719400}
+  interactableLayerMask:
+    serializedVersion: 2
+    m_Bits: 55
+  playerSpeed: 6
+  movementMultiplier: 10
   useGroundChecker: 0
   groundCheckDistance: 0.5
   maxGroundDistance: 0.11
