@@ -66,7 +66,6 @@ public class KitchenDoorController : Interactable
         if (!Input.GetMouseButtonDown(0) || !cameraHasControl) return;
         var ray = cameraController.cameraToControl.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out var hit, cameraController.interactableLayerMask)) return;
-        Debug.Log(hit.transform.gameObject.name);
         if (hit.transform.gameObject.TryGetComponent(out IInteractable interactableObject))
             interactableObject.Interact(this);
     }
