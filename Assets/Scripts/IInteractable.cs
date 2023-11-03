@@ -10,17 +10,15 @@ public interface IInteractable
 public abstract class Interactable : MonoBehaviour, IInteractable
 {
     public Camera lerpCam, fixedCam;
-
-    [HideInInspector] public Camera toCam, fromCam;
-
-    [HideInInspector] public PlayerController playerController;
-    [HideInInspector] public bool doLerp;
-    [HideInInspector] public GameObject toCamObject;
-    [HideInInspector] public Vector3 toCamObjectPosition;
-    [HideInInspector] public Quaternion toCamObjectRotation;
-    [HideInInspector] public Transform toCamObjectTransform;
     public float lerpSpeed = 1f;
     [HideInInspector] public float lerpAlpha;
+    protected bool doLerp;
+    protected PlayerController playerController;
+    protected Camera toCam, fromCam;
+    protected GameObject toCamObject;
+    protected Vector3 toCamObjectPosition;
+    protected Quaternion toCamObjectRotation;
+    protected Transform toCamObjectTransform;
     protected bool InteractModeEnabled { get; set; }
 
     protected virtual void Update()

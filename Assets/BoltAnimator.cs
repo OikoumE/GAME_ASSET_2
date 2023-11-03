@@ -3,25 +3,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class BoltAnimator : Interactable
 {
-    public enum BoltLocation
-    {
-        LeftTop,
-        LeftBot,
-        RightTop,
-        RightBot
-    }
-
-    public BoltLocation boltLocation;
     [SerializeField] private Vector3 startPos, endPos;
     public float unScrewRotateSpeed, impulseForce = 0.01f;
     private BoltController boltController;
-
     private float currAngle;
     private bool hasGotPositions;
-
     private KitchenDoorController kitchenDoorController;
     private Rigidbody mRigidbody;
-    private Quaternion startRotation;
 
     private void Start()
     {
@@ -78,7 +66,6 @@ public class BoltAnimator : Interactable
     {
         if (boltController == null) boltController = GetComponentInParent<BoltController>();
         var tr = transform;
-        startRotation = tr.rotation;
         SetStartEndPos(boltController.unScrewDistance);
         lerpSpeed = boltController.unScrewSpeed;
         unScrewRotateSpeed = boltController.unScrewRotationSpeed;

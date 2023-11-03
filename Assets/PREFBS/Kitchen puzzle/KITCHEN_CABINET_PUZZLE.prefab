@@ -125,9 +125,9 @@ MonoBehaviour:
     pitch: 1
   animateDoor: 0
   endPos: {fileID: 6655782189363165012}
-  doorTranslateSpeed: 0
-  doorRotateSpeed: 0
-  doorRotateTargetAngle: 0
+  doorRotatePoint: {fileID: 2046954894418097793}
+  doorTranslateSpeed: 1
+  doorRotateSpeed: 1
 --- !u!1 &4646642119563525071
 GameObject:
   m_ObjectHideFlags: 0

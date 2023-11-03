@@ -3,8 +3,7 @@ using UnityEngine;
 public class KitchenDoorController : Interactable
 {
     [SerializeField] private AudioSourceSettings lerpCamSetting;
-
-    public bool animateDoor;
+    [HideInInspector] public bool animateDoor;
     [SerializeField] private Transform endPos, doorRotatePoint;
     [SerializeField] private float doorTranslateSpeed = 1, doorRotateSpeed = 1;
 
@@ -12,7 +11,6 @@ public class KitchenDoorController : Interactable
     private CameraController cameraController;
     private bool cameraHasControl;
     private float doorTranslateLerpAlpha;
-
     private Vector3 startPos;
 
     private void Start()
@@ -27,7 +25,16 @@ public class KitchenDoorController : Interactable
         base.Update();
 
 
+        // todo prevent for interacting with panel without drill
+        //TODO interact with wire puzzle game.....
+        // - make targets clickable and drag-able
+        // Vector3.Distance from IKTarget -> TargetLocation
+        // if dist <= threshold, lerp from pos => target
+        // play sound when threshold is met
+        // puzzle-game need to inform kDC that game is over, ReturnToPlayer() 
         // TODO deal with retracting control of camera,
+        // todo play ambiance electric sparky spark sounds to draw players attention to cabinet
+        // todo incorporate drill, drill mechanics, drill animations, sounds
         if (cameraHasControl)
             cameraController.RunInputHandler();
         LerpToCam(lerpCamSetting);
@@ -72,7 +79,6 @@ public class KitchenDoorController : Interactable
         doorRotatePoint.transform.position = Vector3.Lerp(startPos, endPos.position, doorTranslateLerpAlpha);
         if (doorTranslateLerpAlpha <= 1) return;
         doorRotatePoint.transform.Rotate(Vector3.up, -doorRotateSpeed, Space.Self);
-        Debug.Log(doorRotatePoint.transform.rotation.y);
         if (doorRotatePoint.transform.rotation.y <= 0.66f) // magic number, trust me bro!
             animateDoor = false;
     }
