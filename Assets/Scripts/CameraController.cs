@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -5,9 +6,13 @@ public class CameraController : MonoBehaviour
 {
     public GameObject playerToControl;
     public Camera cameraToControl;
-    [DoNotSerialize] public bool playerHasControl = true;
+    [DoNotSerialize] public bool playerHasControl = true, freeLookCamEnabled;
     [SerializeField] private float sensX = 100f, sensY = 100f;
     public LayerMask interactableLayerMask;
+
+    [HideInInspector] public Vector2 xRotClamp, yRotClamp;
+
+    [SerializeField] public ClampRotation clampRotation;
 
     private readonly float mouseSensMultiplier = 0.01f;
 
@@ -16,17 +21,20 @@ public class CameraController : MonoBehaviour
 
     public Camera PlayerCam => cameraToControl;
 
+    public void RunInputHandler()
+    {
+        InputHandler();
+    }
 
-    public void InputHandler()
+    protected void InputHandler()
     {
         if (!playerHasControl) return;
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
-
         yRot += mouseX * sensX * mouseSensMultiplier;
         xRot -= mouseY * sensY * mouseSensMultiplier;
 
-        xRot = Mathf.Clamp(xRot, -90f, 90f);
+        xRot = Mathf.Clamp(xRot, clampRotation.xMin, clampRotation.xMax);
 
         if (playerToControl)
         {
@@ -35,6 +43,14 @@ public class CameraController : MonoBehaviour
             return;
         }
 
+        yRot = Mathf.Clamp(yRot, clampRotation.yMin, clampRotation.yMax);
         cameraToControl.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
+    }
+
+    [Serializable]
+    public class ClampRotation
+    {
+        public float xMax = 90f, xMin = -90f;
+        public float yMax, yMin;
     }
 }

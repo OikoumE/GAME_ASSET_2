@@ -5,50 +5,34 @@ using UnityEngine;
 
 public class ReadingTabletController : Interactable
 {
-    public Camera playerCam, lerpCam, fixedCam;
-    [SerializeField] private float lerpSpeed = 1f;
     [SerializeField] private AudioSettings audioSettings;
     [SerializeField] private Color textColor = Color.red;
-    [SerializeField] private Material readingTabledEmit;
     [TextAreaAttribute] [SerializeField] private string dialogueText;
-
-    [SerializeField] private Color screenOnColor;
     private readonly float textLerpSpeed = 2.5f;
     private readonly float textLerpWait = 1f;
     private readonly float waitAmount = .5f;
+    private float colorLerpAlpha;
 
-
-    private bool doLerp;
     private bool doTextLerp;
-    private Camera fromCam, toCam;
     private bool hasLerpedText;
 
     private bool isReturning;
-    private float lerpAlpha, colorLerpAlpha;
     private Color lerpToColor = Color.clear, lerpFromColor = Color.red;
 
-    private PlayerController playerController;
-
     private TextMeshProUGUI tmpText;
-    private GameObject toCamObject;
-    private Vector3 toCamObjectPosition;
-    private Quaternion toCamObjectRotation;
-    private Transform toCamObjectTransform;
-
-    public bool InteractModeEnabled { get; private set; }
 
     private void Start()
     {
+        if (fromCam == null) fromCam = Camera.main;
         SetText();
-        if (playerCam == null) playerCam = Camera.main;
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         DoRay();
         LerpTextAlpha();
-        if (!doLerp || !playerController) return;
-        LerpToCam();
+        LerpToCam(audioSettings.lerpSettings, true);
     }
 
     private void OnValidate()
@@ -59,29 +43,8 @@ public class ReadingTabletController : Interactable
 
     public override void Interact(PlayerController pC)
     {
-        pC.SetPlayerControl(false);
         if (!InteractModeEnabled) StartCoroutine(FadeText());
-
-        #region Setting From/To cam
-
-        playerController = pC;
-        fromCam = pC.PlayerCam;
-        toCamObject = fixedCam.gameObject;
-        toCam = fixedCam;
-        if (InteractModeEnabled)
-        {
-            fromCam = toCam;
-            toCamObject = playerCam.gameObject;
-            toCam = playerCam;
-        }
-
-        #endregion
-
-        toCamObjectTransform = toCamObject.transform;
-        toCamObjectPosition = toCamObjectTransform.position;
-        toCamObjectRotation = toCamObjectTransform.rotation;
-
-        doLerp = true; // trigger lerp
+        base.Interact(pC);
     }
 
     private void SetText()
@@ -96,16 +59,6 @@ public class ReadingTabletController : Interactable
     private void SetTextEnabled(bool enable)
     {
         tmpText.enabled = enable;
-    }
-
-    private void PlayAudio(AudioSourceSettings settings, bool interrupt = true)
-    {
-        var audioSource = settings.Source;
-        if (interrupt) audioSource.Stop();
-        audioSource.pitch = settings.pitch;
-        audioSource.volume = settings.volume;
-        audioSource.clip = settings.audioClip;
-        audioSource.Play();
     }
 
     private void DoRay()
@@ -127,53 +80,19 @@ public class ReadingTabletController : Interactable
         Interact(playerController); // trigger lerp back to player
     }
 
-
-    private void LerpToCam()
+    protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
     {
-        if (!doLerp) return;
-        if (lerpAlpha < 1)
-            lerpAlpha += Time.deltaTime * lerpSpeed;
-        // if (!(audioSettings.lerpSettings.Source.clip == audioSettings.lerpSettings.audioClip))
-        PlayAudio(audioSettings.lerpSettings);
-        // lerp lerpCam to InteractCam
-        lerpCam.transform.position = Vector3.Lerp(
-            fromCam.transform.position,
-            toCamObjectPosition,
-            lerpAlpha
-        );
-        lerpCam.transform.rotation = Quaternion.Lerp(
-            fromCam.transform.rotation,
-            toCamObjectRotation,
-            lerpAlpha);
-
-        if (!lerpCam.enabled)
-        {
-            lerpCam.enabled = true;
-            fromCam.enabled = false;
-        }
-
-        // when lerp is 1 or more, set "interactCam" active, deactivate lerpcam
+        if (!doLerp || !playerController) return;
         if (lerpAlpha >= 1)
-        {
-            lerpCam.enabled = false;
-            toCam.enabled = true;
             isReturning = false;
-            lerpAlpha = 0;
-            doLerp = false;
-            if (InteractModeEnabled)
-                playerController.SetPlayerControl(true);
-            else playerController.SetCursorLockMode(CursorLockMode.None); // toggle cursor on / unlock mouse
-            InteractModeEnabled = !InteractModeEnabled;
-        }
+        base.LerpToCam(audioSourceSettings, interruptAudio);
     }
 
     private void LerpTextAlpha()
     {
         if (!doTextLerp) return;
-
         if (colorLerpAlpha < 1)
             colorLerpAlpha += Time.deltaTime * textLerpSpeed;
-
         if (colorLerpAlpha >= 1)
         {
             doTextLerp = false;

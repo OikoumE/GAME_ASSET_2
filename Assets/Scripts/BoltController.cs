@@ -9,21 +9,22 @@ public class BoltController : MonoBehaviour
     public float unScrewRotationSpeed = 1f;
     public float impulseForce = 0.01f;
     public bool startTest;
-    private float lerpAlpha;
+
+    public int unScrewedScrews;
     private List<BoltAnimator> screwList = new();
 
-    private void Start()
-    {
-        GetAllScrew();
-    }
+    // private void Start()
+    // {
+    //     GetAllScrew();
+    // }
 
-    private void Update()
-    {
-        if (!startTest) return;
-        startTest = false;
-        foreach (var bA in screwList)
-            bA.Interact();
-    }
+    // private void Update()
+    // {
+    //     if (!startTest) return;
+    //     startTest = false;
+    //     foreach (var bA in screwList)
+    //         bA.Interact();
+    // }
 
     private void OnValidate()
     {
@@ -31,7 +32,7 @@ public class BoltController : MonoBehaviour
         foreach (var bA in screwList)
         {
             bA.unScrewRotateSpeed = unScrewRotationSpeed;
-            bA.unScrewSpeed = unScrewSpeed;
+            bA.lerpSpeed = unScrewSpeed;
             bA.impulseForce = impulseForce;
             bA.SetStartEndPos(unScrewDistance);
         }

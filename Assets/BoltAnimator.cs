@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class BoltAnimator : MonoBehaviour
+public class BoltAnimator : Interactable
 {
     public enum BoltLocation
     {
@@ -13,13 +13,13 @@ public class BoltAnimator : MonoBehaviour
 
     public BoltLocation boltLocation;
     [SerializeField] private Vector3 startPos, endPos;
-    public float unScrewRotateSpeed, unScrewSpeed, impulseForce = 0.01f;
+    public float unScrewRotateSpeed, impulseForce = 0.01f;
     private BoltController boltController;
 
     private float currAngle;
-    private bool doAnimation;
     private bool hasGotPositions;
-    private float lerpAlpha;
+
+    private KitchenDoorController kitchenDoorController;
     private Rigidbody mRigidbody;
     private Quaternion startRotation;
 
@@ -27,28 +27,31 @@ public class BoltAnimator : MonoBehaviour
     {
         mRigidbody = GetComponent<Rigidbody>();
         mRigidbody.useGravity = false;
+        mRigidbody.isKinematic = true;
         mRigidbody.angularDrag = 5f;
         mRigidbody.drag = 5f;
         SetPositions();
     }
 
-    private void Update()
+    protected override void Update()
     {
-        if (!hasGotPositions || !doAnimation) return;
+        base.Update();
+        if (!hasGotPositions || !doLerp) return;
         var tr = transform;
         tr.position = Vector3.Lerp(startPos, endPos, lerpAlpha);
 
-        transform.RotateAround(tr.position, tr.forward, unScrewRotateSpeed);
+        transform.RotateAround(tr.position, tr.forward, -unScrewRotateSpeed);
 
-        if (lerpAlpha <= 1)
-        {
-            lerpAlpha += Time.deltaTime * unScrewSpeed;
-            return;
-        }
+        if (lerpAlpha <= 1) return;
+        var screwCount = boltController.unScrewedScrews;
+        if (screwCount < 4) boltController.unScrewedScrews++;
+        if (boltController.unScrewedScrews == 4) kitchenDoorController.animateDoor = true;
 
+
+        mRigidbody.isKinematic = false;
         mRigidbody.useGravity = true;
         mRigidbody.AddForce(Vector3.up * impulseForce, ForceMode.Impulse);
-        doAnimation = false;
+        doLerp = false;
     }
 
     private void OnDrawGizmos()
@@ -58,10 +61,10 @@ public class BoltAnimator : MonoBehaviour
         Gizmos.DrawWireSphere(endPos, .005f);
     }
 
-
-    public void Interact()
+    public override void Interact(KitchenDoorController kDC)
     {
-        doAnimation = true;
+        kitchenDoorController = kDC;
+        doLerp = true;
     }
 
     public void SetStartEndPos(float unScrewDistance)
@@ -77,7 +80,7 @@ public class BoltAnimator : MonoBehaviour
         var tr = transform;
         startRotation = tr.rotation;
         SetStartEndPos(boltController.unScrewDistance);
-        unScrewSpeed = boltController.unScrewSpeed;
+        lerpSpeed = boltController.unScrewSpeed;
         unScrewRotateSpeed = boltController.unScrewRotationSpeed;
         hasGotPositions = true;
     }

@@ -357,6 +357,9 @@ PrefabInstance:
     - {fileID: 3672437186200707225, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78, type: 3}
     - {fileID: 2319348854449023250, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78, type: 3}
     - {fileID: 1228041342189410006, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78, type: 3}
+    - {fileID: 4518459788674924344, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78, type: 3}
+    - {fileID: 6024018589258719921, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78, type: 3}
+    - {fileID: 7075711030406922208, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -376,6 +379,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4830191595612569}
+    - targetCorrespondingSourceObject: {fileID: 2172042710260773343, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1224754593554364950}
+    - targetCorrespondingSourceObject: {fileID: 230894728908972070, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7242284305935893659}
     - targetCorrespondingSourceObject: {fileID: 5177924043690396636, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       insertIndex: -1
@@ -431,9 +442,141 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!20 &1828606076921597184 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3202001993640572864, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2426655541628013797 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1486889414423033381, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &2604807017768322500 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1236636663204495108, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3110840580038478623 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2172042710260773343, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1224754593554364950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3110840580038478623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  doLerp: 0
+  lerpCam: {fileID: 3407126298821795677}
+  fixedCam: {fileID: 2604807017768322500}
+  fromCam: {fileID: 0}
+  fixedCamObject: {fileID: 0}
+  fixedCamObjectPosition: {x: 0, y: 0, z: 0}
+  fixedCamObjectRotation: {x: 0, y: 0, z: 0, w: 0}
+  fixedCamObjectTransform: {fileID: 0}
+  greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
+  redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
+  lerpSpeed: 1
+  audioSettings:
+    errorSettings:
+      Source: {fileID: 8424412168210547526}
+      audioClip: {fileID: 8300000, guid: 0bc064dffff6ce74aa1282e3de48660e, type: 3}
+      volume: 1
+      pitch: 1
+    clickSettings:
+      Source: {fileID: 8424412168210547526}
+      audioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55, type: 3}
+      volume: 1
+      pitch: 1
+    lerpSettings:
+      Source: {fileID: 8424412168210547526}
+      audioClip: {fileID: 8300000, guid: 5e1cdbb430a206644aa89d5661ba7a3a, type: 3}
+      volume: 1
+      pitch: 1
+    lerpCamAudioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
+    buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
+      type: 3}
+    buttonErrorAudioClip: {fileID: 8300000, guid: 0bc064dffff6ce74aa1282e3de48660e,
+      type: 3}
+  boxColliders:
+  - {fileID: 5047392933931364962}
+  - {fileID: 8660323383819239058}
+--- !u!20 &3407126298821795677 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1893696581189477789, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3907723529379945190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 230894728908972070, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7242284305935893659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3907723529379945190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 0}
+  doLerp: 0
+  lerpCam: {fileID: 3407126298821795677}
+  fixedCam: {fileID: 1828606076921597184}
+  fromCam: {fileID: 0}
+  fixedCamObject: {fileID: 0}
+  fixedCamObjectPosition: {x: 0, y: 0, z: 0}
+  fixedCamObjectRotation: {x: 0, y: 0, z: 0, w: 0}
+  fixedCamObjectTransform: {fileID: 0}
+  greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
+  redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
+  lerpSpeed: 1
+  audioSettings:
+    errorSettings:
+      Source: {fileID: 8424412168210547526}
+      audioClip: {fileID: 8300000, guid: 0bc064dffff6ce74aa1282e3de48660e, type: 3}
+      volume: 1
+      pitch: 1
+    clickSettings:
+      Source: {fileID: 8424412168210547526}
+      audioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55, type: 3}
+      volume: 1
+      pitch: 1
+    lerpSettings:
+      Source: {fileID: 8424412168210547526}
+      audioClip: {fileID: 8300000, guid: 5e1cdbb430a206644aa89d5661ba7a3a, type: 3}
+      volume: 1
+      pitch: 1
+    lerpCamAudioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
+    buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
+      type: 3}
+    buttonErrorAudioClip: {fileID: 8300000, guid: 0bc064dffff6ce74aa1282e3de48660e,
+      type: 3}
+  boxColliders:
+  - {fileID: 5047392933931364962}
+  - {fileID: 8660323383819239058}
+--- !u!65 &5047392933931364962 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 8287953110807742626, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
     type: 3}
   m_PrefabInstance: {fileID: 3823354120450980544}
   m_PrefabAsset: {fileID: 0}
@@ -595,3 +738,15 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!82 &8424412168210547526 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4748709817402177926, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8660323383819239058 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5557704085593670738, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}

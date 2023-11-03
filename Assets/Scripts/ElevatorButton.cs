@@ -11,32 +11,11 @@ public enum Floor
 
 public class ElevatorButton : Interactable
 {
-    public Camera playerCam, lerpCam, buttonCam;
-    // public int panelId;
-
     [SerializeField] private Texture2D greenHand, redHand;
-    [SerializeField] private float lerpSpeed = 1f;
-
     [SerializeField] private AudioSettings audioSettings;
     [SerializeField] private BoxCollider[] boxColliders;
-
-
-    private bool doLerp;
     private ElevatorController elevatorController;
-    private Camera fromCam;
     private Vector3 hitPoint;
-    private int lastPanel;
-    [Range(0, 1)] private float lerpAlpha;
-
-    private PlayerController pC;
-    private Camera toCam;
-    private GameObject toCamObject;
-    private Vector3 toCamObjectPosition;
-    private Quaternion toCamObjectRotation;
-    private Transform toCamObjectTransform;
-
-    public bool InteractModeEnabled { get; private set; }
-
 
     private void Start()
     {
@@ -44,11 +23,12 @@ public class ElevatorButton : Interactable
         elevatorController = GetComponentInParent<ElevatorController>();
     }
 
-    private void Update()
+    protected override void Update()
     {
+        base.Update();
         DoRay();
-        if (!doLerp || !pC) return;
-        LerpToCam();
+
+        LerpToCam(audioSettings.lerpSettings);
     }
 
     private void OnDrawGizmos()
@@ -58,71 +38,16 @@ public class ElevatorButton : Interactable
         Gizmos.DrawRay(toCamObject.transform.position, hitPoint);
     }
 
-    public override void Interact(PlayerController _pC)
-    {
-        _pC.SetPlayerControl(false);
-
-        #region Setting From/To cam
-
-        // lastPanel = panelId;
-        pC = _pC;
-        fromCam = _pC.PlayerCam;
-        toCamObject = buttonCam.gameObject;
-        toCam = buttonCam;
-        // switch (panelId)
-        // {
-        //     case 1:
-        //         toCamObject = buttonCam1.gameObject;
-        //         toCam = buttonCam1;
-        //         break;
-        //     case 2:
-        //         toCamObject = buttonCam2.gameObject;
-        //         toCam = buttonCam2;
-        //         break;
-        //     default:
-        //         throw new NotImplementedException();
-        // }
-
-        if (InteractModeEnabled)
-        {
-            fromCam = toCam;
-            // toCamObject = playerCam.gameObject;
-            // toCam = playerCam;
-            toCamObject = _pC.PlayerCam.gameObject;
-            toCam = _pC.PlayerCam;
-        }
-
-        #endregion
-
-        toCamObjectTransform = toCamObject.transform;
-        toCamObjectPosition = toCamObjectTransform.position;
-        toCamObjectRotation = toCamObjectTransform.rotation;
-
-        doLerp = true; // trigger lerp
-    }
-
-
     private void SetColliderState(bool state)
     {
         foreach (var box in boxColliders) box.enabled = state;
-    }
-
-    private void PlayAudio(AudioSourceSettings settings, bool interrupt = true)
-    {
-        var audioSource = settings.Source;
-        if (interrupt) audioSource.Stop();
-        audioSource.pitch = settings.pitch;
-        audioSource.volume = settings.volume;
-        audioSource.clip = settings.audioClip;
-        audioSource.Play();
     }
 
     private void DoRay()
     {
         if (!InteractModeEnabled) return;
         var activeFloor = elevatorController.ActiveFloor;
-        var ray = toCam.ScreenPointToRay(Input.mousePosition);
-
+        var ray = fixedCam.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out var hit, 1000)) return;
         hitPoint = hit.point;
         var objectHit = hit.transform;
@@ -154,51 +79,21 @@ public class ElevatorButton : Interactable
 
     private IEnumerator ReturnToPlayer()
     {
-        pC.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+        playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
         var waitAmount = elevatorController.runtimeValues.returnToPlayerCooldown;
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
-        Interact(pC); // trigger lerp back to player
+        Interact(playerController); // trigger lerp back to player
         yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
         StartCoroutine(elevatorController.MoveElevatorToFloor()); // close doors.
     }
 
 
-    private void LerpToCam()
+    protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
     {
-        if (!doLerp) return;
-        if (lerpAlpha < 1)
-            lerpAlpha += Time.deltaTime * lerpSpeed;
-        if (!(audioSettings.lerpSettings.Source.clip == audioSettings.lerpSettings.audioClip))
-            PlayAudio(audioSettings.lerpSettings);
-        // lerp lerpCam to InteractCam
-        lerpCam.transform.position = Vector3.Lerp(
-            fromCam.transform.position,
-            toCamObjectPosition,
-            lerpAlpha
-        );
-        lerpCam.transform.rotation = Quaternion.Lerp(
-            fromCam.transform.rotation,
-            toCamObjectRotation,
-            lerpAlpha);
-
-        if (!lerpCam.enabled)
-        {
-            lerpCam.enabled = true;
-            fromCam.enabled = false;
-        }
-
-        // when lerp is 1 or more, set "interactCam" active, deactivate lerpcam
+        if (!doLerp || !playerController) return;
         if (lerpAlpha >= 1)
-        {
-            lerpCam.enabled = false;
-            toCam.enabled = true;
-            lerpAlpha = 0;
-            doLerp = false;
-            if (InteractModeEnabled) pC.SetPlayerControl(true);
-            else pC.SetCursorLockMode(CursorLockMode.None); // toggle cursor on / unlock mouse
             SetColliderState(InteractModeEnabled);
-            InteractModeEnabled = !InteractModeEnabled;
-        }
+        base.LerpToCam(audioSourceSettings, interruptAudio);
     }
 
     [Serializable]
