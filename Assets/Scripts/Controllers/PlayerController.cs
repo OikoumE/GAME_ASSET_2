@@ -57,6 +57,8 @@ public class PlayerController : CameraController, IPlayer
 
     private void DoRay()
     {
+        //TODO RANGE!!!!
+
         if (!Input.GetMouseButtonDown(0) || !playerHasControl) return;
         var ray = cameraToControl.ScreenPointToRay(Input.mousePosition);
 

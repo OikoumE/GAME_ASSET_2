@@ -63,6 +63,8 @@ public class ReadingTabletController : Interactable
 
     private void DoRay()
     {
+        //TODO RANGE!!!!
+
         if (!InteractModeEnabled || isReturning) return;
         if (!Input.GetMouseButtonDown(0)) return;
         isReturning = true;

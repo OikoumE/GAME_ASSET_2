@@ -45,6 +45,8 @@ public class ElevatorButton : Interactable
 
     private void DoRay()
     {
+        //TODO RANGE!!!!
+
         if (!InteractModeEnabled) return;
         var activeFloor = elevatorController.ActiveFloor;
         var ray = fixedCam.ScreenPointToRay(Input.mousePosition);

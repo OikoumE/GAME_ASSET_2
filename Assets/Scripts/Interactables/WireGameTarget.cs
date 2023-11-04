@@ -4,11 +4,15 @@ using UnityEngine.Serialization;
 
 public class WireGameTarget : Interactable
 {
+    [SerializeField] private Material ledIndicatorMaterial;
+    [SerializeField] private MeshRenderer ledIndicator;
+    [SerializeField] private float ledIntensity;
     [SerializeField] private Transform targetLocation;
     [Range(0, .1f)] [SerializeField] private float targetDistanceThreshold = 0.075f;
 
     [FormerlySerializedAs("particleSystem")] [SerializeField]
     private ParticleSystem mParticleSystem;
+
 
     private BoxCollider boxCollider;
     private bool hasInteractedWithTarget;
@@ -22,12 +26,14 @@ public class WireGameTarget : Interactable
     // Start is called before the first frame update
     private void Start()
     {
+        // todo turn off LED indicators
         boxCollider = GetComponent<BoxCollider>();
         if (!targetLocation) throw new Exception("No target set for wire: " + gameObject.name);
     }
 
     protected override void Update()
     {
+        if (!mKDc || !mKDc.doorIsOpen) return;
         base.Update(); //!!keep!! calculates lerp 
         if (!hasInteractedWithTarget || hasReachedTarget) return;
         mousePos = mKDc.hit.point;
@@ -42,9 +48,10 @@ public class WireGameTarget : Interactable
             mKDc.numberOfConnectedWires++;
             boxCollider.enabled = false;
             if (mParticleSystem) mParticleSystem.Stop();
-            //todo make sparks.
-            //todo make sound.
-            //todo record amount of completed wires.
+            mKDc.PlayWireConnectedAudio();
+            ledIndicator.material = ledIndicatorMaterial;
+
+            // todo turn ON LED indicators
         }
         else
         {

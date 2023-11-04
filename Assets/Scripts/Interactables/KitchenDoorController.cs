@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class KitchenDoorController : Interactable, IInteractable
+public class KitchenDoorController : Interactable
 {
+    [SerializeField] private GameObject wireGameAudio;
     [SerializeField] private AudioSourceSettings lerpCamSetting;
     public bool animateDoor;
     [SerializeField] private Transform endPos, doorRotatePoint;
@@ -13,6 +15,11 @@ public class KitchenDoorController : Interactable, IInteractable
 
     [SerializeField] [Range(0, 10)] private float waitAfterComplete = 1f;
 
+    [FormerlySerializedAs("mMeshCollider")] [SerializeField]
+    private MeshCollider kitchenDoorRayCollider;
+
+    [HideInInspector] public bool doorIsOpen;
+
     private BoxCollider boxCollider;
     private CameraController cameraController;
     private bool cameraHasControl;
@@ -21,16 +28,20 @@ public class KitchenDoorController : Interactable, IInteractable
 
     private bool hasReturnedToPlayer;
     [HideInInspector] public RaycastHit hit;
-    private Vector3 startPos;
 
+    private AudioSource onWireConnectAudioSource;
+    private Vector3 startPos;
 
     private void Start()
     {
+        var audioSources = wireGameAudio.GetComponents<AudioSource>();
+        onWireConnectAudioSource = audioSources[1];
         boxCollider = GetComponent<BoxCollider>();
-        if (!doorMesh) throw new Exception("Set doorMesh");
+        if (!doorMesh || !kitchenDoorRayCollider) throw new Exception("check component references!");
         doorMeshRb = doorMesh.GetComponent<Rigidbody>();
         doorMeshRb.isKinematic = true;
         doorMeshRb.useGravity = false;
+
 
         startPos = doorRotatePoint.position;
         SetCamController();
@@ -76,6 +87,7 @@ public class KitchenDoorController : Interactable, IInteractable
 
     private void DoRay()
     {
+        //TODO RANGE!!!!
         var ray = cameraController.cameraToControl.ScreenPointToRay(Input.mousePosition);
         if (!Physics.Raycast(ray, out hit, cameraController.interactableLayerMask)) return;
         if (!Input.GetMouseButtonDown(0) || !cameraHasControl) return;
@@ -99,9 +111,16 @@ public class KitchenDoorController : Interactable, IInteractable
         if (doorTranslateLerpAlpha <= 1) return;
         doorRotatePoint.transform.Rotate(Vector3.up, -doorRotateSpeed, Space.Self);
         if (doorRotatePoint.transform.rotation.y >= 0.69f) return; // magic number, trust me bro!
+
         doorMeshRb.isKinematic = false;
+        doorIsOpen = true;
         doorMeshRb.useGravity = true;
         animateDoor = false;
+    }
+
+    public void PlayWireConnectedAudio()
+    {
+        onWireConnectAudioSource.Play();
     }
 
     protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
@@ -133,6 +152,7 @@ public class KitchenDoorController : Interactable, IInteractable
             lerpAlpha = 0;
             doLerp = false;
             if (InteractModeEnabled) playerController.SetPlayerControl(true);
+            kitchenDoorRayCollider.enabled = !InteractModeEnabled;
             boxCollider.enabled = false;
             cameraHasControl = !InteractModeEnabled;
             InteractModeEnabled = !InteractModeEnabled;

@@ -13,9 +13,11 @@ public class BoltAnimator : Interactable
     private bool hasGotPositions;
     private KitchenDoorController kitchenDoorController;
     private Rigidbody mRigidbody;
+    private AudioSource unscrewAudioSource;
 
     private void Start()
     {
+        unscrewAudioSource = GetComponent<AudioSource>();
         mRigidbody = GetComponent<Rigidbody>();
         mRigidbody.useGravity = false;
         mRigidbody.isKinematic = true;
@@ -32,8 +34,10 @@ public class BoltAnimator : Interactable
         tr.position = Vector3.Lerp(startPos, endPos, lerpAlpha);
 
         transform.RotateAround(tr.position, tr.forward, -unScrewRotateSpeed);
-
+        if (!unscrewAudioSource.isPlaying) unscrewAudioSource.Play();
         if (lerpAlpha <= 1) return;
+        if (unscrewAudioSource.isPlaying) unscrewAudioSource.Stop();
+
         var screwCount = boltController.unScrewedScrews;
         if (screwCount < 4) boltController.unScrewedScrews++;
         if (boltController.unScrewedScrews == 4) kitchenDoorController.animateDoor = true;
