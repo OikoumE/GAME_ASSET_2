@@ -1,56 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class FuseboxController : MonoBehaviour
-{ //Lets piss off leif with shitty code
+{
+    //Lets piss off leif with shitty code
 
     public GameObject fuseboxLid;
     public GameObject fuseToInsert;
-    private bool isFuseboxOpen = false;
     public float rot;
     public float maxRotation = 90;
     public bool animate;
+    private bool isFuseboxOpen;
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && isFuseboxOpen == false) animate = !animate;
+        if (animate) OpenFusebox();
 
-        if (Input.GetKeyDown(KeyCode.E) && isFuseboxOpen==false) animate = !animate;
-        if (animate==true) OpenFusebox();
-            
-            fuseboxLid.transform.rotation = Quaternion.Euler(0, rot, 0);
-        
-
-
-        
+        fuseboxLid.transform.rotation = Quaternion.Euler(0, rot, 0);
     }
 
-    void OpenFusebox()
+    private void OpenFusebox()
     {
         // Open the fusebox lid 
 
         if (rot >= -maxRotation)
-        {
             rot -= 1;
-
-        }
         else if (rot <= -maxRotation)
-        {
-            isFuseboxOpen=true;
-            
-        }
+            isFuseboxOpen = true;
     }
 
-    void InsertFuse()
+    private void InsertFuse()
     {
         // Check if there is a fuse to insert.
         if (fuseToInsert != null)
-        {
             // Insert the fuse
             fuseToInsert.SetActive(true);
-        }
     }
 
-    void CloseFusebox()
+    private void CloseFusebox()
     {
         // Close the fusebox
         fuseboxLid.SetActive(false);
