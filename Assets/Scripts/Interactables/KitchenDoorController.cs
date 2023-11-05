@@ -258,11 +258,11 @@ namespace Interactables
             if (animateDoor)
                 // if all screws are removed, set drill position to outside camframe
                 drillEndPos = drillOutOfCamPosition;
-            // do the lerping
+            // do the lerp-ing
             drillPrefab.transform.localPosition =
                 Vector3.Lerp(drillTargetPosition.localPosition, drillEndPos, drillLerpAlpha);
             if (drillLerpAlpha <= 1) return;
-            // we are done lerping
+            // we are done lerp-ing
             drillLerpAlpha = 0; // reset alpha
             animateDrillRetract = false; // disable retractDrill
         }
