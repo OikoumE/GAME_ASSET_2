@@ -99,6 +99,7 @@ namespace Controllers
 
 
             if (!Input.GetMouseButtonDown(0) || !playerHasControl || !hitInteractable || isOutOfRange) return;
+            Debug.Log(hitInteractable);
             interactableObject.Interact(this);
         }
 

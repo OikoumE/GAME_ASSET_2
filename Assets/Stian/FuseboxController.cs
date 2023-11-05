@@ -1,32 +1,48 @@
-﻿using UnityEngine;
+﻿using Controllers;
+using Interactables;
+using UnityEngine;
 
-public class FuseboxController : MonoBehaviour
+public class FuseboxController : Interactable
 {
     //Lets piss off leif with shitty code
 
     public GameObject fuseboxLid;
     public GameObject fuseToInsert;
     public float rot;
-    public float maxRotation = 90;
+    public float maxRotation = 90, startRotation = 20;
     public bool animate;
     private bool isFuseboxOpen;
-
-    private void Update()
+    public override void Interact(PlayerController playerController)
     {
-        if (Input.GetKeyDown(KeyCode.E) && isFuseboxOpen == false) animate = !animate;
-        if (animate) OpenFusebox();
+        Debug.Log("interacted");
+        animate = !animate;
 
-        fuseboxLid.transform.rotation = Quaternion.Euler(0, rot, 0);
     }
+    protected override void Update()
+    {
+        base.Update();
+        if (Input.GetKeyDown(KeyCode.E)) animate = !animate;
+        if (animate)
+        {
+            OpenFusebox();
+            CloseFusebox();
+        }
 
+
+        fuseboxLid.transform.localRotation = Quaternion.Euler(0, 0, rot);
+    }
+    private void Start()
+    {
+        rot = startRotation;
+    }
     private void OpenFusebox()
     {
         // Open the fusebox lid 
-
+        if (isFuseboxOpen) return;
         if (rot >= -maxRotation)
             rot -= 1;
         else if (rot <= -maxRotation)
-            isFuseboxOpen = true;
+        { isFuseboxOpen = true; animate = false; }
     }
 
     private void InsertFuse()
@@ -39,8 +55,11 @@ public class FuseboxController : MonoBehaviour
 
     private void CloseFusebox()
     {
-        // Close the fusebox
-        fuseboxLid.SetActive(false);
-        isFuseboxOpen = false;
+        if (!isFuseboxOpen) return;
+        if (rot <= 0)
+            rot += 1;
+        else if (rot >= 0)
+        { isFuseboxOpen = false; animate = false; }
+
     }
 }
