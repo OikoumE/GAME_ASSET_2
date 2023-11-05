@@ -65,36 +65,33 @@ namespace Interactables
             var audioSources = wireGameAudio.GetComponents<AudioSource>();
             onWireConnectAudioSource = audioSources[1];
             boxCollider = GetComponent<BoxCollider>();
-            if (!doorMesh || !kitchenDoorRayCollider) throw new Exception("check component references!");
             doorMeshRb = doorMesh.GetComponent<Rigidbody>();
             doorMeshRb.isKinematic = true;
             doorMeshRb.useGravity = false;
-
-            if (wireTargetColliders.Count < 6) throw new Exception("Set wireTargetColliders");
-
             doorRotateStartPos = doorRotatePoint.position;
             SetCamController();
+            if (!doorMesh || !kitchenDoorRayCollider) throw new Exception("check component references!");
+            if (wireTargetColliders.Count < 6) throw new Exception("Set wireTargetColliders");
             if (animateDoor) throw new Exception("Remember to disable animateDoor");
         }
 
         protected override void Update()
         {
-            base.Update();
-            AnimateDrill();
-            LerpToCam(lerpCamSetting);
+            base.Update(); // runs lerp
+            AnimateDrill(); // handles all drill animation
+            LerpToCam(lerpCamSetting); // handles lerp-ing to/from camera
             if (numberOfConnectedWires == 6 && !hasReturnedToPlayer)
             {
                 // we have all wires connected!
-                hasReturnedToPlayer = true;
+                hasReturnedToPlayer = true; // make sure we only trigger once
                 StartCoroutine(ReturnToPlayer());
             }
-            // todo incorporate drill, drill mechanics, drill animations, sounds
             // todo prevent for interacting with panel without drill
 
-            if (cameraHasControl)
+            if (cameraHasControl) // enables easy disabling of camera control
                 cameraController.RunInputHandler();
-            DoRay();
-            DoDoorAnimation();
+            DoRay(); // handles raycast for interactions
+            DoDoorAnimation(); // handles animating the removal of door panel
         }
 
 
@@ -106,6 +103,9 @@ namespace Interactables
 
         private IEnumerator FreezeCamForRetractingDrill(float duration)
         {
+            // disables camera, waits for a duration
+            // enables drillRetract animation and waits for it to finnish
+            // returns control to camera and reset lerpAlpha
             cameraHasControl = false;
             yield return new WaitForSeconds(duration);
             animateDrillRetract = true;
@@ -121,18 +121,30 @@ namespace Interactables
 
         private void DoRay()
         {
-            if (numberOfConnectedWires == 6) return;
-            if (playerController)
+            //handles all rayCasting
+            if (numberOfConnectedWires == 6)
+            {
+                // makes sure we dont accidentally leave camera under player control
+                cameraHasControl = false;
+                return; // if game is done, we are done!
+            }
+
+            if (playerController) // sets crossHair to default
                 playerController.SetCrossHairOutline(cameraController.IsInteractableCrossHairColor, 0);
+            // create ray
             var ray = cameraController.cameraToControl.ScreenPointToRay(Input.mousePosition);
+            //cast ray
             if (!Physics.Raycast(ray, out hit, cameraController.interactableLayerMask)) return;
+            // check if we hit an interactable object
             var hitInteractable = hit.transform.gameObject.TryGetComponent(out Interactable interactableObject);
-            if (hitInteractable)
+            if (hitInteractable) // set crossHair if its an interactable, and can be interacted with
                 if (playerController && interactableObject.isInteractable)
                     playerController.SetCrossHairOutline(cameraController.CanInteractCrossHairColor);
             if (!Input.GetMouseButtonDown(0) || !cameraHasControl || !hitInteractable) return;
+            // all conditions for interaction has been met
             interactableObject.Interact(this);
 
+            // if drill is active, set drill target position, enable drill animation and freeze camera
             if (!drillPrefab.activeSelf) return;
             drillTargetPosition.position = hit.transform.position;
             animateDrill = true;
@@ -141,9 +153,12 @@ namespace Interactables
 
         protected override IEnumerator ReturnToPlayer()
         {
-            playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
-            yield return new WaitForSeconds(waitAfterComplete); // cooldown before returning to playerCam.
-            Interact(playerController); // trigger lerp back to player
+            // toggle cursor off/lock mouse
+            playerController.SetCursorLockMode(CursorLockMode.Locked);
+            // cooldown before returning to playerCam.
+            yield return new WaitForSeconds(waitAfterComplete);
+            // trigger lerp back to player
+            Interact(playerController);
         }
 
         private void DoDoorAnimation()
@@ -154,13 +169,19 @@ namespace Interactables
             doorRotatePoint.transform.position =
                 Vector3.Lerp(doorRotateStartPos, endPos.position, doorTranslateLerpAlpha);
             if (doorTranslateLerpAlpha <= 1) return;
+            // we are done lerp-ing, start rotating
             doorRotatePoint.transform.Rotate(Vector3.up, -doorRotateSpeed, Space.Self);
             if (doorRotatePoint.transform.rotation.y >= 0.69f) return; // magic number, trust me bro!
+            // we have reached target rotation
+            // deactivate drillPrefab - we are done with it
             drillPrefab.gameObject.SetActive(false);
+            // enable hitBoxes for interaction with wires
             SetWireTargetsEnabled(true);
+            // make door fall to floor via rigidbody settings
             doorMeshRb.isKinematic = false;
             doorIsOpen = true;
             doorMeshRb.useGravity = true;
+            // disable doorAnimation
             animateDoor = false;
         }
 
@@ -174,12 +195,13 @@ namespace Interactables
             if (!doLerp) return;
             if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
                 PlayAudio(audioSourceSettings);
-            // lerp lerpCam to InteractCam
+            // lerp lerpCam's position to InteractCam's position
             lerpCam.transform.position = Vector3.Lerp(
                 fromCam.transform.position,
                 toCamObjectPosition,
                 lerpAlpha
             );
+            // lerp lerpCam's rotation to InteractCam's rotation
             lerpCam.transform.rotation = Quaternion.Lerp(
                 fromCam.transform.rotation,
                 toCamObjectRotation,
@@ -187,70 +209,68 @@ namespace Interactables
 
             if (!lerpCam.enabled)
             {
+                //toggle between lerpCam and toCam while we lerp
                 lerpCam.enabled = true;
                 fromCam.enabled = false;
             }
 
             if (lerpAlpha <= 1) return;
-            lerpCam.enabled = false;
+            // we are done lerp-ing
+            lerpCam.enabled = false; //toggle between lerpCam and toCam
             toCam.enabled = true;
-            lerpAlpha = 0;
-            doLerp = false;
-
-
+            lerpAlpha = 0; //reset lerpAlpha
+            doLerp = false; // disable lerp-ing
+            cameraHasControl = false; // added wait timer (FreezeCamForDuration) that
+            // turn off/on cameraControls
             if (InteractModeEnabled)
-            {
-                cameraHasControl = !InteractModeEnabled;
+                // if we have done lerp, interacted, and are about to lerp back
                 playerController.SetPlayerControl(true);
-            }
-            else
-            {
+            else // we are on out way to interact
                 StartCoroutine(FreezeCamForDuration(initialWaitForControl));
-            }
 
-            kitchenDoorRayCollider.enabled = !InteractModeEnabled;
-            boxCollider.enabled = false;
-            drillPrefab.SetActive(!InteractModeEnabled);
-            InteractModeEnabled = !InteractModeEnabled;
+            kitchenDoorRayCollider.enabled = !InteractModeEnabled; // toggle rayCollider
+            boxCollider.enabled = false; // disable collider for interacting with door
+            drillPrefab.SetActive(!InteractModeEnabled); // toggle drillPrefab
+            InteractModeEnabled = !InteractModeEnabled; // toggle InteractModeEnabled
         }
 
 
         private IEnumerator FreezeCamForDuration(float duration)
         {
-            cameraHasControl = false;
-            yield return new WaitForSeconds(duration);
-            cameraHasControl = true;
+            cameraHasControl = false; // disable cam
+            yield return new WaitForSeconds(duration); //wait
+            cameraHasControl = true; // enable cam
         }
 
         private void SetWireTargetsEnabled(bool enable)
         {
+            // loops over all wireTargetColliders and sets enabled state
             foreach (var wireTargetCollider in wireTargetColliders) wireTargetCollider.enabled = enable;
         }
 
-        #region DRILL
+        #region DRILL // all the drill animations
 
         private void RetractDrill()
         {
             if (!animateDrillRetract) return;
-
-
             if (drillLerpAlpha < 1) drillLerpAlpha += Time.deltaTime * drillLerpSpeed;
-            var drillEndPos = drillInHandPosition;
-
-            if (animateDoor) drillEndPos = drillOutOfCamPosition;
-
-
+            var drillEndPos = drillInHandPosition; // declare end position
+            if (animateDoor)
+                // if all screws are removed, set drill position to outside camframe
+                drillEndPos = drillOutOfCamPosition;
+            // do the lerping
             drillPrefab.transform.localPosition =
                 Vector3.Lerp(drillTargetPosition.localPosition, drillEndPos, drillLerpAlpha);
-            if (drillLerpAlpha >= 1)
-            {
-                drillLerpAlpha = 0;
-                animateDrillRetract = false;
-            }
+            if (drillLerpAlpha <= 1) return;
+            // we are done lerping
+            drillLerpAlpha = 0; // reset alpha
+            animateDrillRetract = false; // disable retractDrill
         }
 
         private void AnimateDrillIntro()
         {
+            // will only trigger if we have not gotten control yet (just done lerp-ing)
+            // and will only run once due to hasStartedDrill
             if (!cameraHasControl || hasStartedDrill) return;
             if (drillLerpAlpha < 1) drillLerpAlpha += Time.deltaTime * drillLerpSpeed;
             drillPrefab.transform.localPosition =
@@ -262,10 +282,10 @@ namespace Interactables
 
         private void AnimateDrill()
         {
+            // runs both logic for animating drill on start, during interact, and after
             AnimateDrillIntro();
             RetractDrill();
             if (!animateDrill) return;
-
             if (drillLerpAlpha < 1) drillLerpAlpha += Time.deltaTime * drillLerpSpeed;
 
             drillPrefab.transform.localPosition =

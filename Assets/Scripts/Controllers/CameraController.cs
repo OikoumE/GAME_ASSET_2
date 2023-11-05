@@ -73,7 +73,6 @@ namespace Controllers
 
         public void SetStartRot(Vector2 rot)
         {
-            Debug.Log(rot);
             xRot = rot.x;
             yRot = rot.y;
         }
