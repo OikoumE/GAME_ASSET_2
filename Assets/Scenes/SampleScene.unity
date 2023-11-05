@@ -3746,22 +3746,22 @@ PrefabInstance:
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9527783
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.30366707
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -3771,7 +3771,7 @@ PrefabInstance:
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -35.356
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -3792,6 +3792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: groundCheckDistance
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4992973264910324920, guid: 8ca62a8272933734bae7042ed98d62d0,
+        type: 3}
+      propertyPath: initialWaitBeforeControl
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4992973264910324920, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -6028,6 +6033,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: KITCHEN_CABINET_PUZZLE
+      objectReference: {fileID: 0}
+    - target: {fileID: 7005909822728610535, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: initialWaitForControl
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7921878223988940294, guid: 08362096452cdc746a711b68f40b69f3,
         type: 3}
