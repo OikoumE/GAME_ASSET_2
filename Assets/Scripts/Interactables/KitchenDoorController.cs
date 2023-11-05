@@ -47,6 +47,7 @@ namespace Interactables
         private CameraController cameraController;
         private bool cameraHasControl;
         private Rigidbody doorMeshRb;
+        private Vector3 doorRotateStartPos;
         private float doorTranslateLerpAlpha;
         private float drillLerpAlpha;
 
@@ -56,7 +57,6 @@ namespace Interactables
         private bool hasStartedDrill;
         [HideInInspector] public RaycastHit hit;
         private AudioSource onWireConnectAudioSource;
-        private Vector3 startPos;
 
 
         private void Start()
@@ -72,11 +72,10 @@ namespace Interactables
 
             if (wireTargetColliders.Count < 6) throw new Exception("Set wireTargetColliders");
 
-            startPos = doorRotatePoint.position;
+            doorRotateStartPos = doorRotatePoint.position;
             SetCamController();
             if (animateDoor) throw new Exception("Remember to disable animateDoor");
         }
-
 
         protected override void Update()
         {
@@ -140,7 +139,97 @@ namespace Interactables
             StartCoroutine(FreezeCamForRetractingDrill(drillAnimDuration));
         }
 
-        public void RetractDrill()
+        protected override IEnumerator ReturnToPlayer()
+        {
+            playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+            yield return new WaitForSeconds(waitAfterComplete); // cooldown before returning to playerCam.
+            Interact(playerController); // trigger lerp back to player
+        }
+
+        private void DoDoorAnimation()
+        {
+            if (!animateDoor) return;
+            if (doorTranslateLerpAlpha < 1)
+                doorTranslateLerpAlpha += Time.deltaTime * doorTranslateSpeed;
+            doorRotatePoint.transform.position =
+                Vector3.Lerp(doorRotateStartPos, endPos.position, doorTranslateLerpAlpha);
+            if (doorTranslateLerpAlpha <= 1) return;
+            doorRotatePoint.transform.Rotate(Vector3.up, -doorRotateSpeed, Space.Self);
+            if (doorRotatePoint.transform.rotation.y >= 0.69f) return; // magic number, trust me bro!
+            drillPrefab.gameObject.SetActive(false);
+            SetWireTargetsEnabled(true);
+            doorMeshRb.isKinematic = false;
+            doorIsOpen = true;
+            doorMeshRb.useGravity = true;
+            animateDoor = false;
+        }
+
+        public void PlayWireConnectedAudio()
+        {
+            onWireConnectAudioSource.Play();
+        }
+
+        protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
+        {
+            if (!doLerp) return;
+            if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
+                PlayAudio(audioSourceSettings);
+            // lerp lerpCam to InteractCam
+            lerpCam.transform.position = Vector3.Lerp(
+                fromCam.transform.position,
+                toCamObjectPosition,
+                lerpAlpha
+            );
+            lerpCam.transform.rotation = Quaternion.Lerp(
+                fromCam.transform.rotation,
+                toCamObjectRotation,
+                lerpAlpha);
+
+            if (!lerpCam.enabled)
+            {
+                lerpCam.enabled = true;
+                fromCam.enabled = false;
+            }
+
+            if (lerpAlpha <= 1) return;
+            lerpCam.enabled = false;
+            toCam.enabled = true;
+            lerpAlpha = 0;
+            doLerp = false;
+
+
+            if (InteractModeEnabled)
+            {
+                cameraHasControl = !InteractModeEnabled;
+                playerController.SetPlayerControl(true);
+            }
+            else
+            {
+                StartCoroutine(FreezeCamForDuration(initialWaitForControl));
+            }
+
+            kitchenDoorRayCollider.enabled = !InteractModeEnabled;
+            boxCollider.enabled = false;
+            drillPrefab.SetActive(!InteractModeEnabled);
+            InteractModeEnabled = !InteractModeEnabled;
+        }
+
+
+        private IEnumerator FreezeCamForDuration(float duration)
+        {
+            cameraHasControl = false;
+            yield return new WaitForSeconds(duration);
+            cameraHasControl = true;
+        }
+
+        private void SetWireTargetsEnabled(bool enable)
+        {
+            foreach (var wireTargetCollider in wireTargetColliders) wireTargetCollider.enabled = enable;
+        }
+
+        #region DRILL
+
+        private void RetractDrill()
         {
             if (!animateDrillRetract) return;
 
@@ -189,87 +278,6 @@ namespace Interactables
             }
         }
 
-        protected override IEnumerator ReturnToPlayer()
-        {
-            playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
-            yield return new WaitForSeconds(waitAfterComplete); // cooldown before returning to playerCam.
-            Interact(playerController); // trigger lerp back to player
-        }
-
-        private void DoDoorAnimation()
-        {
-            if (!animateDoor) return;
-            if (doorTranslateLerpAlpha < 1)
-                doorTranslateLerpAlpha += Time.deltaTime * doorTranslateSpeed;
-            doorRotatePoint.transform.position = Vector3.Lerp(startPos, endPos.position, doorTranslateLerpAlpha);
-            if (doorTranslateLerpAlpha <= 1) return;
-            doorRotatePoint.transform.Rotate(Vector3.up, -doorRotateSpeed, Space.Self);
-            if (doorRotatePoint.transform.rotation.y >= 0.69f) return; // magic number, trust me bro!
-            drillPrefab.gameObject.SetActive(false);
-            SetWireTargetsEnabled(true);
-            doorMeshRb.isKinematic = false;
-            doorIsOpen = true;
-            doorMeshRb.useGravity = true;
-            animateDoor = false;
-        }
-
-        public void PlayWireConnectedAudio()
-        {
-            onWireConnectAudioSource.Play();
-        }
-
-        protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
-        {
-            if (!doLerp) return;
-            if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
-                PlayAudio(audioSourceSettings);
-            // lerp lerpCam to InteractCam
-            lerpCam.transform.position = Vector3.Lerp(
-                fromCam.transform.position,
-                toCamObjectPosition,
-                lerpAlpha
-            );
-            lerpCam.transform.rotation = Quaternion.Lerp(
-                fromCam.transform.rotation,
-                toCamObjectRotation,
-                lerpAlpha);
-
-            if (!lerpCam.enabled)
-            {
-                lerpCam.enabled = true;
-                fromCam.enabled = false;
-            }
-
-            if (lerpAlpha <= 1) return;
-            lerpCam.enabled = false;
-            toCam.enabled = true;
-            lerpAlpha = 0;
-            doLerp = false;
-            if (InteractModeEnabled)
-            {
-                playerController.SetPlayerControl(true);
-            }
-
-            
-            kitchenDoorRayCollider.enabled = !InteractModeEnabled;
-            boxCollider.enabled = false;
-            cameraHasControl = !InteractModeEnabled;
-            StartCoroutine(FreezeCamForDuration(initialWaitForControl));
-            drillPrefab.SetActive(!InteractModeEnabled);
-            InteractModeEnabled = !InteractModeEnabled;
-        }
-
-
-        private IEnumerator FreezeCamForDuration(float duration)
-        {
-            cameraHasControl = false;
-            yield return new WaitForSeconds(duration);
-            cameraHasControl = true;
-        }
-
-        private void SetWireTargetsEnabled(bool enable)
-        {
-            foreach (var wireTargetCollider in wireTargetColliders) wireTargetCollider.enabled = enable;
-        }
+        #endregion
     }
 }

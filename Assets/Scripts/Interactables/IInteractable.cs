@@ -46,10 +46,7 @@ namespace Interactables
                 toCam = pC.PlayerCam;
                 toCamObject = pC.PlayerCam.gameObject;
             }
-            else
-            {
-                toCam.transform.parent.LookAt(playerController.Hit.point, toCam.transform.up);
-            }
+
 
             toCamObjectTransform = toCamObject.transform;
             toCamObjectPosition = toCamObjectTransform.position;

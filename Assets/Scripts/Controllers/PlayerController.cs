@@ -17,14 +17,16 @@ namespace Controllers
 
         public RaycastHit Hit => hit;
 
-        private void Start()
+        protected override void Start()
         {
+            base.Start();
             playerToControl = gameObject;
             if (cameraToControl == null)
                 cameraToControl = Camera.main;
             Cursor.lockState = CursorLockMode.Locked;
             mRigidbody = GetComponent<Rigidbody>();
         }
+
 
         private void Update()
         {
@@ -48,6 +50,9 @@ namespace Controllers
 
         private void OnDrawGizmos()
         {
+            if (hit.point != Vector3.zero)
+                Gizmos.DrawCube(hit.point, Vector3.one * 0.1f);
+
             var camTransform = cameraToControl.transform;
             Gizmos.DrawRay(camTransform.position, camTransform.forward * 10);
             Gizmos.color = Color.red;

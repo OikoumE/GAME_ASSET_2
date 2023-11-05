@@ -26,7 +26,7 @@ namespace Controllers
         public Color32 IsInteractableCrossHairColor => isInteractableCrossHairColor;
         public Color32 CanInteractCrossHairColor => canInteractCrossHairColor;
 
-        protected void Start()
+        protected virtual void Start()
         {
             var rot = transform.localRotation.eulerAngles;
             yRot = rot.y;
@@ -71,6 +71,17 @@ namespace Controllers
             cameraToControl.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
         }
 
+        public void SetStartRot(Vector2 rot)
+        {
+            Debug.Log(rot);
+            xRot = rot.x;
+            yRot = rot.y;
+        }
+
+        public void SetClampRotation(ClampRotation clampRot)
+        {
+            clampRotation = clampRot;
+        }
 
         [Serializable]
         public class ClampRotation
