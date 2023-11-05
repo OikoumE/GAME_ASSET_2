@@ -1151,6 +1151,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 143417826541780294}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ff4488b4198af94a86462cb6d77f5ab,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2445664533826270071}
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4488b4198af94a86462cb6d77f5ab, type: 3}
 --- !u!4 &343330764234601033 stripped
 Transform:
@@ -1179,11 +1183,13 @@ MonoBehaviour:
   lerpCam: {fileID: 0}
   fixedCam: {fileID: 0}
   lerpSpeed: 0.2
+  isInteractable: 1
   lerpAlpha: 0
   startPos: {x: 2.1301022, y: -5.277405, z: 3.807623}
   endPos: {x: 2.1209261, y: -5.277405, z: 3.7898521}
   unScrewRotateSpeed: 10
   impulseForce: 0
+  drillAnimDuration: 3
 --- !u!54 &5419905677443339486
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1307,6 +1313,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2445664533826270071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119163397877459187}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.001, y: 0.001, z: 0.0001}
+  m_Center: {x: -0.00000047565246, y: 0.0000001658409, z: 0.00015}
 --- !u!1001 &3094363017980997102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1407,6 +1434,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5925141564661443275}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ff4488b4198af94a86462cb6d77f5ab,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5031760331674834072}
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4488b4198af94a86462cb6d77f5ab, type: 3}
 --- !u!1 &2751711556219818175 stripped
 GameObject:
@@ -1429,11 +1460,13 @@ MonoBehaviour:
   lerpCam: {fileID: 0}
   fixedCam: {fileID: 0}
   lerpSpeed: 0.2
+  isInteractable: 1
   lerpAlpha: 0
   startPos: {x: 1.3892808, y: -5.2777, z: 4.1347857}
   endPos: {x: 1.3837132, y: -5.2777, z: 4.1155763}
   unScrewRotateSpeed: 10
   impulseForce: 0
+  drillAnimDuration: 3
 --- !u!54 &7672087084342172649
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1557,6 +1590,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &5031760331674834072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2751711556219818175}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.001, y: 0.001, z: 0.0001}
+  m_Center: {x: -0.00000047565246, y: 0.0000001658409, z: 0.00015}
 --- !u!4 &3277454738544757253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3ff4488b4198af94a86462cb6d77f5ab,
@@ -1658,6 +1712,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8837741853747368711}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ff4488b4198af94a86462cb6d77f5ab,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2615648874943271796}
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4488b4198af94a86462cb6d77f5ab, type: 3}
 --- !u!4 &4638080076803221462 stripped
 Transform:
@@ -1686,11 +1744,13 @@ MonoBehaviour:
   lerpCam: {fileID: 0}
   fixedCam: {fileID: 0}
   lerpSpeed: 0.2
+  isInteractable: 1
   lerpAlpha: 0
   startPos: {x: 1.3892808, y: -4.305646, z: 4.1347857}
   endPos: {x: 1.3837134, y: -4.305646, z: 4.1155763}
   unScrewRotateSpeed: 10
   impulseForce: 0
+  drillAnimDuration: 3
 --- !u!54 &842123122756514257
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1814,6 +1874,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2615648874943271796
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5410536110035860844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.001, y: 0.001, z: 0.0001}
+  m_Center: {x: -0.00000047565246, y: 0.0000001658409, z: 0.00015}
 --- !u!1001 &8982763092234539332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1909,6 +1990,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 9171636035503897988}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ff4488b4198af94a86462cb6d77f5ab,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2342521013957254897}
   m_SourcePrefab: {fileID: 100100000, guid: 3ff4488b4198af94a86462cb6d77f5ab, type: 3}
 --- !u!1 &8099801588910795797 stripped
 GameObject:
@@ -1931,11 +2016,13 @@ MonoBehaviour:
   lerpCam: {fileID: 0}
   fixedCam: {fileID: 0}
   lerpSpeed: 0.2
+  isInteractable: 1
   lerpAlpha: 0
   startPos: {x: 2.1301022, y: -4.305351, z: 3.807623}
   endPos: {x: 2.1209261, y: -4.305351, z: 3.7898521}
   unScrewRotateSpeed: 10
   impulseForce: 0
+  drillAnimDuration: 3
 --- !u!54 &2532592239452084263
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2059,6 +2146,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2342521013957254897
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8099801588910795797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.001, y: 0.001, z: 0.0001}
+  m_Center: {x: -0.00000047565246, y: 0.0000001658409, z: 0.00015}
 --- !u!4 &8873100677465536175 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3ff4488b4198af94a86462cb6d77f5ab,

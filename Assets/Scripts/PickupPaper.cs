@@ -1,21 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using Controllers;
 using UnityEngine;
 
 public class PickupPaper : MonoBehaviour
 {
-
-    void Interact(PlayerController pC)
+    private void Start()
     {
     }
-  
-    void Start()
+
+    private void Update()
     {
-        
     }
 
-    void Update()
+    private void Interact(PlayerController pC)
     {
-        
     }
 }

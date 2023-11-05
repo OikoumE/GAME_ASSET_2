@@ -1,62 +1,82 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+namespace Controllers
 {
-    public GameObject playerToControl;
-    public Camera cameraToControl;
-    [DoNotSerialize] public bool playerHasControl = true, freeLookCamEnabled;
-    [SerializeField] private float sensX = 100f, sensY = 100f;
-    public LayerMask interactableLayerMask;
-
-    [HideInInspector] public Vector2 xRotClamp, yRotClamp;
-
-    [SerializeField] public ClampRotation clampRotation;
-
-    private readonly float mouseSensMultiplier = 0.01f;
-
-    private float xRot, yRot, mouseX, mouseY;
-
-
-    public Camera PlayerCam => cameraToControl;
-
-    private void OnDrawGizmos()
+    public class CameraController : MonoBehaviour
     {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawRay(transform.position, transform.forward * 10);
-    }
+        public GameObject playerToControl;
+        public Camera cameraToControl;
+        public bool playerHasControl = true;
+        [SerializeField] private float interactDistanceThreshold = 1f;
+        [SerializeField] private float sensX = 100f, sensY = 100f;
+        public LayerMask interactableLayerMask;
+        [SerializeField] protected Color32 canInteractCrossHairColor = new(0, 255, 0, 255);
+        [SerializeField] protected Color32 isInteractableCrossHairColor = new(255, 255, 255, 255);
 
-    public void RunInputHandler()
-    {
-        InputHandler();
-    }
+        [SerializeField] public ClampRotation clampRotation;
+        [SerializeField] private float initialWaitBeforeControl;
 
-    protected void InputHandler()
-    {
-        if (!playerHasControl) return;
-        mouseX = Input.GetAxisRaw("Mouse X");
-        mouseY = Input.GetAxisRaw("Mouse Y");
-        yRot += mouseX * sensX * mouseSensMultiplier;
-        xRot -= mouseY * sensY * mouseSensMultiplier;
+        private readonly float mouseSensMultiplier = 0.01f;
+        private bool hasWaitedForControl;
+        private float xRot, yRot, mouseX, mouseY;
 
-        xRot = Mathf.Clamp(xRot, clampRotation.xMin, clampRotation.xMax);
 
-        if (playerToControl)
+        public Camera PlayerCam => cameraToControl;
+        public Color32 IsInteractableCrossHairColor => isInteractableCrossHairColor;
+        public Color32 CanInteractCrossHairColor => canInteractCrossHairColor;
+
+        protected void Start()
         {
-            cameraToControl.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
-            playerToControl.transform.rotation = Quaternion.Euler(0, yRot, 0);
-            return;
+            var rot = transform.localRotation.eulerAngles;
+            yRot = rot.y;
         }
 
-        yRot = Mathf.Clamp(yRot, clampRotation.yMin, clampRotation.yMax);
-        cameraToControl.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
-    }
 
-    [Serializable]
-    public class ClampRotation
-    {
-        public float xMax = 90f, xMin = -90f;
-        public float yMax, yMin;
+        private void OnDrawGizmos()
+        {
+            var tr = transform;
+            Gizmos.color = Color.blue;
+            Gizmos.DrawRay(tr.position, tr.forward * 10);
+        }
+
+
+        public void RunInputHandler()
+        {
+            InputHandler();
+        }
+
+        protected bool IsInteractOutOfRange(Vector3 pointA, Vector3 pointB)
+        {
+            return Vector3.Distance(pointA, pointB) > interactDistanceThreshold;
+        }
+
+        protected void InputHandler()
+        {
+            if (!playerHasControl) return;
+            mouseX = Input.GetAxisRaw("Mouse X");
+            mouseY = Input.GetAxisRaw("Mouse Y");
+            yRot += mouseX * sensX * mouseSensMultiplier;
+            xRot -= mouseY * sensY * mouseSensMultiplier;
+            xRot = Mathf.Clamp(xRot, clampRotation.xMin, clampRotation.xMax);
+
+            if (playerToControl)
+            {
+                cameraToControl.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
+                playerToControl.transform.rotation = Quaternion.Euler(0, yRot, 0);
+                return;
+            }
+
+            yRot = Mathf.Clamp(yRot, clampRotation.yMin, clampRotation.yMax);
+            cameraToControl.transform.localRotation = Quaternion.Euler(xRot, yRot, 0);
+        }
+
+
+        [Serializable]
+        public class ClampRotation
+        {
+            public float xMax = 90f, xMin = -90f;
+            public float yMax, yMin;
+        }
     }
 }

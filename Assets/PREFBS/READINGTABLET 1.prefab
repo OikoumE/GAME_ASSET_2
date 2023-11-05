@@ -53,14 +53,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lerpCam: {fileID: 5507959044136530950}
   fixedCam: {fileID: 7937215886549618315}
-  toCam: {fileID: 0}
-  fromCam: {fileID: 0}
-  playerController: {fileID: 0}
-  doLerp: 0
-  toCamObject: {fileID: 0}
-  toCamObjectPosition: {x: 0, y: 0, z: 0}
-  toCamObjectRotation: {x: 0, y: 0, z: 0, w: 0}
-  toCamObjectTransform: {fileID: 0}
   lerpSpeed: 1
   lerpAlpha: 0
   audioSettings:
@@ -288,7 +280,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.95
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

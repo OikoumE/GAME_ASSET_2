@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548084948544128689}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.253, y: 1.494, z: 0.435}
-  m_LocalScale: {x: 0.1, y: 0.5, z: 0.1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.25299883, y: -0.37100005, z: 0.43500015}
+  m_LocalScale: {x: 0.1, y: 0.5, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1528970828462211858}
+  m_Father: {fileID: 5945657317900708928}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &4428604700594157075
 MeshFilter:
@@ -183,8 +183,6 @@ Transform:
   m_Children:
   - {fileID: 3404887192302619238}
   - {fileID: 5313481298827758885}
-  - {fileID: 7899291050653130476}
-  - {fileID: 7864317822308729597}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4992973264910324920
@@ -202,12 +200,18 @@ MonoBehaviour:
   playerToControl: {fileID: 7193295067102001727}
   cameraToControl: {fileID: 3674900935272719400}
   playerHasControl: 1
-  freeLookCamEnabled: 0
+  interactDistanceThreshold: 1
   sensX: 100
   sensY: 100
   interactableLayerMask:
     serializedVersion: 2
     m_Bits: 55
+  canInteractCrossHairColor:
+    serializedVersion: 2
+    rgba: 4278255360
+  isInteractableCrossHairColor:
+    serializedVersion: 2
+    rgba: 4294967295
   xRotClamp: {x: 0, y: 0}
   yRotClamp: {x: 0, y: 0}
   clampRotation:
@@ -220,6 +224,7 @@ MonoBehaviour:
   useGroundChecker: 0
   groundCheckDistance: 0.5
   maxGroundDistance: 0.11
+  crossHair: {fileID: 0}
 --- !u!136 &8671748410094523187
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -393,12 +398,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8542735325377821104}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.238, y: 1.494, z: 0.435}
-  m_LocalScale: {x: 0.1, y: 0.5, z: 0.1}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.23799849, y: -0.37100005, z: 0.4349997}
+  m_LocalScale: {x: 0.1, y: 0.5, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1528970828462211858}
+  m_Father: {fileID: 5945657317900708928}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &2461891056970504147
 MeshFilter:
@@ -538,7 +543,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5133373502221542834, guid: 19b73f0b497879e44b36f424e23bfcbc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7899291050653130476}
+    - targetCorrespondingSourceObject: {fileID: 5133373502221542834, guid: 19b73f0b497879e44b36f424e23bfcbc,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7864317822308729597}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4875825895564579131, guid: 19b73f0b497879e44b36f424e23bfcbc,
         type: 3}

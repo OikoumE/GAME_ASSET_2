@@ -248,6 +248,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 2374838613183361342, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Radius
+      value: 1.6
+      objectReference: {fileID: 0}
     - target: {fileID: 2822511074155260342, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -478,18 +483,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  doLerp: 0
   lerpCam: {fileID: 3407126298821795677}
   fixedCam: {fileID: 2604807017768322500}
-  fromCam: {fileID: 0}
-  fixedCamObject: {fileID: 0}
-  fixedCamObjectPosition: {x: 0, y: 0, z: 0}
-  fixedCamObjectRotation: {x: 0, y: 0, z: 0, w: 0}
-  fixedCamObjectTransform: {fileID: 0}
+  lerpSpeed: 1
+  lerpAlpha: 0
+  isInteractable: 1
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
-  lerpSpeed: 1
   audioSettings:
     errorSettings:
       Source: {fileID: 8424412168210547526}
@@ -538,18 +538,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
-  doLerp: 0
   lerpCam: {fileID: 3407126298821795677}
   fixedCam: {fileID: 1828606076921597184}
-  fromCam: {fileID: 0}
-  fixedCamObject: {fileID: 0}
-  fixedCamObjectPosition: {x: 0, y: 0, z: 0}
-  fixedCamObjectRotation: {x: 0, y: 0, z: 0, w: 0}
-  fixedCamObjectTransform: {fileID: 0}
+  lerpSpeed: 1
+  lerpAlpha: 0
+  isInteractable: 1
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
-  lerpSpeed: 1
   audioSettings:
     errorSettings:
       Source: {fileID: 8424412168210547526}

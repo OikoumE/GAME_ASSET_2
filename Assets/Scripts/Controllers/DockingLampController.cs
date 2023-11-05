@@ -46,8 +46,8 @@ public class DockingLampController : MonoBehaviour
             case DockingSide.Right:
                 leftColor = Color.red;
                 rightColor = Color.green;
-                leftMaterial = greenLED;
-                rightMaterial = redLED;
+                leftMaterial = redLED;
+                rightMaterial = greenLED;
                 leftCanOpen = false;
                 rightCanOpen = true;
                 break;

@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Controllers;
+using Elevator;
 using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
@@ -85,14 +87,6 @@ public class ElevatorController : MonoBehaviour
         }
     }
 
-    // private void PlayAudio(AudioClip clip, bool interrupt = true, float volume = 1, float pitch = 1)
-    // {
-    //     if (interrupt) audioSource.Stop();
-    //     audioSource.pitch = pitch;
-    //     audioSource.volume = volume;
-    //     audioSource.clip = clip;
-    //     audioSource.Play();
-    // }
 
     private void PlayElevatorMoveAudio()
     {
