@@ -600,14 +600,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47055900}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.306715, y: 20.221415, z: 35.121475}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.15299988, y: -1.0009995, z: 6.316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 700709455}
   - {fileID: 6047819184484541094}
-  m_Father: {fileID: 0}
+  - {fileID: 700709455}
+  m_Father: {fileID: 598701140}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &61944575
 PrefabInstance:
@@ -1602,6 +1602,43 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &433693422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 433693423}
+  m_Layer: 0
+  m_Name: TABLETS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &433693423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433693422}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5229593268308592547}
+  - {fileID: 1506880623}
+  - {fileID: 1822120221}
+  - {fileID: 452901063}
+  - {fileID: 1305589952}
+  - {fileID: 948301372}
+  m_Father: {fileID: 598701140}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &433803372
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,7 +1820,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 598701140}
+    m_TransformParent: {fileID: 433693423}
     m_Modifications:
     - target: {fileID: 193932509178476009, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -1799,17 +1836,17 @@ PrefabInstance:
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.253
+      value: -0.25299835
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.6186533
+      value: -4.6186523
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.263
+      value: 4.2630005
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -1859,8 +1896,7 @@ PrefabInstance:
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: dialogueText
-      value: whelp... we had to escape... it started leaking electricity all over....
-        please hepl me Stian!
+      value: secret :D <Placeholder>
       objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -2062,12 +2098,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5229593268308592547}
-  - {fileID: 1506880623}
-  - {fileID: 1822120221}
-  - {fileID: 452901063}
-  - {fileID: 1305589952}
-  - {fileID: 948301372}
+  - {fileID: 433693423}
+  - {fileID: 47055901}
   m_Father: {fileID: 22392183}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &667392693
@@ -4639,22 +4671,22 @@ PrefabInstance:
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.989
+      value: -9.106
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.266
+      value: 0.08287966
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9
+      value: 73.982
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.068302825
+      value: 0.7071072
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -4664,7 +4696,7 @@ PrefabInstance:
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.9976647
+      value: -0.7071064
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -4679,7 +4711,7 @@ PrefabInstance:
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -172.167
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1528970828462211858, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -4777,7 +4809,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 598701140}
+    m_TransformParent: {fileID: 433693423}
     m_Modifications:
     - target: {fileID: 2561495929457500678, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -4792,12 +4824,12 @@ PrefabInstance:
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.05
+      value: -0.049999237
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.978
+      value: -0.97800064
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -4849,6 +4881,11 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: dialogueText
+      value: <Placeholder>
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: readingTabledEmit
@@ -5328,7 +5365,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 598701140}
+    m_TransformParent: {fileID: 433693423}
     m_Modifications:
     - target: {fileID: 2561495929457500678, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -5338,17 +5375,17 @@ PrefabInstance:
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.959
+      value: -1.9589996
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.91372633
+      value: -0.9137268
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.145
+      value: 53.144997
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -6063,7 +6100,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 598701140}
+    m_TransformParent: {fileID: 433693423}
     m_Modifications:
     - target: {fileID: 193932509178476009, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -6079,12 +6116,12 @@ PrefabInstance:
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.92
+      value: 0.91999817
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.102
+      value: -5.102001
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -6140,7 +6177,7 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogueText
       value: whelp... we had to escape... it started leaking electricity all over....
-        please hepl me Stian!
+        please hepl me Stian!<Placeholder>
       objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -7896,22 +7933,22 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 598701140}
+    m_TransformParent: {fileID: 433693423}
     m_Modifications:
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.193
+      value: 5.193001
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0034285635
+      value: -0.0034294128
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.196
+      value: 3.196001
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -7960,6 +7997,11 @@ PrefabInstance:
       objectReference: {fileID: 1065970432}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
+      propertyPath: dialogueText
+      value: Hello World <Placeholder>
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
       propertyPath: readingTabledEmit
       value: 
       objectReference: {fileID: 2100000, guid: 8869dfa318cea8943bb00f42652f57bc, type: 2}
@@ -7989,9 +8031,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
         type: 3}
+      propertyPath: dialogueText.title
+      value: <Placeholder>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
       propertyPath: uiElements.titleTmp
       value: 
       objectReference: {fileID: 1346097314}
+    - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: dialogueText.dialogue
+      value: You need to check your tasks before you can leave!
+      objectReference: {fileID: 0}
     - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
         type: 3}
       propertyPath: uiElements.dialogueTmp
@@ -8005,17 +8057,17 @@ PrefabInstance:
     - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.147715
+      value: -3.1590004
       objectReference: {fileID: 0}
     - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.021414
+      value: 1.2000008
       objectReference: {fileID: 0}
     - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.59252
+      value: 74.714
       objectReference: {fileID: 0}
     - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
         type: 3}
@@ -8073,7 +8125,7 @@ PrefabInstance:
     - target: {fileID: 3224801509655863122, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: dialogueText.title
-      value: Thou has nicht drillz!
+      value: Thou has nicht drillz!<Placeholder>
       objectReference: {fileID: 0}
     - target: {fileID: 3224801509655863122, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
@@ -8090,6 +8142,11 @@ PrefabInstance:
       propertyPath: uiElements.dialogueTmp
       value: 
       objectReference: {fileID: 1365541097}
+    - target: {fileID: 3224801509655863122, guid: c980cf6453d378346a47f8617ea09e57,
+        type: 3}
+      propertyPath: uiElements.dialogueCanvas
+      value: 
+      objectReference: {fileID: 1242529723}
     - target: {fileID: 6233416880058703805, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: uiElements.titleTmp
@@ -8108,22 +8165,22 @@ PrefabInstance:
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.147715
+      value: 3.137
       objectReference: {fileID: 0}
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -19.021414
+      value: -4.56
       objectReference: {fileID: 0}
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 39.59252
+      value: -1.525
       objectReference: {fileID: 0}
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9846214
       objectReference: {fileID: 0}
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
@@ -8133,7 +8190,7 @@ PrefabInstance:
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.17470172
       objectReference: {fileID: 0}
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
@@ -8148,7 +8205,7 @@ PrefabInstance:
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 20.123
       objectReference: {fileID: 0}
     - target: {fileID: 7600959998880233152, guid: c980cf6453d378346a47f8617ea09e57,
         type: 3}
@@ -8172,22 +8229,39 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 598701140}
+    m_TransformParent: {fileID: 433693423}
     m_Modifications:
+    - target: {fileID: 1792804531780444149, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1792804531780444149, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: dialogueText
+      value: 'You are tasked with replacing the fuse and getting Scepa station back
+        to full capacity! Dont forget to bring a fuse! <Placeholder>  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7094013475750746758, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_text
+      value: You are tasked with replacing the fuse and getting Scepa station back
+        to full capacity! Dont forget to bring a fuse! <Placeholder> !
+      objectReference: {fileID: 0}
     - target: {fileID: 7258109298090388810, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.158
+      value: -5.158001
       objectReference: {fileID: 0}
     - target: {fileID: 7258109298090388810, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.21377659
+      value: -0.21377563
       objectReference: {fileID: 0}
     - target: {fileID: 7258109298090388810, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 79.656
+      value: 79.65599
       objectReference: {fileID: 0}
     - target: {fileID: 7258109298090388810, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
@@ -8741,4 +8815,3 @@ SceneRoots:
   - {fileID: 841458234}
   - {fileID: 22392183}
   - {fileID: 720313240}
-  - {fileID: 47055901}

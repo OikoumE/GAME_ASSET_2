@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2420357839251689316}
   - component: {fileID: 1121483659778748425}
   - component: {fileID: 5598121837656405531}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DialogueTriggerShuttle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

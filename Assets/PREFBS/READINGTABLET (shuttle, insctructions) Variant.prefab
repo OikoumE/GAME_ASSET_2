@@ -11,7 +11,8 @@ PrefabInstance:
     - target: {fileID: 2561495929457500678, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_text
-      value: You must replace fuse
+      value: You are tasked with replacing the fuse and getting Scepa station back
+        to full capacity! Dont forget to bring a fuse! <Placeholder> !
       objectReference: {fileID: 0}
     - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
@@ -87,10 +88,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7651444496126709282}
-    - targetCorrespondingSourceObject: {fileID: 2743642683471904354, guid: bed44d22f51e73643b98c8d68b99c26c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1792804531780444149}
   m_SourcePrefab: {fileID: 100100000, guid: bed44d22f51e73643b98c8d68b99c26c, type: 3}
 --- !u!82 &40241044935714254 stripped
 AudioSource:
@@ -148,37 +145,5 @@ MonoBehaviour:
     buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
       type: 3}
   textColor: {r: 1, g: 0, b: 0, a: 1}
-  dialogueText: 
---- !u!114 &1792804531780444149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7488884926501635810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ca09df188d34347b7d1f1186eb5962, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lerpCam: {fileID: 976875138063600774}
-  fixedCam: {fileID: 3447534763252512267}
-  lerpSpeed: 1
-  isInteractable: 1
-  lerpAlpha: 0
-  audioSettings:
-    clickSettings:
-      Source: {fileID: 40241044935714254}
-      audioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55, type: 3}
-      volume: 1
-      pitch: 1
-    lerpSettings:
-      Source: {fileID: 40241044935714254}
-      audioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
-      volume: 1
-      pitch: 1
-    lerpCamAudioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
-    buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
-      type: 3}
-  textColor: {r: 1, g: 0, b: 0, a: 1}
-  dialogueText: You must replace fuse
+  dialogueText: You are tasked with replacing the fuse and getting Scepa station
+    back to full capacity! Dont forget to bring a fuse! <Placeholder> !
