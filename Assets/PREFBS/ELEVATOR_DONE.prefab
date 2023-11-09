@@ -188,6 +188,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 698106073342170791, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
+      objectReference: {fileID: 0}
+    - target: {fileID: 1069495752165984056, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 1486889414423033381, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -250,8 +260,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2374838613183361342, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
+      propertyPath: m_Height
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374838613183361342, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
       propertyPath: m_Radius
-      value: 1.6
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374838613183361342, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2822511074155260342, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
@@ -278,16 +298,36 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2970945920912876112, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 4014446954105162935, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       propertyPath: m_Layer
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778264541763700682, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 5089116019159923945, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d7897fb9cb747d44ba025ac4d7632c93, type: 2}
+    - target: {fileID: 5557704085593670738, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5557704085593670738, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5875335986159110292, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       propertyPath: m_Layer
@@ -323,10 +363,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 22
       objectReference: {fileID: 0}
+    - target: {fileID: 6948307660955839595, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
+      objectReference: {fileID: 0}
     - target: {fileID: 7075711030406922208, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       propertyPath: playerCam
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608379899136098683, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.015
       objectReference: {fileID: 0}
     - target: {fileID: 7656733971804849062, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
@@ -337,6 +387,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287953110807742626, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8287953110807742626, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724269358437702881, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.02e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724269358437702881, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.1e-44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8724269358437702881, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 2.1186e-41
       objectReference: {fileID: 0}
     - target: {fileID: 8727473337462716455, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
@@ -368,6 +443,10 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2010468089651228412, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+        type: 3}
+      insertIndex: 4
+      addedObject: {fileID: 4924683178698686125}
     - targetCorrespondingSourceObject: {fileID: 7160077145806761886, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
         type: 3}
       insertIndex: -1
@@ -486,8 +565,8 @@ MonoBehaviour:
   lerpCam: {fileID: 3407126298821795677}
   fixedCam: {fileID: 2604807017768322500}
   lerpSpeed: 1
-  lerpAlpha: 0
   isInteractable: 1
+  lerpAlpha: 0
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
   audioSettings:
@@ -514,6 +593,33 @@ MonoBehaviour:
   boxColliders:
   - {fileID: 5047392933931364962}
   - {fileID: 8660323383819239058}
+--- !u!1 &3380468581051061308 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2010468089651228412, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  m_PrefabInstance: {fileID: 3823354120450980544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &4924683178698686125
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3380468581051061308}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 2.5, z: 5}
+  m_Center: {x: 0, y: 1.25, z: 0}
 --- !u!20 &3407126298821795677 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 1893696581189477789, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
@@ -541,8 +647,8 @@ MonoBehaviour:
   lerpCam: {fileID: 3407126298821795677}
   fixedCam: {fileID: 1828606076921597184}
   lerpSpeed: 1
-  lerpAlpha: 0
   isInteractable: 1
+  lerpAlpha: 0
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
   audioSettings:

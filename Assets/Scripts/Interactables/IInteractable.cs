@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Controllers;
+using Elevator;
 using UnityEngine;
 
 namespace Interactables

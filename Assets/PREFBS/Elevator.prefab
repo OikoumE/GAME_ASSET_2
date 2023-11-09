@@ -90,7 +90,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.6, z: 0.5}
+  m_Size: {x: 0.05, y: 0.6, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2319348854449023250
 MonoBehaviour:
@@ -104,13 +104,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 0}
   lerpCam: {fileID: 0}
-  buttonCam1: {fileID: 0}
-  buttonCam2: {fileID: 0}
+  fixedCam: {fileID: 0}
+  lerpSpeed: 1
+  isInteractable: 1
+  lerpAlpha: 0
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
-  lerpSpeed: 1
   audioSettings:
     errorSettings:
       Source: {fileID: 0}
@@ -197,8 +197,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.045, z: 0.3}
-  m_Center: {x: 1.62, y: 1.165, z: 0}
+  m_Size: {x: 0.05, y: 0.045, z: 0.3}
+  m_Center: {x: 1.57, y: 1.165, z: 0}
 --- !u!114 &6012524943752319866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,7 +222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1486889414423033381}
   - component: {fileID: 6803841016432991109}
-  - component: {fileID: 2374838613183361342}
   - component: {fileID: 1546653997489588555}
   - component: {fileID: 8950598914954714035}
   m_Layer: 0
@@ -266,6 +265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01c18b09b0731f1499e9c832f5b3417a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kitchenLightsGo: {fileID: 0}
+  restaurantLightsGo: {fileID: 0}
+  engineLightsGo: {fileID: 0}
   objectData:
     kitchenButton: {fileID: 8628973510322108381}
     restaurantButton: {fileID: 1634857166864448239}
@@ -300,29 +302,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
---- !u!136 &2374838613183361342
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010468089651228412}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3
-  m_Height: 7.14
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.5, z: 0}
+  fadeAudioSpeed: 0
 --- !u!82 &1546653997489588555
 AudioSource:
   m_ObjectHideFlags: 0
@@ -568,7 +548,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.6, z: 0.5}
+  m_Size: {x: 0.05, y: 0.6, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3672437186200707225
 MonoBehaviour:
@@ -582,13 +562,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 0}
   lerpCam: {fileID: 0}
-  buttonCam1: {fileID: 0}
-  buttonCam2: {fileID: 0}
+  fixedCam: {fileID: 0}
+  lerpSpeed: 1
+  isInteractable: 1
+  lerpAlpha: 0
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
-  lerpSpeed: 1
   audioSettings:
     errorSettings:
       Source: {fileID: 0}
@@ -816,8 +796,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.045, z: 0.3}
-  m_Center: {x: 1.62, y: 1.12, z: 0}
+  m_Size: {x: 0.05, y: 0.045, z: 0.3}
+  m_Center: {x: 1.57, y: 1.12, z: 0}
 --- !u!114 &6628746727308189094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1024,7 +1004,7 @@ Transform:
   m_GameObject: {fileID: 5177924043690396636}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 2.262, z: 0}
+  m_LocalPosition: {x: 0, y: 2.538, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1039,13 +1019,13 @@ Light:
   m_GameObject: {fileID: 5177924043690396636}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 2
+  m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 2
-  m_Range: 2
-  m_SpotAngle: 52
-  m_InnerSpotAngle: 21.80208
+  m_Range: 3
+  m_SpotAngle: 167.09073
+  m_InnerSpotAngle: 69.290306
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -1087,7 +1067,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 4.8e-44, z: 7.201e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -1167,8 +1147,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.045, z: 0.3}
-  m_Center: {x: 1.62, y: 1.21, z: 0}
+  m_Size: {x: 0.05, y: 0.045, z: 0.3}
+  m_Center: {x: 1.57, y: 1.21, z: 0}
 --- !u!114 &932133484606531094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1317,8 +1297,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.045, z: 0.3}
-  m_Center: {x: 1.62, y: 1.21, z: 0}
+  m_Size: {x: 0.05, y: 0.045, z: 0.3}
+  m_Center: {x: 1.57, y: 1.21, z: 0}
 --- !u!114 &616389786803496548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1359,7 +1339,7 @@ Transform:
   m_GameObject: {fileID: 7160077145806761886}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.891, z: 0}
+  m_LocalPosition: {x: 0, y: 2.422, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1593,13 +1573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d215c75c824494aa4efa8c144fea44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCam: {fileID: 0}
   lerpCam: {fileID: 1893696581189477789}
-  buttonCam1: {fileID: 1236636663204495108}
-  buttonCam2: {fileID: 3202001993640572864}
+  fixedCam: {fileID: 0}
+  lerpSpeed: 1
+  isInteractable: 1
+  lerpAlpha: 0
   greenHand: {fileID: 2800000, guid: d6794c9423a8cdc4ca3742c4d10b21b1, type: 3}
   redHand: {fileID: 2800000, guid: bb1d50ff2bcc371469d948f999a326de, type: 3}
-  lerpSpeed: 1
   audioSettings:
     errorSettings:
       Source: {fileID: 4748709817402177926}
@@ -1676,8 +1656,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.045, z: 0.3}
-  m_Center: {x: 1.62, y: 1.12, z: 0}
+  m_Size: {x: 0.05, y: 0.045, z: 0.3}
+  m_Center: {x: 1.57, y: 1.12, z: 0}
 --- !u!114 &648532826917375915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,8 +1723,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.045, z: 0.3}
-  m_Center: {x: 1.62, y: 1.165, z: 0}
+  m_Size: {x: 0.05, y: 0.045, z: 0.3}
+  m_Center: {x: 1.57, y: 1.165, z: 0}
 --- !u!114 &2493031221803591352
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ namespace Controllers
         public LayerMask interactableLayerMask;
         [SerializeField] protected Color32 canInteractCrossHairColor = new(0, 255, 0, 255);
         [SerializeField] protected Color32 isInteractableCrossHairColor = new(255, 255, 255, 255);
+        [SerializeField] protected Color32 isNotInteractableCrossHairColor = new(255, 0, 0, 255);
 
         [SerializeField] public ClampRotation clampRotation;
         [SerializeField] private float initialWaitBeforeControl;

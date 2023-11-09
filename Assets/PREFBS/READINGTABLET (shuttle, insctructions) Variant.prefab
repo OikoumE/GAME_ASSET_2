@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4755446417996740736
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2561495929457500678, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_text
+      value: You must replace fuse
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.158
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.21377659
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 79.656
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5076861
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.86154217
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -118.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 2686193363421124042, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2743642683471904354, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Name
+      value: READINGTABLET (shuttle, insctructions) Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: dialogueText
+      value: You must replace fuse
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2743642683471904354, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7651444496126709282}
+    - targetCorrespondingSourceObject: {fileID: 2743642683471904354, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1792804531780444149}
+  m_SourcePrefab: {fileID: 100100000, guid: bed44d22f51e73643b98c8d68b99c26c, type: 3}
+--- !u!82 &40241044935714254 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4715350544054607182, guid: bed44d22f51e73643b98c8d68b99c26c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4755446417996740736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &976875138063600774 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4755446417996740736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &3447534763252512267 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4755446417996740736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7488884926501635810 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2743642683471904354, guid: bed44d22f51e73643b98c8d68b99c26c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4755446417996740736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7651444496126709282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488884926501635810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e96cc218c8987f4598f56c1614b5270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpCam: {fileID: 976875138063600774}
+  fixedCam: {fileID: 3447534763252512267}
+  lerpSpeed: 1
+  isInteractable: 1
+  lerpAlpha: 0
+  audioSettings:
+    clickSettings:
+      Source: {fileID: 40241044935714254}
+      audioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55, type: 3}
+      volume: 1
+      pitch: 1
+    lerpSettings:
+      Source: {fileID: 40241044935714254}
+      audioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
+      volume: 1
+      pitch: 1
+    lerpCamAudioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
+    buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
+      type: 3}
+  textColor: {r: 1, g: 0, b: 0, a: 1}
+  dialogueText: 
+--- !u!114 &1792804531780444149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7488884926501635810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ca09df188d34347b7d1f1186eb5962, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpCam: {fileID: 976875138063600774}
+  fixedCam: {fileID: 3447534763252512267}
+  lerpSpeed: 1
+  isInteractable: 1
+  lerpAlpha: 0
+  audioSettings:
+    clickSettings:
+      Source: {fileID: 40241044935714254}
+      audioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55, type: 3}
+      volume: 1
+      pitch: 1
+    lerpSettings:
+      Source: {fileID: 40241044935714254}
+      audioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
+      volume: 1
+      pitch: 1
+    lerpCamAudioClip: {fileID: 8300000, guid: 77307bd20f82c9448b5e6ba134153b76, type: 3}
+    buttonClickAudioClip: {fileID: 8300000, guid: fe1128aecda398548b23e65cfb5e4a55,
+      type: 3}
+  textColor: {r: 1, g: 0, b: 0, a: 1}
+  dialogueText: You must replace fuse

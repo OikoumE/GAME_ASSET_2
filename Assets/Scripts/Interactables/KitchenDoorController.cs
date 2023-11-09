@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
+using Elevator;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -149,6 +150,13 @@ namespace Interactables
             drillTargetPosition.position = hit.transform.position;
             animateDrill = true;
             StartCoroutine(FreezeCamForRetractingDrill(drillAnimDuration));
+        }
+
+        public override void Interact(PlayerController pC)
+        {
+            Debug.Log("hasPickedDrill: " + pC.hasPickedDrill);
+            if (!pC.hasPickedDrill) return;
+            base.Interact(pC);
         }
 
         protected override IEnumerator ReturnToPlayer()

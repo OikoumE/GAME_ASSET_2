@@ -16,6 +16,9 @@ namespace Controllers
         private Rigidbody mRigidbody;
 
         public RaycastHit Hit => hit;
+        public bool hasPickedDrill { get; set; }
+        public bool hasPickedFuse { get; set; }
+        public bool hasReadShuttleTablet { get; set; }
 
         protected override void Start()
         {
@@ -64,6 +67,11 @@ namespace Controllers
             GroundChecker();
         }
 
+        public PlayerController GetPlayerController()
+        {
+            return this;
+        }
+
         public void SetCrossHairEnabled(bool enable)
         {
             crossHair.enabled = enable;
@@ -95,11 +103,13 @@ namespace Controllers
                     SetCrossHairOutline(isInteractableCrossHairColor);
                 if (!isOutOfRange && canBeInteractedWith)
                     SetCrossHairOutline(canInteractCrossHairColor);
+                if (!isOutOfRange && interactableObject.gameObject.TryGetComponent(out KitchenDoorController kDc))
+                    if (!hasPickedDrill)
+                        SetCrossHairOutline(isNotInteractableCrossHairColor);
             }
 
 
             if (!Input.GetMouseButtonDown(0) || !playerHasControl || !hitInteractable || isOutOfRange) return;
-            Debug.Log(hitInteractable);
             interactableObject.Interact(this);
         }
 
@@ -145,5 +155,6 @@ namespace Controllers
 
     public interface IPlayer
     {
+        public PlayerController GetPlayerController();
     }
 }

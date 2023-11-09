@@ -75,13 +75,20 @@ public class OpenDoor : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out IPlayer iP)) OpenAnimation();
+        if (!other.TryGetComponent(out IPlayer iP)) return;
+        var pC = iP.GetPlayerController();
+        if (!pC.hasPickedFuse || !pC.hasReadShuttleTablet) return;
+        OpenAnimation();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent(out IPlayer iP)) CloseAnimation();
+        if (!other.TryGetComponent(out IPlayer iP)) return;
+        var pC = iP.GetPlayerController();
+        if (!pC.hasPickedFuse || !pC.hasReadShuttleTablet) return;
+        CloseAnimation();
     }
+
 
     public void OpenAnimation()
     {
