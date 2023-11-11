@@ -2,38 +2,36 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
+using StateMachine;
 using UnityEngine;
-using UnityEngine.Experimental.GlobalIllumination;
 
 namespace Elevator
 {
     public class ElevatorController : MonoBehaviour
     {
-        [SerializeField] private GameObject kitchenLightsGo, restaurantLightsGo, dockingLightsGo, engineLightsGo;
         [SerializeField] private ObjectData objectData;
         [SerializeField] private AudioSettings audioSettings;
         [SerializeField] public RuntimeValues runtimeValues;
         [SerializeField] public ElevatorDestinations elevatorDestinations;
-
         [SerializeField] private float fadeAudioSpeed;
 
         private readonly DoorPositions doorPositions = new();
 
         private float alpha;
         private bool animateDoors;
-        private Light[] elevatorLights, dockingLights;
+        private ElevatorButton[] elevatorButtons;
+        private Light[] elevatorLights;
         private bool fadeAudio;
         private float fadeAudioAlpha;
 
         private bool inCollider;
 
-        // private AudioSource audioSource;
         private bool isOpen;
 
 
-        private PointLight[] kitchenLights, restaurantLights, dockLights, engineLights;
         private Floor lastActiveFloor;
         private AudioClip openDoorAudio, closeDoorAudio, elevatorMoveAudio;
+        private GameStateName state;
 
         public Floor ActiveFloor
         {
@@ -44,7 +42,7 @@ namespace Elevator
         private void Start()
         {
             elevatorLights = GetComponentsInChildren<Light>();
-            dockingLights = dockingLightsGo.GetComponentsInChildren<Light>();
+            elevatorButtons = GetComponentsInChildren<ElevatorButton>();
             AssignAudio();
         }
 
@@ -53,31 +51,37 @@ namespace Elevator
             SetActiveFloorButtonColor();
             AnimateDoors();
             FadeOutAudio();
-            if (Input.GetKeyDown(KeyCode.E))
-                if (isOpen) CloseAnimation();
-                else OpenAnimation();
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (!other.TryGetComponent(out PlayerController pC)) return;
+            state = GameStateMachine.Instance.currentStateName;
             pC.transform.parent = transform; // set elevator as player parent (for anim)
-            SetLightsArrayEnabled(elevatorLights, true);
+
+            if (state != GameStateName.WireGameState)
+                LightController.SetLightsArrayEnabled(elevatorLights, true);
             OpenAnimation();
         }
 
         private void OnTriggerExit(Collider other)
         {
             if (!other.TryGetComponent(out PlayerController pC)) return;
+
             pC.transform.parent = null; // remove player parent
-            SetLightsArrayEnabled(elevatorLights, false);
+            if (state != GameStateName.WireGameState)
+                LightController.SetLightsArrayEnabled(elevatorLights, false);
             CloseAnimation();
+        }
+
+        private void SetButtonsInteractable(bool interactable)
+        {
+            foreach (var elevatorButton in elevatorButtons) elevatorButton.isInteractable = interactable;
         }
 
         private void OpenAnimation()
         {
             PlayDoorAudio(openDoorAudio);
-            // if (animateDoors)
             isOpen = false;
             animateDoors = true;
         }
@@ -85,45 +89,8 @@ namespace Elevator
         private void CloseAnimation()
         {
             PlayDoorAudio(closeDoorAudio);
-            // if (animateDoors) 
             isOpen = true;
-            // else 
             animateDoors = true;
-        }
-
-        private static void SetLightsArrayEnabled(IEnumerable<Light> lights, bool enable)
-        {
-            foreach (var mLight in lights) mLight.enabled = enable;
-        }
-
-
-        private void SetFloorLightsActive(Floor floor)
-        {
-            switch (floor)
-            {
-                case Floor.Engine:
-                    engineLightsGo.SetActive(true);
-                    kitchenLightsGo.SetActive(false);
-                    restaurantLightsGo.SetActive(false);
-                    SetLightsArrayEnabled(dockingLights, false);
-
-                    break;
-                case Floor.Restaurant:
-                    engineLightsGo.SetActive(false);
-                    kitchenLightsGo.SetActive(false);
-                    restaurantLightsGo.SetActive(true);
-                    SetLightsArrayEnabled(dockingLights, true);
-                    break;
-                case Floor.Kitchen:
-                    engineLightsGo.SetActive(false);
-                    kitchenLightsGo.SetActive(true);
-                    restaurantLightsGo.SetActive(false);
-                    SetLightsArrayEnabled(dockingLights, false);
-
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
         }
 
 
@@ -199,17 +166,17 @@ namespace Elevator
         public IEnumerator MoveElevatorToFloor()
         {
             //TODO if door is open (when move) close door
-
-
+            SetButtonsInteractable(false);
             CloseAnimation();
             // if (isOpen) CloseAnimation();
             yield return new WaitForSeconds(runtimeValues.waitForClosingDoors);
             PlayElevatorMoveAudio();
             yield return new WaitForSeconds(.5f);
             MoveElevator();
-            SetFloorLightsActive(lastActiveFloor);
+            GameStateMachine.Instance.lightController.SetFloorLightsActive(lastActiveFloor);
             yield return new WaitForSeconds(runtimeValues.elevatorRideDuration);
             OpenAnimation();
+            SetButtonsInteractable(true);
         }
 
 

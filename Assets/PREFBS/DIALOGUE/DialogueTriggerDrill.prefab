@@ -91,7 +91,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aeef12cdaf87f04d9f162cd8328c023, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displaySystem: {fileID: 5259058850381716740, guid: a7f66696caa9e884baf04825a167ad6a,
+    type: 3}
   isOneShot: 0
+  previewDialogue: 0
   uiElements:
     titleTmp: {fileID: 1594544509335828718, guid: f55e4904609f39f468acab9d3fbfe4bb,
       type: 3}

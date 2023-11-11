@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using Controllers;
+using Interactables;
 using UnityEngine;
 
 public class SpacedockController : MonoBehaviour
 {
     public float doorOpenSpeed;
     [SerializeField] [Range(0, 100)] private float allowThroughDoorThreshold;
+    [SerializeField] private bool refreshDoorSettings;
     [SerializeField] private List<OpenDoor> doorsThatCanOpen;
     private BoxCollider boxCollider;
 
@@ -14,11 +16,7 @@ public class SpacedockController : MonoBehaviour
         boxCollider = GetComponent<BoxCollider>();
         boxCollider.isTrigger = true;
 
-        GetAllDoors();
-    }
-
-    private void Update()
-    {
+        SetAllDoorsSettings();
     }
 
 
@@ -36,18 +34,27 @@ public class SpacedockController : MonoBehaviour
             door.CloseAnimation();
     }
 
+    private void OnValidate()
+    {
+        if (refreshDoorSettings) refreshDoorSettings = false;
+        SetAllDoorsSettings();
+    }
 
-    private void GetAllDoors()
+
+    private void SetAllDoorsSettings()
     {
         doorsThatCanOpen.Clear();
         var allDoors = GetComponentsInChildren<OpenDoor>();
         foreach (var door in allDoors)
+        {
             if (door.canBeOpened && door.doorPosition == OpenDoor.DoorPosition.middle)
             {
                 doorsThatCanOpen.Add(door);
                 door.SetTriggerBoxActive(false);
-                door.OpenSpeed = doorOpenSpeed;
-                door.AllowThroughDoorThreshold = allowThroughDoorThreshold;
             }
+
+            door.OpenSpeed = doorOpenSpeed;
+            door.AllowThroughDoorThreshold = allowThroughDoorThreshold;
+        }
     }
 }

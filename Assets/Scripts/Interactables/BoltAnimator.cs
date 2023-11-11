@@ -63,12 +63,14 @@ namespace Interactables
 
         public override void Interact(KitchenDoorController kDC)
         {
+            if (!isInteractable) return;
             kitchenDoorController = kDC;
             // doLerp = true;
             StartCoroutine(ActivateLerp());
             isInteractable = false;
             boxCollider.enabled = false;
         }
+
 
         private IEnumerator ActivateLerp()
         {

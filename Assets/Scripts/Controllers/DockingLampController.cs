@@ -1,4 +1,5 @@
 using System;
+using Interactables;
 using UnityEngine;
 
 public class DockingLampController : MonoBehaviour

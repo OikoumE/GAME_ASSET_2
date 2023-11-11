@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Controllers;
 using Interactables;
 using UnityEngine;
 
@@ -22,7 +23,6 @@ namespace Elevator
 
         private void Start()
         {
-            // boxColliders = GetComponentsInChildren<BoxCollider>();
             elevatorController = GetComponentInParent<ElevatorController>();
         }
 
@@ -39,6 +39,16 @@ namespace Elevator
             if (!toCamObject) return;
             Gizmos.color = Color.red;
             Gizmos.DrawRay(toCamObject.transform.position, hitPoint);
+        }
+
+        public override void Interact(KitchenDoorController kDC)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Interact(FuseboxController fC)
+        {
+            throw new NotImplementedException();
         }
 
         private void SetColliderState(bool state)

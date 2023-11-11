@@ -1,4 +1,5 @@
 using System;
+using Controllers;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -82,6 +83,11 @@ namespace Interactables
             boxCollider.enabled = false;
             mKDc = kDc;
             hasInteractedWithTarget = true;
+        }
+
+        public override void Interact(FuseboxController fC)
+        {
+            throw new NotImplementedException();
         }
     }
 }

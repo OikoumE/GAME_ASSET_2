@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8144564811683537372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4319866457880718005, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_Name
+      value: DialogueTriggerReturnToShuttle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: previewDialogue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: dialogueText.title
+      value: <Placeholder>
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: uiElements.titleTmp
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: dialogueText.dialogue
+      value: You need to check your tasks before you can leave!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.587
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.2000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 74.714
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8236245194869759846, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5598121837656405531, guid: 206cf9975a630aa4ea0467e101444362, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4319866457880718005, guid: 206cf9975a630aa4ea0467e101444362,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6449376474070429094}
+  m_SourcePrefab: {fileID: 100100000, guid: 206cf9975a630aa4ea0467e101444362, type: 3}
+--- !u!1 &5401066289090382697 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4319866457880718005, guid: 206cf9975a630aa4ea0467e101444362,
+    type: 3}
+  m_PrefabInstance: {fileID: 8144564811683537372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-6449376474070429094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401066289090382697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a4437cd7e11944abb183ffd5dc7257, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOneShot: 0
+  dialogueText:
+    title: 
+    dialogue: 
+  enabledPreview: 0

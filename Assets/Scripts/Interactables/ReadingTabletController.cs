@@ -53,6 +53,16 @@ namespace Interactables
             base.Interact(pC);
         }
 
+        public override void Interact(KitchenDoorController kDC)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Interact(FuseboxController fC)
+        {
+            throw new NotImplementedException();
+        }
+
         private void SetText()
         {
             if (tmpText == null) tmpText = GetComponentInChildren<TextMeshProUGUI>();

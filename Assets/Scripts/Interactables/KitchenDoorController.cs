@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Controllers;
 using Elevator;
+using StateMachine;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -58,6 +59,7 @@ namespace Interactables
         private bool hasStartedDrill;
         [HideInInspector] public RaycastHit hit;
         private AudioSource onWireConnectAudioSource;
+        private bool startedDelayedEnding;
 
 
         private void Start()
@@ -120,28 +122,41 @@ namespace Interactables
             cameraController = fixedCam.gameObject.GetComponent<CameraController>();
         }
 
+        private IEnumerator StartDelayedEnding()
+        {
+            yield return new WaitForSeconds(.75f);
+            cameraHasControl = false;
+        }
+
         private void DoRay()
         {
+            var currentStateIsWireGame = GameStateMachine.Instance.IsCurrentState(GameStateName.WireGameState);
+            if (!currentStateIsWireGame) return;
             //handles all rayCasting
-            if (numberOfConnectedWires == 6)
+            if (!cameraHasControl) return;
+            if (numberOfConnectedWires == 6) // makes sure we dont accidentally leave camera under player control
             {
-                // makes sure we dont accidentally leave camera under player control
-                cameraHasControl = false;
+                if (startedDelayedEnding) return;
+                startedDelayedEnding = true;
+                StartCoroutine(StartDelayedEnding());
                 return; // if game is done, we are done!
             }
 
-            if (playerController) // sets crossHair to default
-                playerController.SetCrossHairOutline(cameraController.IsInteractableCrossHairColor, 0);
             // create ray
             var ray = cameraController.cameraToControl.ScreenPointToRay(Input.mousePosition);
             //cast ray
-            if (!Physics.Raycast(ray, out hit, cameraController.interactableLayerMask)) return;
+            var rayCastHit = Physics.Raycast(ray, out hit, cameraController.interactableLayerMask);
             // check if we hit an interactable object
             var hitInteractable = hit.transform.gameObject.TryGetComponent(out Interactable interactableObject);
+
+            if (playerController) // sets crossHair to default
+                playerController.SetCrossHairOutline(cameraController.IsInteractableCrossHairColor, 0);
             if (hitInteractable) // set crossHair if its an interactable, and can be interacted with
                 if (playerController && interactableObject.isInteractable)
                     playerController.SetCrossHairOutline(cameraController.CanInteractCrossHairColor);
-            if (!Input.GetMouseButtonDown(0) || !cameraHasControl || !hitInteractable) return;
+
+
+            if (!Input.GetMouseButtonDown(0) || !cameraHasControl || !hitInteractable || !rayCastHit) return;
             // all conditions for interaction has been met
             interactableObject.Interact(this);
 
@@ -154,10 +169,10 @@ namespace Interactables
 
         public override void Interact(PlayerController pC)
         {
-            Debug.Log("hasPickedDrill: " + pC.hasPickedDrill);
             if (!pC.hasPickedDrill) return;
             base.Interact(pC);
         }
+
 
         protected override IEnumerator ReturnToPlayer()
         {
@@ -167,6 +182,7 @@ namespace Interactables
             yield return new WaitForSeconds(waitAfterComplete);
             // trigger lerp back to player
             Interact(playerController);
+            GameStateMachine.Instance.SetState(GameStateMachine.Instance.exitInShuttleState);
         }
 
         private void DoDoorAnimation()

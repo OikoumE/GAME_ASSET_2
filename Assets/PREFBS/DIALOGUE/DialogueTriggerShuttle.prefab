@@ -75,7 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e1aaaba87fe954697d2e949abf8283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displaySystem: {fileID: 5259058850381716740, guid: a7f66696caa9e884baf04825a167ad6a,
+    type: 3}
   isOneShot: 0
+  previewDialogue: 0
   uiElements:
     titleTmp: {fileID: 2478635151507910738, guid: 853b0e454f73e624b8b27e41d6b3e4d0,
       type: 3}

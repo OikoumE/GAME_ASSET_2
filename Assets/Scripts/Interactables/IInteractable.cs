@@ -10,6 +10,7 @@ namespace Interactables
     {
         public void Interact(PlayerController pC);
         public void Interact(KitchenDoorController kDC);
+        public void Interact(FuseboxController fC);
     }
 
     public abstract class Interactable : MonoBehaviour, IInteractable
@@ -56,6 +57,11 @@ namespace Interactables
         }
 
         public virtual void Interact(KitchenDoorController kDC)
+        {
+            throw new NotImplementedException();
+        }
+
+        public virtual void Interact(FuseboxController fC)
         {
             throw new NotImplementedException();
         }

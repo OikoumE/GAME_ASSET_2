@@ -1,5 +1,6 @@
 using Interactables;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Controllers
@@ -11,14 +12,20 @@ namespace Controllers
         [SerializeField] private float groundCheckDistance = 1f;
         [SerializeField] private float maxGroundDistance;
         [SerializeField] private TMP_Text crossHair;
+
+        [DoNotSerialize] public bool
+            hasPickedDrill,
+            hasPickedFuse,
+            hasReadShuttleTablet;
+
+        private FlashLightController flashLightController;
+
+
         private RaycastHit hit;
 
         private Rigidbody mRigidbody;
 
         public RaycastHit Hit => hit;
-        public bool hasPickedDrill { get; set; }
-        public bool hasPickedFuse { get; set; }
-        public bool hasReadShuttleTablet { get; set; }
 
         protected override void Start()
         {
@@ -28,6 +35,7 @@ namespace Controllers
                 cameraToControl = Camera.main;
             Cursor.lockState = CursorLockMode.Locked;
             mRigidbody = GetComponent<Rigidbody>();
+            flashLightController = GetComponentInChildren<FlashLightController>();
         }
 
 
@@ -56,10 +64,15 @@ namespace Controllers
             if (hit.point != Vector3.zero)
                 Gizmos.DrawCube(hit.point, Vector3.one * 0.1f);
 
+
             var camTransform = cameraToControl.transform;
-            Gizmos.DrawRay(camTransform.position, camTransform.forward * 10);
+            Gizmos.DrawRay(camTransform.position, camTransform.forward * 1000);
             Gizmos.color = Color.red;
-            Gizmos.DrawRay(transform.position, Vector3.down * groundCheckDistance);
+            var position = transform.position;
+            Gizmos.DrawRay(position, Vector3.down * groundCheckDistance);
+            Gizmos.DrawSphere(position + Vector3.up * 1.75f, 0.25f);
+            Gizmos.DrawSphere(position + Vector3.up, 0.25f);
+            Gizmos.DrawSphere(position + Vector3.up * .25f, 0.25f);
         }
 
         private void OnValidate()
@@ -88,9 +101,11 @@ namespace Controllers
             crossHair.outlineColor = color;
         }
 
+
         private void DoRay()
         {
-            if (playerHasControl) SetCrossHairOutline(isInteractableCrossHairColor, 0);
+            if (!playerHasControl) return;
+            SetCrossHairOutline(isInteractableCrossHairColor, 0);
             var ray = cameraToControl.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out hit, interactableLayerMask)) return;
             var isOutOfRange = IsInteractOutOfRange(transform.position, hit.point);
