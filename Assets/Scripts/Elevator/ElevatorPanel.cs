@@ -1,9 +1,11 @@
-using Elevator;
 using UnityEngine;
 
-public class ElevatorPanel : MonoBehaviour
+namespace Elevator
 {
-    public int panelId;
+    public class ElevatorPanel : MonoBehaviour
+    {
+        public int panelId;
 
-    public ElevatorButton elevatorButton;
+        public ElevatorButton elevatorButton;
+    }
 }

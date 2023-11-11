@@ -1,36 +1,38 @@
 using System;
 using Controllers;
-using Interactables;
 
-public class InteractableFuse : Interactable
+namespace Interactables
 {
-    private InteractableFuse[] fuses;
-
-    private void Start()
+    public class InteractableFuse : Interactable
     {
-        fuses = FindObjectsOfType<InteractableFuse>();
-    }
+        private InteractableFuse[] fuses;
 
-
-    public override void Interact(PlayerController pC)
-    {
-        if (pC.hasPickedFuse) return;
-        pC.hasPickedFuse = true;
-        gameObject.SetActive(false);
-        foreach (var interactableFuse in fuses)
+        private void Start()
         {
-            if (interactableFuse == this) continue;
-            interactableFuse.isInteractable = false;
+            fuses = FindObjectsOfType<InteractableFuse>();
         }
-    }
 
-    public override void Interact(KitchenDoorController kDC)
-    {
-        throw new NotImplementedException();
-    }
 
-    public override void Interact(FuseboxController fC)
-    {
-        throw new NotImplementedException();
+        public override void Interact(PlayerController pC)
+        {
+            if (pC.hasPickedFuse) return;
+            pC.hasPickedFuse = true;
+            gameObject.SetActive(false);
+            foreach (var interactableFuse in fuses)
+            {
+                if (interactableFuse == this) continue;
+                interactableFuse.isInteractable = false;
+            }
+        }
+
+        public override void Interact(KitchenDoorController kDC)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void Interact(FuseboxController fC)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

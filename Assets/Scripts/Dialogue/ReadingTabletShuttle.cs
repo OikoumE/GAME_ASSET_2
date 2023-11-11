@@ -1,11 +1,14 @@
 using Controllers;
 using Interactables;
 
-public class ReadingTabletShuttle : ReadingTabletController
+namespace Dialogue
 {
-    public override void Interact(PlayerController pC)
+    public class ReadingTabletShuttle : ReadingTabletController
     {
-        base.Interact(pC);
-        pC.hasReadShuttleTablet = true;
+        public override void Interact(PlayerController pC)
+        {
+            base.Interact(pC);
+            pC.hasReadShuttleTablet = true;
+        }
     }
 }

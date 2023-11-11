@@ -1,4 +1,5 @@
 using System;
+using Dialogue;
 using StateMachine;
 using Unity.VisualScripting;
 using UnityEngine;

@@ -1,51 +1,53 @@
 using Controllers;
-using Interactables;
 using UnityEngine;
 
-public class FuseBoxDoorKnob : Interactable
+namespace Interactables
 {
-    [SerializeField] private float doorKnobSpeed;
-    private bool animateDoorKnob;
-    private BoxCollider boxCollider;
-
-    private FuseboxController fuseboxController;
-
-    private float rotAlpha;
-
-    // Start is called before the first frame update
-    private void Start()
+    public class FuseBoxDoorKnob : Interactable
     {
-        boxCollider = GetComponent<BoxCollider>();
-    }
+        [SerializeField] private float doorKnobSpeed;
+        private bool animateDoorKnob;
+        private BoxCollider boxCollider;
 
+        private FuseboxController fuseboxController;
 
-    // Update is called once per frame
-    protected override void Update()
-    {
-        base.Update();
-        AnimateDoorKnob();
-    }
+        private float rotAlpha;
 
-    private void AnimateDoorKnob()
-    {
-        if (!animateDoorKnob) return;
-        transform.localRotation = Quaternion.Euler(0, rotAlpha, 0);
-        if (rotAlpha <= 90)
+        // Start is called before the first frame update
+        private void Start()
         {
-            rotAlpha += doorKnobSpeed;
-            return;
+            boxCollider = GetComponent<BoxCollider>();
         }
 
-        fuseboxController.animateDoor = true;
-        animateDoorKnob = false;
-    }
+
+        // Update is called once per frame
+        protected override void Update()
+        {
+            base.Update();
+            AnimateDoorKnob();
+        }
+
+        private void AnimateDoorKnob()
+        {
+            if (!animateDoorKnob) return;
+            transform.localRotation = Quaternion.Euler(0, rotAlpha, 0);
+            if (rotAlpha <= 90)
+            {
+                rotAlpha += doorKnobSpeed;
+                return;
+            }
+
+            fuseboxController.animateDoor = true;
+            animateDoorKnob = false;
+        }
 
 
-    public override void Interact(FuseboxController fC)
-    {
-        fuseboxController = fC;
-        animateDoorKnob = true;
-        isInteractable = false;
-        boxCollider.enabled = false;
+        public override void Interact(FuseboxController fC)
+        {
+            fuseboxController = fC;
+            animateDoorKnob = true;
+            isInteractable = false;
+            boxCollider.enabled = false;
+        }
     }
 }

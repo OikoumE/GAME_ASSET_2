@@ -1,7 +1,9 @@
-using Elevator;
 using UnityEngine;
 
-public class ElevatorButtonHitBox : MonoBehaviour
+namespace Elevator
 {
-    public Floor floor;
+    public class ElevatorButtonHitBox : MonoBehaviour
+    {
+        public Floor floor;
+    }
 }

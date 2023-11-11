@@ -1,31 +1,33 @@
 using System;
 using Controllers;
-using Interactables;
 
-public class InteractableDrill : Interactable
+namespace Interactables
 {
-    private void Start()
+    public class InteractableDrill : Interactable
     {
-    }
+        private void Start()
+        {
+        }
 
-    protected override void Update()
-    {
-    }
+        protected override void Update()
+        {
+        }
 
-    public override void Interact(PlayerController pC)
-    {
-        if (pC.hasPickedDrill) return;
-        pC.hasPickedDrill = true;
-        gameObject.SetActive(false);
-    }
+        public override void Interact(PlayerController pC)
+        {
+            if (pC.hasPickedDrill) return;
+            pC.hasPickedDrill = true;
+            gameObject.SetActive(false);
+        }
 
-    public override void Interact(KitchenDoorController kDC)
-    {
-        throw new NotImplementedException();
-    }
+        public override void Interact(KitchenDoorController kDC)
+        {
+            throw new NotImplementedException();
+        }
 
-    public override void Interact(FuseboxController fC)
-    {
-        throw new NotImplementedException();
+        public override void Interact(FuseboxController fC)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
