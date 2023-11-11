@@ -1015,3 +1015,6 @@ Assets/Plugins/CW/Third-Party Notices.txt.meta
 *LightingData.asset
 */LightingData.asset
 Assets/Scenes/SampleScene/LightingData.asset
+*LightingData.meta
+*/LightingData.meta
+Assets/Scenes/SampleScene/LightingData.meta
