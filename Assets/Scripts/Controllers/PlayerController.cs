@@ -17,11 +17,10 @@ namespace Controllers
 
         [SerializeField] private AudioSourceSettings lerpAudioSourceSettings;
 
-        [DoNotSerialize] public bool
-            hasPickedDrill,
-            hasPickedFuse,
-            hasReadShuttleTablet,
-            hasFlashLight;
+        [DoNotSerialize] public bool hasPickedDrill;
+        [DoNotSerialize] public bool hasPickedFuse;
+        [DoNotSerialize] public bool hasReadShuttleTablet;
+        [DoNotSerialize] public bool hasFlashLight;
 
         private FlashLightController flashLightController;
 
@@ -38,7 +37,7 @@ namespace Controllers
             playerToControl = gameObject;
             if (cameraToControl == null)
                 cameraToControl = Camera.main;
-            Cursor.lockState = CursorLockMode.Locked;
+            // Cursor.lockState = CursorLockMode.Locked;
             mRigidbody = GetComponent<Rigidbody>();
             flashLightController = GetComponentInChildren<FlashLightController>();
         }
@@ -47,7 +46,6 @@ namespace Controllers
         private void Update()
         {
             InputHandler();
-            CursorLockHandler();
             DoRay();
         }
 
@@ -146,29 +144,6 @@ namespace Controllers
                     pos = new Vector3(pos.x, pos.y - dst, pos.z);
                 }
             }
-        }
-
-        private void CursorLockHandler()
-        {
-            if (Input.GetKeyDown(KeyCode.Escape)) ToggleCursorLockMode();
-        }
-
-        /// <summary>
-        ///     if setState is passed, defaults to CursorLockMode.Locked;
-        /// </summary>
-        /// <param name="setState">whether or not to toggle or set state</param>
-        /// <param name="state">what state to set if setState = true</param>
-        public void SetCursorLockMode(CursorLockMode state)
-        {
-            Cursor.lockState = state;
-        }
-
-        public void ToggleCursorLockMode()
-        {
-            if (Cursor.lockState == CursorLockMode.Locked)
-                Cursor.lockState = CursorLockMode.None;
-            else
-                Cursor.lockState = CursorLockMode.Locked;
         }
     }
 

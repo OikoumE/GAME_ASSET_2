@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Controllers;
 using Interactables;
+using StateMachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -56,7 +57,7 @@ namespace Elevator
         {
             if (!InteractModeEnabled) return;
             isCursorOverUi = false;
-            pC.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+            GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
             Interact(playerController, audioSettings.lerpSettings);
             pC.SetCrossHairEnabled(true);
         }
@@ -124,7 +125,7 @@ namespace Elevator
             AudioSourceSettings audioSourceSettings,
             bool interruptAudio)
         {
-            playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+            GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
             var waitAmount = elevatorController.runtimeValues.returnToPlayerCooldown;
             yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
             Interact(playerController, audioSourceSettings, interruptAudio); // trigger lerp back to player

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Controllers;
 using Elevator;
+using StateMachine;
 using TMPro;
 using UnityEngine;
 
@@ -98,7 +99,7 @@ namespace Interactables
         {
             StartCoroutine(FadeText());
             yield return new WaitForSeconds(textLerpWait); // cooldown before returning to playerCam.
-            playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+            GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
             yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
             Interact(playerController, audioSourceSettings, interruptAudio); // trigger lerp back to player
         }

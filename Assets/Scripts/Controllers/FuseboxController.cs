@@ -39,7 +39,6 @@ namespace Controllers
         {
             var currentStateIsFuseBox = GameStateMachine.Instance.IsCurrentState(GameStateName.FuseBoxState);
             if (!currentStateIsFuseBox) return;
-            Debug.Log("IS THIS WRONGF!?!??!? currentStateIsFuseBox" + currentStateIsFuseBox);
             base.Update();
             if (cameraHasControl) // enables easy disabling of camera control
                 cameraController.RunInputHandler();
@@ -129,7 +128,9 @@ namespace Controllers
 
                 doLerp = false;
                 if (InteractModeEnabled) playerController.SetPlayerControl(true);
-                else playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor on / unlock mouse
+                else
+                    GameStateMachine.Instance.SetCursorLockMode(CursorLockMode
+                        .Locked); // toggle cursor on / unlock mouse
                 InteractModeEnabled = !InteractModeEnabled;
                 cameraHasControl = InteractModeEnabled;
             }

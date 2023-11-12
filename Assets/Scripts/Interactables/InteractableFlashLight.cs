@@ -1,6 +1,7 @@
 using System;
 using Controllers;
 using Elevator;
+using UnityEngine;
 
 namespace Interactables
 {
@@ -20,9 +21,17 @@ namespace Interactables
             bool interruptAudio = true
         )
         {
-            if (pC.hasFlashLight) return;
+            if (pC.hasFlashLight)
+            {
+                Debug.Log("hasFlashLight" + pC.hasFlashLight);
+                return;
+            }
+
+            Debug.Log("hasFlashLight" + pC.hasFlashLight);
+
             pC.hasFlashLight = true;
             gameObject.SetActive(false);
+            Debug.Log("hasFlashLight" + pC.hasFlashLight);
         }
 
         public override void Interact(KitchenDoorController kDC)

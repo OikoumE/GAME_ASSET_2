@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Controllers;
 using Elevator;
+using StateMachine;
 using UnityEngine;
 
 namespace Interactables
@@ -136,7 +137,8 @@ namespace Interactables
                 lerpAlpha = 0;
                 doLerp = false;
                 if (InteractModeEnabled) playerController.SetPlayerControl(true);
-                else playerController.SetCursorLockMode(CursorLockMode.None); // toggle cursor on / unlock mouse
+                else
+                    GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.None); // toggle cursor on / unlock mouse
                 InteractModeEnabled = !InteractModeEnabled;
             }
         }

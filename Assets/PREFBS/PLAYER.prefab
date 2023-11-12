@@ -241,6 +241,9 @@ MonoBehaviour:
   worldLayerMask:
     serializedVersion: 2
     m_Bits: 0
+  defaultCrossHairColor:
+    serializedVersion: 2
+    rgba: 4278190080
   canInteractCrossHairColor:
     serializedVersion: 2
     rgba: 4278255360
@@ -262,9 +265,15 @@ MonoBehaviour:
   groundCheckDistance: 0.5
   maxGroundDistance: 0.11
   crossHair: {fileID: 0}
+  lerpAudioSourceSettings:
+    Source: {fileID: 0}
+    audioClip: {fileID: 0}
+    volume: 1
+    pitch: 1
   hasPickedDrill: 0
   hasPickedFuse: 0
   hasReadShuttleTablet: 0
+  hasFlashLight: 0
 --- !u!136 &8671748410094523187
 CapsuleCollider:
   m_ObjectHideFlags: 0

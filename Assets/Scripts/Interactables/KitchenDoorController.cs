@@ -185,7 +185,7 @@ namespace Interactables
             bool interruptAudio)
         {
             // toggle cursor off/lock mouse
-            playerController.SetCursorLockMode(CursorLockMode.Locked);
+            GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked);
             // cooldown before returning to playerCam.
             yield return new WaitForSeconds(waitAfterComplete);
             // trigger lerp back to player

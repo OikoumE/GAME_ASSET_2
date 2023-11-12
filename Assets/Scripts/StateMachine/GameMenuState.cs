@@ -14,23 +14,18 @@ namespace StateMachine
         public override void EnterState(GameStateMachine gameStateMachine)
         {
             gameStateMachine.currentStateName = gameStateName;
-            gameStateMachine.playerController.SetPlayerControl(false);
-            Time.timeScale = 0;
-            Cursor.lockState = CursorLockMode.None;
+            // Time.timeScale = 0;
             gameStateMachine.playerController.cameraToControl.enabled = false;
-
-            Debug.Log("Enter state: " + gameStateName);
+            gameStateMachine.playerController.SetPlayerControl(false);
+            gameStateMachine.playerController.SetCrossHairEnabled(false);
+            gameStateMachine.SetCursorLockMode(CursorLockMode.None);
         }
 
         public override void ExitState(GameStateMachine gameStateMachine)
         {
-            gameStateMachine.playerController.cameraToControl.enabled = true;
-
-            Cursor.lockState = CursorLockMode.Locked;
             Time.timeScale = 1;
             gameStateMachine.playerController.SetPlayerControl(true);
-
-            Debug.Log("Exit state: " + gameStateName);
+            gameStateMachine.playerController.SetCrossHairEnabled(true);
         }
     }
 }

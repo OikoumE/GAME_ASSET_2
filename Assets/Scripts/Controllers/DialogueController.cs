@@ -28,7 +28,7 @@ namespace Controllers
         protected virtual void OnTriggerEnter(Collider other)
         {
             if (requireSpecificGameState)
-                if (gameStateName != GameStateMachine.Instance.currentStateName)
+                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
                     return;
             if (!other.TryGetComponent(out IPlayer iP)) return;
             playerController = iP.GetPlayerController();
@@ -39,7 +39,7 @@ namespace Controllers
         protected virtual void OnTriggerExit(Collider other)
         {
             if (requireSpecificGameState)
-                if (gameStateName != GameStateMachine.Instance.currentStateName)
+                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
                     return;
             if (!other.TryGetComponent(out IPlayer iP)) return;
             SetDialogueVisibility(false);
