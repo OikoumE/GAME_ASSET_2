@@ -44,5 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 506fddfcbd4abdf41b16ed07ba53a833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 0}
+  playerController: {fileID: 4992973264910324920, guid: 8ca62a8272933734bae7042ed98d62d0,
+    type: 3}
+  elevatorController: {fileID: 6803841016432991109, guid: 4c93d73e8b7e4a64fb8e1ae4e5e78c78,
+    type: 3}
+  lightController: {fileID: 5179839988020025321, guid: 98764b90370f15f48a0db83a8dee1ccf,
+    type: 3}
+  wireGameAudioController: {fileID: 3919016651776217175, guid: 08ef5c748ebe83d48a86c4ac0bb8934b,
+    type: 3}
+  ENABLECHEAT: 0
   currentStateName: 0

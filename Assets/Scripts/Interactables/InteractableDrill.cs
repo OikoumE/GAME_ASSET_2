@@ -1,5 +1,6 @@
 using System;
 using Controllers;
+using Elevator;
 
 namespace Interactables
 {
@@ -13,7 +14,11 @@ namespace Interactables
         {
         }
 
-        public override void Interact(PlayerController pC)
+        public override void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
         {
             if (pC.hasPickedDrill) return;
             pC.hasPickedDrill = true;

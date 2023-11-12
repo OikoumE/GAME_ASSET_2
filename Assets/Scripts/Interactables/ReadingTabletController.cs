@@ -36,7 +36,7 @@ namespace Interactables
             base.Update();
             DoRay();
             LerpTextAlpha();
-            LerpToCam(audioSettings.lerpSettings, true);
+            LerpToCam();
         }
 
         private void OnValidate()
@@ -45,12 +45,16 @@ namespace Interactables
         }
 
 
-        public override void Interact(PlayerController pC)
+        public override void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
         {
             playerController = pC;
             if (!InteractModeEnabled) StartCoroutine(FadeText());
             pC.SetCrossHairEnabled(InteractModeEnabled);
-            base.Interact(pC);
+            base.Interact(pC, audioSourceSettings, interruptAudio);
         }
 
         public override void Interact(KitchenDoorController kDC)
@@ -79,29 +83,32 @@ namespace Interactables
 
         private void DoRay()
         {
-            if (!InteractModeEnabled || isReturning) return;
+            if (isReturning) return;
+            if (!InteractModeEnabled) return;
             if (!Input.GetMouseButtonDown(0)) return;
             isReturning = true;
             PlayAudio(audioSettings.clickSettings);
             // button has been clicked and cursor is not over activeFloor;
-            StartCoroutine(ReturnToPlayer());
+            StartCoroutine(ReturnToPlayer(audioSettings.lerpSettings, true));
         }
 
-        protected override IEnumerator ReturnToPlayer()
+        protected override IEnumerator ReturnToPlayer(
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio)
         {
             StartCoroutine(FadeText());
             yield return new WaitForSeconds(textLerpWait); // cooldown before returning to playerCam.
             playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
             yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
-            Interact(playerController); // trigger lerp back to player
+            Interact(playerController, audioSourceSettings, interruptAudio); // trigger lerp back to player
         }
 
-        protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
+        protected override void LerpToCam()
         {
             if (!doLerp || !playerController) return;
             if (lerpAlpha >= 1)
                 isReturning = false;
-            base.LerpToCam(audioSourceSettings, interruptAudio);
+            base.LerpToCam();
         }
 
         private void LerpTextAlpha()

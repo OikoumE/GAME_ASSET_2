@@ -1,13 +1,14 @@
 using System.Collections;
 using Controllers;
+using Elevator;
 using UnityEngine;
 
 namespace Interactables
 {
     public class ReplaceFuseInteract : Interactable
     {
+        [SerializeField] private AudioSourceSettings audioSourceSettings;
         private BoxCollider boxCollider;
-
         private FuseAnimator brokenFuse, insertFuse;
 
 
@@ -37,7 +38,7 @@ namespace Interactables
             fuseboxController.animateDoor = true;
             yield return new WaitForSeconds(1.5f);
             var pC = fuseboxController.GetPlayerController;
-            fuseboxController.Interact(pC);
+            fuseboxController.Interact(pC, audioSourceSettings);
         }
 
         public override void Interact(FuseboxController fC)

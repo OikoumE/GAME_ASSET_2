@@ -8,9 +8,11 @@ namespace Interactables
 {
     public interface IInteractable
     {
-        public void Interact(PlayerController pC);
+        public void Interact(PlayerController pC, AudioSourceSettings audioSourceSettings, bool interruptAudio = true);
         public void Interact(KitchenDoorController kDC);
         public void Interact(FuseboxController fC);
+
+        public void UnInteract(PlayerController playerController);
     }
 
     public abstract class Interactable : MonoBehaviour, IInteractable
@@ -35,8 +37,16 @@ namespace Interactables
             CalculateLerpAlpha();
         }
 
-        public virtual void Interact(PlayerController pC)
+        public virtual void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
         {
+            if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
+                PlayAudio(audioSourceSettings);
+
+
             pC.SetPlayerControl(false);
             playerController = pC;
             fromCam = pC.PlayerCam;
@@ -53,6 +63,8 @@ namespace Interactables
             toCamObjectTransform = toCamObject.transform;
             toCamObjectPosition = toCamObjectTransform.position;
             toCamObjectRotation = toCamObjectTransform.rotation;
+
+
             doLerp = true; // trigger lerp
         }
 
@@ -66,7 +78,14 @@ namespace Interactables
             throw new NotImplementedException();
         }
 
-        protected virtual IEnumerator ReturnToPlayer()
+        public virtual void UnInteract(PlayerController playerController)
+        {
+            throw new NotImplementedException();
+        }
+
+        protected virtual IEnumerator ReturnToPlayer(
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio)
         {
             throw new NotImplementedException();
         }
@@ -88,11 +107,11 @@ namespace Interactables
                 lerpAlpha += Time.deltaTime * lerpSpeed;
         }
 
-        protected virtual void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
+        protected virtual void LerpToCam()
         {
             if (!doLerp) return;
-            if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
-                PlayAudio(audioSourceSettings);
+            // if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
+            //     PlayAudio(audioSourceSettings);
             // lerp lerpCam to InteractCam
             lerpCam.transform.position = Vector3.Lerp(
                 fromCam.transform.position,

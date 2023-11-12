@@ -58,7 +58,6 @@ namespace Elevator
             if (!other.TryGetComponent(out PlayerController pC)) return;
             state = GameStateMachine.Instance.currentStateName;
             pC.transform.parent = transform; // set elevator as player parent (for anim)
-
             if (state != GameStateName.WireGameState)
                 LightController.SetLightsArrayEnabled(elevatorLights, true);
             OpenAnimation();
@@ -67,7 +66,6 @@ namespace Elevator
         private void OnTriggerExit(Collider other)
         {
             if (!other.TryGetComponent(out PlayerController pC)) return;
-
             pC.transform.parent = null; // remove player parent
             if (state != GameStateName.WireGameState)
                 LightController.SetLightsArrayEnabled(elevatorLights, false);

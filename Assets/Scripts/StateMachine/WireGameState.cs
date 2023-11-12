@@ -17,14 +17,14 @@ namespace StateMachine
             gameStateMachine.currentStateName = gameStateName;
             gameStateMachine.lightController.SetAllLightsEnabled(false);
             gameStateMachine.wireGameAudioController.SetParticlePlayState(true);
-            Debug.Log("Enter state: WireGameState");
+            Debug.Log("Enter state: " + gameStateName);
         }
 
         public override void ExitState(GameStateMachine gameStateMachine)
         {
             gameStateMachine.lightController.SetAllLightsEnabled(true);
             gameStateMachine.wireGameAudioController.SetParticlePlayState(false);
-            Debug.Log("Exit state: WireGameState");
+            Debug.Log("Exit state: " + gameStateName);
         }
     }
 }

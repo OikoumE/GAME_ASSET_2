@@ -17,12 +17,12 @@ namespace StateMachine
         public override void EnterState(GameStateMachine gameStateMachine)
         {
             gameStateMachine.currentStateName = gameStateName;
-            Debug.Log("Enter state: GameStateIntro");
+            Debug.Log("Enter state: " + gameStateName);
         }
 
         public override void ExitState(GameStateMachine gameStateMachine)
         {
-            Debug.Log("Exit state: GameStateIntro");
+            Debug.Log("Exit state: " + gameStateName);
         }
     }
 }

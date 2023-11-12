@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using Controllers;
 using Interactables;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Elevator
@@ -18,8 +19,12 @@ namespace Elevator
         [SerializeField] private Texture2D greenHand, redHand;
         [SerializeField] private AudioSettings audioSettings;
         [SerializeField] private BoxCollider[] boxColliders;
+        [SerializeField] private GameObject unInteractButton;
+        [DoNotSerialize] public bool isPlayerInsideElevator;
         private ElevatorController elevatorController;
         private Vector3 hitPoint;
+
+        private bool isCursorOverUi;
 
         private void Start()
         {
@@ -31,7 +36,7 @@ namespace Elevator
             base.Update();
             DoRay();
 
-            LerpToCam(audioSettings.lerpSettings);
+            LerpToCam();
         }
 
         private void OnDrawGizmos()
@@ -41,39 +46,63 @@ namespace Elevator
             Gizmos.DrawRay(toCamObject.transform.position, hitPoint);
         }
 
-        public override void Interact(KitchenDoorController kDC)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Interact(FuseboxController fC)
-        {
-            throw new NotImplementedException();
-        }
 
         private void SetColliderState(bool state)
         {
             foreach (var box in boxColliders) box.enabled = state;
         }
 
+        public override void UnInteract(PlayerController pC)
+        {
+            if (!InteractModeEnabled) return;
+            isCursorOverUi = false;
+            pC.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
+            Interact(playerController, audioSettings.lerpSettings);
+            pC.SetCrossHairEnabled(true);
+        }
+
+        public override void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
+        {
+            if (unInteractButton.activeInHierarchy)
+                unInteractButton.SetActive(false);
+            if (!isPlayerInsideElevator) return;
+
+
+            base.Interact(pC, audioSourceSettings, interruptAudio);
+        }
+
+        public void SetCursorUi(bool setAsGreen)
+        {
+            var colorToSet = setAsGreen ? greenHand : redHand;
+            isCursorOverUi = setAsGreen;
+            Cursor.SetCursor(colorToSet, Vector2.zero, CursorMode.Auto);
+        }
+
         private void DoRay()
         {
             if (!InteractModeEnabled) return;
+
             var activeFloor = elevatorController.ActiveFloor;
             var ray = fixedCam.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out var hit, 1000)) return;
             hitPoint = hit.point;
             var objectHit = hit.transform;
-
+            if (isCursorOverUi) return;
             var isElevatorButtonHitBox = objectHit.gameObject.TryGetComponent(out ElevatorButtonHitBox eButtonHitBox);
             if (!isElevatorButtonHitBox)
             {
                 Cursor.SetCursor(redHand, Vector2.zero, CursorMode.Auto);
-                playerController.SetCrossHairEnabled(false);
                 return;
             }
 
+
             var handColor = activeFloor == eButtonHitBox.floor ? redHand : greenHand;
+            var xHotSpot = handColor.width / 2f;
+            var a = new Vector2(xHotSpot, 0);
             Cursor.SetCursor(handColor, Vector2.zero, CursorMode.Auto);
 
             if (!Input.GetMouseButtonDown(0))
@@ -85,30 +114,38 @@ namespace Elevator
                 return;
             }
 
-            PlayAudio(audioSettings.clickSettings);
             // button has been clicked and cursor is not over activeFloor;
+            PlayAudio(audioSettings.clickSettings);
             elevatorController.ActiveFloor = eButtonHitBox.floor; // set active floor
-            StartCoroutine(ReturnToPlayer());
+            StartCoroutine(ReturnToPlayer(audioSettings.lerpSettings, true));
         }
 
-        protected override IEnumerator ReturnToPlayer()
+        protected override IEnumerator ReturnToPlayer(
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio)
         {
             playerController.SetCursorLockMode(CursorLockMode.Locked); // toggle cursor off/lock mouse
             var waitAmount = elevatorController.runtimeValues.returnToPlayerCooldown;
             yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
-            Interact(playerController); // trigger lerp back to player
+            Interact(playerController, audioSourceSettings, interruptAudio); // trigger lerp back to player
+            StartCoroutine(elevatorController.MoveElevatorToFloor()); // close doors.
             yield return new WaitForSeconds(waitAmount); // cooldown before returning to playerCam.
             playerController.SetCrossHairEnabled(true);
-            StartCoroutine(elevatorController.MoveElevatorToFloor()); // close doors.
         }
 
 
-        protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
+        protected override void LerpToCam()
         {
             if (!doLerp || !playerController) return;
             if (lerpAlpha >= 1)
+            {
                 SetColliderState(InteractModeEnabled);
-            base.LerpToCam(audioSourceSettings, interruptAudio);
+                if (!unInteractButton.activeInHierarchy && !InteractModeEnabled)
+                    unInteractButton.SetActive(true);
+            }
+
+            playerController.SetCrossHairEnabled(InteractModeEnabled);
+            base.LerpToCam();
         }
 
         [Serializable]

@@ -11,9 +11,12 @@ namespace Controllers
         [SerializeField] private float interactDistanceThreshold = 1f;
         [SerializeField] private float sensX = 100f, sensY = 100f;
         public LayerMask interactableLayerMask, worldLayerMask;
-        [SerializeField] protected Color32 canInteractCrossHairColor = new(0, 255, 0, 255);
-        [SerializeField] protected Color32 isInteractableCrossHairColor = new(255, 255, 255, 255);
-        [SerializeField] protected Color32 isNotInteractableCrossHairColor = new(255, 0, 0, 255);
+
+        [SerializeField] protected Color32
+            defaultCrossHairColor = new(0, 0, 0, 255),
+            canInteractCrossHairColor = new(0, 255, 0, 255),
+            isInteractableCrossHairColor = new(255, 255, 255, 255),
+            isNotInteractableCrossHairColor = new(255, 0, 0, 255);
 
         [SerializeField] public ClampRotation clampRotation;
         [SerializeField] private float initialWaitBeforeControl;

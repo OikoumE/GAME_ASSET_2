@@ -3,7 +3,67 @@ guid: 7f2671d783b5d004c808f7ef1fb5153b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuse
+    second: {fileID: 2100000, guid: ab54fafb30b6fbe439c6c98828023128, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuse body
+    second: {fileID: 2100000, guid: a3f04650aff14984e885161ec5aeeb4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuse conntactpoint
+    second: {fileID: 2100000, guid: 915788431bffac645a9b6ebcd7376850, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fusebox door knob
+    second: {fileID: 2100000, guid: 8702e3f5808f2274ba8e638055725a43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fusebox inner bodies
+    second: {fileID: 2100000, guid: a8c8eafed52a00347a8f89bd8361ea1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fusebox rails
+    second: {fileID: 2100000, guid: 23464dacc4c84bd4ca6cef948105173a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxe box wire holder
+    second: {fileID: 2100000, guid: 29a15caa272107c4e98fa536f949e4bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox blue wire
+    second: {fileID: 2100000, guid: 1ab4443d9dc164a45a621696e01dab99, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox box
+    second: {fileID: 2100000, guid: a18da3a682501bc4ea235b5e1b67dfa8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox box.door
+    second: {fileID: 2100000, guid: 0ce55f3aaa0367843bf1290ddd47d4cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox fuse connector
+    second: {fileID: 2100000, guid: 9b1dc7226054b2648a51ad89743d0701, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: fuxebox red wire
+    second: {fileID: 2100000, guid: 61c03865757118841a408bc64be4b871, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

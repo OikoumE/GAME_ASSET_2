@@ -649,6 +649,9 @@ MonoBehaviour:
   interactableLayerMask:
     serializedVersion: 2
     m_Bits: 55
+  worldLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
   canInteractCrossHairColor:
     serializedVersion: 2
     rgba: 4278255360
@@ -1348,17 +1351,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: fd68cd9325fb04b469d398d5febc7ba1, type: 2}
+      objectReference: {fileID: 2100000, guid: 23464dacc4c84bd4ca6cef948105173a, type: 2}
     - target: {fileID: -7511558181221131132, guid: 7f2671d783b5d004c808f7ef1fb5153b,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
-      objectReference: {fileID: 2100000, guid: d7897fb9cb747d44ba025ac4d7632c93, type: 2}
+      objectReference: {fileID: 2100000, guid: 9b1dc7226054b2648a51ad89743d0701, type: 2}
     - target: {fileID: -7511558181221131132, guid: 7f2671d783b5d004c808f7ef1fb5153b,
         type: 3}
       propertyPath: m_Materials.Array.data[3]
       value: 
-      objectReference: {fileID: 2100000, guid: ee7d06985d7c7924da94cc8fabfc1725, type: 2}
+      objectReference: {fileID: 2100000, guid: a8c8eafed52a00347a8f89bd8361ea1b, type: 2}
     - target: {fileID: -3986699759025868235, guid: 7f2671d783b5d004c808f7ef1fb5153b,
         type: 3}
       propertyPath: m_IsActive
@@ -1413,7 +1416,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9fb609d29f4d66647a727dfbdc41bdd8, type: 2}
+      objectReference: {fileID: 2100000, guid: 0ce55f3aaa0367843bf1290ddd47d4cf, type: 2}
     - target: {fileID: -131413986120152744, guid: 7f2671d783b5d004c808f7ef1fb5153b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

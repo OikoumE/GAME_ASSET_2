@@ -20,12 +20,12 @@ namespace StateMachine
         {
             gameStateMachine.currentStateName = gameStateName;
 
-            Debug.Log("Enter state: ExitInShuttleState");
+            Debug.Log("Enter state: " + gameStateName);
         }
 
         public override void ExitState(GameStateMachine gameStateMachine)
         {
-            Debug.Log("Exit state: ExitInShuttleState");
+            Debug.Log("Exit state: " + gameStateName);
         }
     }
 }

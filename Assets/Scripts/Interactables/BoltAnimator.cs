@@ -1,5 +1,6 @@
 using System.Collections;
 using Controllers;
+using Elevator;
 using UnityEngine;
 
 namespace Interactables
@@ -78,7 +79,11 @@ namespace Interactables
             doLerp = true;
         }
 
-        public override void Interact(PlayerController pC)
+        public override void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
         {
             //do nothing
             // SUCCESS!!!

@@ -11,7 +11,6 @@ namespace Controllers
         [SerializeField] private float lerpSpeed = 1;
         [SerializeField] private GameObject flashLightGo;
         private readonly Vector3 buttonOffRotation = new(90, 0, 0);
-
         private readonly Vector3 buttonOnRot = new(-90, 0, 0);
 
         private readonly Vector3 inPos = Vector3.zero;
@@ -19,11 +18,13 @@ namespace Controllers
         private MeshRenderer buttonMeshRenderer;
         private bool isIn;
         private float lerpAlpha = 1;
+        private PlayerController playerController;
         private Light spotLight;
         private Vector3 startLerpPos, endLerpPos;
 
         private void Start()
         {
+            playerController = GetComponentInParent<PlayerController>();
             buttonMeshRenderer = button.gameObject.GetComponent<MeshRenderer>();
             spotLight = GetComponentInChildren<Light>();
             Init();
@@ -31,6 +32,7 @@ namespace Controllers
 
         private void Update()
         {
+            if (!playerController.hasFlashLight) return;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (isIn) StartCoroutine(StartAnimateOutDelayed());

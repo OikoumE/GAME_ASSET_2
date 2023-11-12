@@ -3,7 +3,47 @@ guid: 4d140c645d65acb4b917f4f31e35b1e2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant counter body
+    second: {fileID: 2100000, guid: 38c539078a3166f46ae49ba888b10cb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant counter emit
+    second: {fileID: 2100000, guid: 17389bbfd75292148b7514e0b21bc024, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant countertop
+    second: {fileID: 2100000, guid: 7ce5d6570d6a641458ed5319def50fa3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant floor
+    second: {fileID: 2100000, guid: 15c1c9286f56b724fbe839adeda4438b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant roof
+    second: {fileID: 2100000, guid: 90940cd123e8b924991211af1a6d2723, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant roof emit
+    second: {fileID: 2100000, guid: 6d35f365c9abb1245a4d299aae2ccdab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant roof emit border
+    second: {fileID: 2100000, guid: 31138c4008adad641970b445cabc0b7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: restaurant walls
+    second: {fileID: 2100000, guid: 41f27a3ef5661c947a2980666c6e8a44, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

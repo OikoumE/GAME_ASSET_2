@@ -8,6 +8,7 @@ namespace StateMachine
     public enum GameStateName
     {
         BaseState,
+        GameMenuState,
         GameIntroState,
         FuseBoxState,
         WireGameState,
@@ -25,11 +26,12 @@ namespace StateMachine
 
 
         [SerializeField] public GameStateName currentStateName;
-        public readonly GameBaseState exitInShuttleState = new ExitInShuttleState();
-        public readonly GameBaseState fuseBoxState = new FuseBoxState();
-        private readonly GameBaseState gameIntroState = new GameIntroState();
-        public readonly GameBaseState gameOverState = new GameOverState();
-        public readonly GameBaseState wireGameState = new WireGameState();
+        public readonly GameBaseState exitInShuttleState = new ExitInShuttleState(); //#5
+        public readonly GameBaseState fuseBoxState = new FuseBoxState(); //#3
+        public readonly GameBaseState gameIntroState = new GameIntroState(); //#2
+        public readonly GameBaseState gameMenuState = new GameMenuState(); //#1
+        public readonly GameBaseState gameOverState = new GameOverState(); //#6
+        public readonly GameBaseState wireGameState = new WireGameState(); //#4
         private GameBaseState currentState;
 
         public static GameStateMachine Instance { get; private set; }
@@ -58,7 +60,7 @@ namespace StateMachine
 
         private void Start()
         {
-            SetState(gameIntroState);
+            SetState(gameMenuState);
         }
 
         private void Update()
@@ -107,6 +109,35 @@ namespace StateMachine
             currentState?.ExitState(this);
             currentState = newState;
             currentState.EnterState(this);
+        }
+
+
+        public void SetState(GameStateName newStateName)
+        {
+            GameBaseState newState;
+            switch (newStateName)
+            {
+                case GameStateName.BaseState:
+                case GameStateName.GameIntroState:
+                    newState = gameIntroState;
+                    break;
+                case GameStateName.FuseBoxState:
+                    newState = fuseBoxState;
+                    break;
+                case GameStateName.WireGameState:
+                    newState = wireGameState;
+                    break;
+                case GameStateName.ExitInShuttleState:
+                    newState = exitInShuttleState;
+                    break;
+                case GameStateName.GameOverState:
+                    newState = gameOverState;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+
+            SetState(newState);
         }
     }
 }

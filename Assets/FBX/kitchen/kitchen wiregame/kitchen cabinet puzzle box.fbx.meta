@@ -3,7 +3,77 @@ guid: 2e41871a7d0af8047b9409ca3a10d3ee
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue emit.left
+    second: {fileID: 2100000, guid: ec7d4dc5d2ef9cb49abcfa263df33ae8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blue emit.right
+    second: {fileID: 2100000, guid: a1084c053e5fb3e438d461b99186ce9e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bolt metal
+    second: {fileID: 2100000, guid: 48466561de81bd94484a2e68f287aaf8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green emit.left
+    second: {fileID: 2100000, guid: 1a05f0c9b32c34b438163412a99fc6f9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: green emit.right
+    second: {fileID: 2100000, guid: c48fe0d10e0e4114f8a0428becf9c431, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red emit.left
+    second: {fileID: 2100000, guid: 72628de6ab793d742884d22c497c1f55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: red emit.right
+    second: {fileID: 2100000, guid: 8f213c2112bac6948a31070cf2c8424c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game black plastic
+    second: {fileID: 2100000, guid: 8c119969fc5a4124199f70c558ba91d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game blue metal
+    second: {fileID: 2100000, guid: 7cc84b9e4d9ecdc4880aadc219f14fcc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game box body
+    second: {fileID: 2100000, guid: fefa6e864b0c3324ca70929b2e4b0441, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game door
+    second: {fileID: 2100000, guid: d3fb08c86c47a5d42938e167844c85f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game green metal
+    second: {fileID: 2100000, guid: da83e65145422814ab4ea1ada1bf5d30, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game middle box
+    second: {fileID: 2100000, guid: 914690079d4decc4ba53a79caae6b1b2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wire game red metal
+    second: {fileID: 2100000, guid: cebe887eb0fa24248a550c72cafe4256, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

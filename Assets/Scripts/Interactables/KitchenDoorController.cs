@@ -80,14 +80,18 @@ namespace Interactables
 
         protected override void Update()
         {
+            var currentStateIsWireGame = GameStateMachine.Instance.IsCurrentState(GameStateName.WireGameState);
+            if (!currentStateIsWireGame) return;
+            Debug.Log("IS THIS WRONGF!?!??!? currentStateIsWireGame" + currentStateIsWireGame);
+
             base.Update(); // runs lerp
             AnimateDrill(); // handles all drill animation
-            LerpToCam(lerpCamSetting); // handles lerp-ing to/from camera
+            LerpToCam(); // handles lerp-ing to/from camera
             if (numberOfConnectedWires == 6 && !hasReturnedToPlayer)
             {
                 // we have all wires connected!
                 hasReturnedToPlayer = true; // make sure we only trigger once
-                StartCoroutine(ReturnToPlayer());
+                StartCoroutine(ReturnToPlayer(lerpCamSetting, true));
             }
             // todo prevent for interacting with panel without drill
 
@@ -130,8 +134,6 @@ namespace Interactables
 
         private void DoRay()
         {
-            var currentStateIsWireGame = GameStateMachine.Instance.IsCurrentState(GameStateName.WireGameState);
-            if (!currentStateIsWireGame) return;
             //handles all rayCasting
             if (!cameraHasControl) return;
             if (numberOfConnectedWires == 6) // makes sure we dont accidentally leave camera under player control
@@ -167,21 +169,27 @@ namespace Interactables
             StartCoroutine(FreezeCamForRetractingDrill(drillAnimDuration));
         }
 
-        public override void Interact(PlayerController pC)
+        public override void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
         {
             if (!pC.hasPickedDrill) return;
-            base.Interact(pC);
+            base.Interact(pC, audioSourceSettings, interruptAudio);
         }
 
 
-        protected override IEnumerator ReturnToPlayer()
+        protected override IEnumerator ReturnToPlayer(
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio)
         {
             // toggle cursor off/lock mouse
             playerController.SetCursorLockMode(CursorLockMode.Locked);
             // cooldown before returning to playerCam.
             yield return new WaitForSeconds(waitAfterComplete);
             // trigger lerp back to player
-            Interact(playerController);
+            Interact(playerController, audioSourceSettings, interruptAudio);
             GameStateMachine.Instance.SetState(GameStateMachine.Instance.exitInShuttleState);
         }
 
@@ -214,11 +222,10 @@ namespace Interactables
             onWireConnectAudioSource.Play();
         }
 
-        protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
+        protected override void LerpToCam()
         {
             if (!doLerp) return;
-            if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
-                PlayAudio(audioSourceSettings);
+
             // lerp lerpCam's position to InteractCam's position
             lerpCam.transform.position = Vector3.Lerp(
                 fromCam.transform.position,

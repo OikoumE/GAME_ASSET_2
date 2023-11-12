@@ -1,3 +1,4 @@
+using Elevator;
 using Interactables;
 using TMPro;
 using Unity.VisualScripting;
@@ -13,10 +14,14 @@ namespace Controllers
         [SerializeField] private float maxGroundDistance;
         [SerializeField] private TMP_Text crossHair;
 
+
+        [SerializeField] private AudioSourceSettings lerpAudioSourceSettings;
+
         [DoNotSerialize] public bool
             hasPickedDrill,
             hasPickedFuse,
-            hasReadShuttleTablet;
+            hasReadShuttleTablet,
+            hasFlashLight;
 
         private FlashLightController flashLightController;
 
@@ -105,27 +110,26 @@ namespace Controllers
         private void DoRay()
         {
             if (!playerHasControl) return;
-            SetCrossHairOutline(isInteractableCrossHairColor, 0);
             var ray = cameraToControl.ScreenPointToRay(Input.mousePosition);
             if (!Physics.Raycast(ray, out hit, interactableLayerMask)) return;
             var isOutOfRange = IsInteractOutOfRange(transform.position, hit.point);
             var hitInteractable = hit.transform.gameObject.TryGetComponent(out Interactable interactableObject);
-
+            SetCrossHairOutline(defaultCrossHairColor, 0.0f); // set black cross-hair
             if (hitInteractable)
             {
                 var canBeInteractedWith = interactableObject.isInteractable;
-                if (playerHasControl && canBeInteractedWith)
+                if (playerHasControl && canBeInteractedWith) // set white cross-hair
                     SetCrossHairOutline(isInteractableCrossHairColor);
                 if (!isOutOfRange && canBeInteractedWith)
-                    SetCrossHairOutline(canInteractCrossHairColor);
+                    SetCrossHairOutline(canInteractCrossHairColor); // set green cross-hair
                 if (!isOutOfRange && interactableObject.gameObject.TryGetComponent(out KitchenDoorController kDc))
                     if (!hasPickedDrill)
-                        SetCrossHairOutline(isNotInteractableCrossHairColor);
+                        SetCrossHairOutline(isNotInteractableCrossHairColor); // set red cross-hair
             }
 
 
             if (!Input.GetMouseButtonDown(0) || !playerHasControl || !hitInteractable || isOutOfRange) return;
-            interactableObject.Interact(this);
+            interactableObject.Interact(this, lerpAudioSourceSettings);
         }
 
 

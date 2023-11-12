@@ -39,12 +39,13 @@ namespace Controllers
         {
             var currentStateIsFuseBox = GameStateMachine.Instance.IsCurrentState(GameStateName.FuseBoxState);
             if (!currentStateIsFuseBox) return;
+            Debug.Log("IS THIS WRONGF!?!??!? currentStateIsFuseBox" + currentStateIsFuseBox);
             base.Update();
             if (cameraHasControl) // enables easy disabling of camera control
                 cameraController.RunInputHandler();
             DoRay();
             AnimateDoor();
-            LerpToCam(lerpAudio.lerpSettings, true);
+            LerpToCam();
         }
 
 
@@ -59,14 +60,18 @@ namespace Controllers
             cameraController = fixedCam.gameObject.GetComponent<CameraController>();
         }
 
-        public override void Interact(PlayerController pC)
+        public override void Interact(
+            PlayerController pC,
+            AudioSourceSettings audioSourceSettings,
+            bool interruptAudio = true
+        )
         {
             boxCollider.enabled = false;
             playerController = pC;
             if (InteractModeEnabled)
                 StartCoroutine(SetNextStateDelayed());
 
-            base.Interact(pC);
+            base.Interact(pC, audioSourceSettings, interruptAudio);
         }
 
         private IEnumerator SetNextStateDelayed()
@@ -78,7 +83,7 @@ namespace Controllers
         private void DoRay()
         {
             //handles all rayCasting
-
+            if (!cameraHasControl) return;
             if (playerController) // sets crossHair to default
                 playerController.SetCrossHairOutline(cameraController.IsInteractableCrossHairColor, 0);
             // create ray
@@ -95,11 +100,10 @@ namespace Controllers
             interactableObject.Interact(this);
         }
 
-        protected override void LerpToCam(AudioSourceSettings audioSourceSettings, bool interruptAudio = false)
+        protected override void LerpToCam()
         {
             if (!doLerp) return;
-            if (audioSourceSettings.Source.clip != audioSourceSettings.audioClip || interruptAudio)
-                PlayAudio(audioSourceSettings);
+
             // lerp lerpCam to InteractCam
             lerpCam.transform.position = Vector3.Lerp(
                 fromCam.transform.position,
