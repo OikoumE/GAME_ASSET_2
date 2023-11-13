@@ -3,7 +3,72 @@ guid: 49c062d046ed9a74a90e798d7cfe895d
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator buttons light green
+    second: {fileID: 2100000, guid: 173bfbcb1f518464fbc63f0aeed36586, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator buttons light red
+    second: {fileID: 2100000, guid: ae4a2f385612ce0479336c13e1f331e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator buttons light red.002
+    second: {fileID: 2100000, guid: f68aa489e7938454b9aa79d58fb5cc19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator buttons rim.001
+    second: {fileID: 2100000, guid: 4a8dfdceb2b80474ba3d7d680024c909, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator door 1
+    second: {fileID: 2100000, guid: db0a325ccbba640428570e8774513076, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator door 2
+    second: {fileID: 2100000, guid: 88f810f0b560e1849bc51170c87bb780, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator interior
+    second: {fileID: 2100000, guid: b8d20aebb06543248a77a756e5846b6d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator panel rim.001
+    second: {fileID: 2100000, guid: 9a4722ca62de4b840bbb23d5bf0329ed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator panel.inner
+    second: {fileID: 2100000, guid: 9d5f7ed6177ff294dac177c997506b4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator plaque.001
+    second: {fileID: 2100000, guid: 054cb73752e6b5945afbeecd50a09970, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator roof emit
+    second: {fileID: 2100000, guid: 86b322d85b289f548aeeba520de166c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator screws.001
+    second: {fileID: 2100000, guid: 1d3b7ce3ad8d619469247ed36881ab52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: elevator text.001
+    second: {fileID: 2100000, guid: 5999710eee4977f42af7d6698e644e1d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

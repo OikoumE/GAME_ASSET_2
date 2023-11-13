@@ -1,18 +1,38 @@
 using System;
 using Controllers;
-using Elevator;
+using HighlightPlus;
+using StateMachine;
+using UnityEngine;
 
 namespace Interactables
 {
     public class InteractableFuse : Interactable
     {
+        [SerializeField] private HighlightEffect highlightEffect;
+        [SerializeField] private HighlightTrigger highlightTrigger;
         private InteractableFuse[] fuses;
 
         private void Start()
         {
             fuses = FindObjectsOfType<InteractableFuse>();
+            if (!highlightEffect) highlightEffect = GetComponentInParent<HighlightEffect>();
+            if (!highlightTrigger) highlightTrigger = GetComponentInParent<HighlightTrigger>();
         }
 
+        public bool setColors = false;
+        private void OnValidate()
+        {
+            if (setColors)
+            {
+                // do the color thing
+            }
+        }
+
+        public void SetHighlightEnabled(bool enable)
+        {
+            highlightEffect.enabled = enable;
+            highlightTrigger.enabled = enable;
+        }
 
         public override void Interact(
             PlayerController pC,
@@ -22,12 +42,14 @@ namespace Interactables
         {
             if (pC.hasPickedFuse) return;
             pC.hasPickedFuse = true;
-            gameObject.SetActive(false);
             foreach (var interactableFuse in fuses)
             {
                 if (interactableFuse == this) continue;
                 interactableFuse.isInteractable = false;
+                interactableFuse.SetHighlightEnabled(false);
             }
+
+            gameObject.SetActive(false);
         }
 
         public override void Interact(KitchenDoorController kDC)

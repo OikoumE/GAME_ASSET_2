@@ -5,11 +5,12 @@ namespace Interactables
 {
     public class FuseBoxDoorKnob : Interactable
     {
-        [SerializeField] private float doorKnobSpeed;
+        [SerializeField] private float doorKnobSpeed = 1f;
         private bool animateDoorKnob;
         private BoxCollider boxCollider;
 
         private FuseboxController fuseboxController;
+
 
         private float rotAlpha;
 

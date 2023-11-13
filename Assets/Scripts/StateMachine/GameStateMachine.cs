@@ -5,6 +5,15 @@ using UnityEngine;
 
 namespace StateMachine
 {
+    [Serializable]
+    public class AudioSourceSettings
+    {
+        [SerializeField] public AudioSource Source;
+        [SerializeField] public AudioClip audioClip;
+        [SerializeField] [Range(0, 1)] public float volume = 1f;
+        [SerializeField] [Range(-3, 3)] public float pitch = 1f;
+    }
+
     public enum GameStateName
     {
         BaseState,
@@ -124,15 +133,9 @@ namespace StateMachine
 
         public void SetState(GameBaseState newState)
         {
-            if (currentState != null)
-            {
-                Debug.Log("Exit state: " + currentState.gameStateName);
-                currentState?.ExitState(this);
-            }
-
+            currentState?.ExitState(this);
             currentState = newState;
             currentState.EnterState(this);
-            Debug.Log("Enter state: " + currentState.gameStateName);
         }
 
 

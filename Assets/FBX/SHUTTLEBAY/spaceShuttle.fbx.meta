@@ -52,6 +52,66 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: space shuttle  blue emit
+    second: {fileID: 2100000, guid: fd1a4ab6f4d15fa4c9c7ddde20175a6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle  purple emit
+    second: {fileID: 2100000, guid: 7113cb157549aca4f8cd3d4f424ff597, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle 1
+    second: {fileID: 2100000, guid: 18208773ef985ba4cb5c50224c394b17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle 2
+    second: {fileID: 2100000, guid: b26144d3b9c41074696b7ea8aa77409c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle 3
+    second: {fileID: 2100000, guid: af0108704fdeaa74484330839a3f85a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle 4
+    second: {fileID: 2100000, guid: ef431fdf538aeb644baaebe7ba941af3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle green emit
+    second: {fileID: 2100000, guid: 2ca3727448155324aafa23dbde74e0be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle orange emit
+    second: {fileID: 2100000, guid: 3ba6865e0a432744a996081542e9af84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle red emit
+    second: {fileID: 2100000, guid: 3ea096b7afe93814db0210598573768e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle white emit
+    second: {fileID: 2100000, guid: 000347d183fe79944874cb69b57476a9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: space shuttle yellow emit
+    second: {fileID: 2100000, guid: 76ab793eb36992c43b8f316caca838f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spaceshuttle glass
+    second: {fileID: 2100000, guid: ae934bfe76c92224685d0428d0aa4f40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: toolbox metal
     second: {fileID: 2100000, guid: f26db08dbfde84046b92a190082fd867, type: 2}
   - first:

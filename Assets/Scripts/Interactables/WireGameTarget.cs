@@ -16,6 +16,7 @@ namespace Interactables
         [FormerlySerializedAs("particleSystem")] [SerializeField]
         private ParticleSystem mParticleSystem;
 
+        [SerializeField] private Transform targetConstraintTransform;
 
         private BoxCollider boxCollider;
         private bool hasInteractedWithTarget;
@@ -25,13 +26,10 @@ namespace Interactables
 
         private Vector3 mousePos;
 
-//TODO turn on audio on demand... for sparky
-        // Start is called before the first frame update
         private void Start()
         {
             boxCollider = GetComponent<BoxCollider>();
             boxCollider.enabled = false;
-            //TODO enable colliders after door has opened
             if (!targetLocation) throw new Exception("No target set for wire: " + gameObject.name);
         }
 
@@ -43,8 +41,11 @@ namespace Interactables
             mousePos = mKDc.hit.point;
             if (Input.GetMouseButton(0))
             {
+                var position = transform.position;
                 transform.position = mousePos;
-                var dst = Vector3.Distance(transform.position, targetLocation.position);
+
+
+                var dst = Vector3.Distance(position, targetLocation.position);
                 if (dst >= targetDistanceThreshold) return;
                 // we have reached target
                 transform.position = targetLocation.position;
@@ -60,6 +61,10 @@ namespace Interactables
                 if (hasReachedTarget) return;
                 hasInteractedWithTarget = false;
                 boxCollider.enabled = true;
+
+                // TODO
+                // snap target back to bonePos on release
+                transform.position = targetConstraintTransform.position;
             }
         }
 
@@ -67,13 +72,7 @@ namespace Interactables
         {
             if (!hasInteractedWithTarget || !targetLocation) return;
             Gizmos.color = Color.blue;
-            Gizmos.DrawWireSphere(targetLocation.position, .01f);
-            Gizmos.color = Color.white;
             Gizmos.DrawWireSphere(targetLocation.position, targetDistanceThreshold);
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(transform.position, .01f);
-            Gizmos.color = Color.cyan;
-            Gizmos.DrawRay(targetLocation.position, transform.position);
         }
 
 

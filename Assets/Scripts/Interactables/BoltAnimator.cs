@@ -1,6 +1,7 @@
 using System.Collections;
 using Controllers;
-using Elevator;
+using HighlightPlus;
+using StateMachine;
 using UnityEngine;
 
 namespace Interactables
@@ -16,12 +17,16 @@ namespace Interactables
         private BoxCollider boxCollider;
         private float currAngle;
         private bool hasGotPositions;
+        private HighlightEffect highlightEffect;
+        private HighlightTrigger highlightTrigger;
         private KitchenDoorController kitchenDoorController;
         private Rigidbody mRigidbody;
         private AudioSource unscrewAudioSource;
 
         private void Start()
         {
+            highlightEffect = GetComponent<HighlightEffect>();
+            highlightTrigger = GetComponent<HighlightTrigger>();
             unscrewAudioSource = GetComponent<AudioSource>();
             boxCollider = GetComponent<BoxCollider>();
             mRigidbody = GetComponent<Rigidbody>();
@@ -69,6 +74,8 @@ namespace Interactables
             // doLerp = true;
             StartCoroutine(ActivateLerp());
             isInteractable = false;
+            highlightEffect.enabled = false;
+            highlightTrigger.enabled = false;
             boxCollider.enabled = false;
         }
 

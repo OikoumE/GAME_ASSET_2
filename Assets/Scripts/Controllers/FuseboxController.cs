@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-using Elevator;
+using HighlightPlus;
 using Interactables;
 using StateMachine;
 using Unity.VisualScripting;
@@ -17,6 +17,8 @@ namespace Controllers
         private BoxCollider boxCollider;
         private CameraController cameraController;
         private bool cameraHasControl;
+        private HighlightEffect highlightEffect;
+        private HighlightTrigger highlightTrigger;
 
 
         private bool isFuseboxOpen, animateFuse;
@@ -33,6 +35,8 @@ namespace Controllers
             rot = startRotation;
             SetCamController();
             boxCollider = GetComponent<BoxCollider>();
+            highlightEffect = GetComponent<HighlightEffect>();
+            highlightTrigger = GetComponent<HighlightTrigger>();
         }
 
         protected override void Update()
@@ -65,6 +69,8 @@ namespace Controllers
             bool interruptAudio = true
         )
         {
+            highlightEffect.enabled = false;
+            highlightTrigger.enabled = false;
             boxCollider.enabled = false;
             playerController = pC;
             if (InteractModeEnabled)

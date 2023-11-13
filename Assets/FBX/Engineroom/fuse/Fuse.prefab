@@ -54,6 +54,8 @@ MonoBehaviour:
   lerpSpeed: 1
   isInteractable: 1
   lerpAlpha: 0
+  highlightEffect: {fileID: 6539187163605927596}
+  highlightTrigger: {fileID: 745849240963467332}
 --- !u!136 &4573822957802023373
 CapsuleCollider:
   m_ObjectHideFlags: 0

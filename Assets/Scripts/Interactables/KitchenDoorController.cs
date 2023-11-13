@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Controllers;
-using Elevator;
+using HighlightPlus;
 using StateMachine;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -17,6 +17,8 @@ namespace Interactables
         [SerializeField] private Transform endPos, doorRotatePoint;
         [SerializeField] private float doorTranslateSpeed = 1, doorRotateSpeed = 1;
         [SerializeField] private GameObject doorMesh;
+        [SerializeField] private HighlightEffect highlightEffect;
+        [SerializeField] private HighlightTrigger highlightTrigger;
 
         [FormerlySerializedAs("mMeshCollider")] [SerializeField]
         private MeshCollider kitchenDoorRayCollider;
@@ -57,6 +59,8 @@ namespace Interactables
         private bool hasReturnedToPlayer;
 
         private bool hasStartedDrill;
+
+
         [HideInInspector] public RaycastHit hit;
         private AudioSource onWireConnectAudioSource;
         private bool startedDelayedEnding;
@@ -64,6 +68,8 @@ namespace Interactables
 
         private void Start()
         {
+            if (!highlightEffect) highlightEffect = GetComponentInParent<HighlightEffect>();
+            if (!highlightTrigger) highlightTrigger = GetComponentInParent<HighlightTrigger>();
             drillPrefab.SetActive(false);
             var audioSources = wireGameAudio.GetComponents<AudioSource>();
             onWireConnectAudioSource = audioSources[1];
@@ -82,7 +88,6 @@ namespace Interactables
         {
             var currentStateIsWireGame = GameStateMachine.Instance.IsCurrentState(GameStateName.WireGameState);
             if (!currentStateIsWireGame) return;
-            Debug.Log("IS THIS WRONGF!?!??!? currentStateIsWireGame" + currentStateIsWireGame);
 
             base.Update(); // runs lerp
             AnimateDrill(); // handles all drill animation
@@ -148,17 +153,16 @@ namespace Interactables
             var ray = cameraController.cameraToControl.ScreenPointToRay(Input.mousePosition);
             //cast ray
             var rayCastHit = Physics.Raycast(ray, out hit, cameraController.interactableLayerMask);
-            // check if we hit an interactable object
-            var hitInteractable = hit.transform.gameObject.TryGetComponent(out Interactable interactableObject);
-
             if (playerController) // sets crossHair to default
                 playerController.SetCrossHairOutline(cameraController.IsInteractableCrossHairColor, 0);
+            if (!rayCastHit) return;
+            var hitInteractable = hit.transform.gameObject.TryGetComponent(out Interactable interactableObject);
             if (hitInteractable) // set crossHair if its an interactable, and can be interacted with
                 if (playerController && interactableObject.isInteractable)
                     playerController.SetCrossHairOutline(cameraController.CanInteractCrossHairColor);
 
 
-            if (!Input.GetMouseButtonDown(0) || !cameraHasControl || !hitInteractable || !rayCastHit) return;
+            if (!Input.GetMouseButtonDown(0) || !cameraHasControl || !hitInteractable) return;
             // all conditions for interaction has been met
             interactableObject.Interact(this);
 
@@ -190,7 +194,6 @@ namespace Interactables
             yield return new WaitForSeconds(waitAfterComplete);
             // trigger lerp back to player
             Interact(playerController, audioSourceSettings, interruptAudio);
-            GameStateMachine.Instance.SetState(GameStateMachine.Instance.exitInShuttleState);
         }
 
         private void DoDoorAnimation()
@@ -255,16 +258,22 @@ namespace Interactables
             // turn off/on cameraControls
             if (InteractModeEnabled)
                 // if we have done lerp, interacted, and are about to lerp back
+            {
+                GameStateMachine.Instance.SetState(GameStateMachine.Instance.exitInShuttleState);
                 playerController.SetPlayerControl(true);
+            }
             else // we are on out way to interact
+            {
                 StartCoroutine(FreezeCamForDuration(initialWaitForControl));
+            }
 
             kitchenDoorRayCollider.enabled = !InteractModeEnabled; // toggle rayCollider
             boxCollider.enabled = false; // disable collider for interacting with door
+            highlightEffect.enabled = false;
+            highlightTrigger.enabled = false;
             drillPrefab.SetActive(!InteractModeEnabled); // toggle drillPrefab
             InteractModeEnabled = !InteractModeEnabled; // toggle InteractModeEnabled
         }
-
 
         private IEnumerator FreezeCamForDuration(float duration)
         {

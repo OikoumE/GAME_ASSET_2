@@ -1,5 +1,5 @@
-using Elevator;
 using Interactables;
+using StateMachine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -40,6 +40,10 @@ namespace Controllers
             // Cursor.lockState = CursorLockMode.Locked;
             mRigidbody = GetComponent<Rigidbody>();
             flashLightController = GetComponentInChildren<FlashLightController>();
+            var lights = GetComponentsInChildren<Light>();
+            foreach (var mLight in lights)
+                if (mLight.enabled)
+                    Debug.Log("REMEMBER TO TURN OFF DEV FLASH LIGHT");
         }
 
 
@@ -109,10 +113,10 @@ namespace Controllers
         {
             if (!playerHasControl) return;
             var ray = cameraToControl.ScreenPointToRay(Input.mousePosition);
+            SetCrossHairOutline(defaultCrossHairColor, 0.0f); // set black cross-hair
             if (!Physics.Raycast(ray, out hit, interactableLayerMask)) return;
             var isOutOfRange = IsInteractOutOfRange(transform.position, hit.point);
             var hitInteractable = hit.transform.gameObject.TryGetComponent(out Interactable interactableObject);
-            SetCrossHairOutline(defaultCrossHairColor, 0.0f); // set black cross-hair
             if (hitInteractable)
             {
                 var canBeInteractedWith = interactableObject.isInteractable;

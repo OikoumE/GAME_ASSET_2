@@ -1,6 +1,6 @@
 using System;
 using Controllers;
-using Elevator;
+using StateMachine;
 
 namespace Interactables
 {

@@ -280,13 +280,4 @@ namespace Elevator
             public Quaternion StartPos { get; } = new(-0.50f, -0.5f, -0.5f, 0.5f);
         }
     }
-
-    [Serializable]
-    public class AudioSourceSettings
-    {
-        [SerializeField] public AudioSource Source;
-        [SerializeField] public AudioClip audioClip;
-        [SerializeField] [Range(0, 1)] public float volume = 1f;
-        [SerializeField] [Range(-3, 3)] public float pitch = 1f;
-    }
 }
