@@ -1845,8 +1845,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 940753816384017469, guid: 6ead5229870e31c42a3681cc785188ed,
         type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940753816384017469, guid: 6ead5229870e31c42a3681cc785188ed,
+        type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 940753816384017469, guid: 6ead5229870e31c42a3681cc785188ed,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 940753816384017469, guid: 6ead5229870e31c42a3681cc785188ed,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1048028034211942304, guid: 6ead5229870e31c42a3681cc785188ed,
         type: 3}
@@ -2839,6 +2854,69 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &292830815
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 292830816}
+  - component: {fileID: 292830818}
+  - component: {fileID: 292830817}
+  m_Layer: 22
+  m_Name: RayCastCollider (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &292830816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292830815}
+  serializedVersion: 2
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 32.430508}
+  m_LocalScale: {x: 0.5, y: 1, z: 7}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705219771}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!64 &292830817
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292830815}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &292830818
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292830815}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!114 &374318639 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7242284305935893659, guid: 29f3a640871050449b80cd326614e4ae,
@@ -3362,6 +3440,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -4800,8 +4928,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1038803146102047679, guid: c3c39c0c3935b5349a3faa688a953fff,
         type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038803146102047679, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1038803146102047679, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 1038803146102047679, guid: c3c39c0c3935b5349a3faa688a953fff,
         type: 3}
@@ -4843,6 +4981,11 @@ PrefabInstance:
       propertyPath: mParticleSystem
       value: 
       objectReference: {fileID: 494215776}
+    - target: {fileID: 1362044973147772189, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1593600800737783714, guid: c3c39c0c3935b5349a3faa688a953fff,
         type: 3}
       propertyPath: m_Layer
@@ -4906,6 +5049,11 @@ PrefabInstance:
     - target: {fileID: 2490932139995344196, guid: c3c39c0c3935b5349a3faa688a953fff,
         type: 3}
       propertyPath: deactivateWhenDone
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719929322181694937, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2770671314197015671, guid: c3c39c0c3935b5349a3faa688a953fff,
@@ -5062,6 +5210,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172079947950832515, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172079947950832515, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7172079947950832515, guid: c3c39c0c3935b5349a3faa688a953fff,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7937328194143208489, guid: c3c39c0c3935b5349a3faa688a953fff,
         type: 3}
@@ -6622,10 +6785,30 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1802130440966120521, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828606076921597184, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1828606076921597184, guid: 29f3a640871050449b80cd326614e4ae,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828606076921597184, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1828606076921597184, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1897042647704503183, guid: 29f3a640871050449b80cd326614e4ae,
         type: 3}
@@ -6654,8 +6837,23 @@ PrefabInstance:
       objectReference: {fileID: 1065970432}
     - target: {fileID: 2604807017768322500, guid: 29f3a640871050449b80cd326614e4ae,
         type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604807017768322500, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604807017768322500, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2604807017768322500, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2840879872706240026, guid: 29f3a640871050449b80cd326614e4ae,
         type: 3}
@@ -6672,6 +6870,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3407126298821795677, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407126298821795677, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3407126298821795677, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3555695055380307682, guid: 29f3a640871050449b80cd326614e4ae,
         type: 3}
       propertyPath: _highlighted
@@ -6681,6 +6894,11 @@ PrefabInstance:
         type: 3}
       propertyPath: _highlighted
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964967482454962076, guid: 29f3a640871050449b80cd326614e4ae,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4258043045399897234, guid: 29f3a640871050449b80cd326614e4ae,
         type: 3}
@@ -6914,6 +7132,21 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 746258795812871093, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976875138063600774, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976875138063600774, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 976875138063600774, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
       propertyPath: near clip plane
@@ -6932,8 +7165,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
       propertyPath: near clip plane
       value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835347629388608794, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6457208973850022471, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
@@ -8165,7 +8423,7 @@ PrefabInstance:
     - target: {fileID: 3674900935272719400, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
       propertyPath: near clip plane
-      value: 0.11
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3865169507046591203, guid: 8ca62a8272933734bae7042ed98d62d0,
         type: 3}
@@ -8528,6 +8786,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -8644,6 +8952,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -10052,6 +10410,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: lerpSpeed
@@ -10184,6 +10592,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6b3560f65b07bd4f928652eb6bea703, type: 3}
+--- !u!4 &1705219771 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1727641950671770671, guid: 579ddf2d28d6ca24a9d2ceddd9f01648,
+    type: 3}
+  m_PrefabInstance: {fileID: 1857294877}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1724433751 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4307897833284757203, guid: d0a1e57ea4f48e240894c97059d04109,
@@ -11173,6 +11587,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -11284,6 +11748,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -12788,6 +13302,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1727641950671770671, guid: 579ddf2d28d6ca24a9d2ceddd9f01648,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 292830816}
     - targetCorrespondingSourceObject: {fileID: 6299069434813295501, guid: 579ddf2d28d6ca24a9d2ceddd9f01648,
         type: 3}
       insertIndex: 0
@@ -14803,6 +15321,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -15032,6 +15600,21 @@ PrefabInstance:
       propertyPath: targetConstraintTransform
       value: 
       objectReference: {fileID: 873569499}
+    - target: {fileID: 1170686085096205018, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170686085096205018, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170686085096205018, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1402260084463763741, guid: 08362096452cdc746a711b68f40b69f3,
         type: 3}
       propertyPath: targetTransform
@@ -15187,6 +15770,21 @@ PrefabInstance:
       propertyPath: InitialModule.startSizeZ.minScalar
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 4576391839859764826, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576391839859764826, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576391839859764826, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 5085117784413352161, guid: 08362096452cdc746a711b68f40b69f3,
         type: 3}
       propertyPath: targetTransform
@@ -15336,6 +15934,11 @@ PrefabInstance:
         type: 3}
       propertyPath: startPos.z
       value: -1.3892822
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939519936024205240, guid: 08362096452cdc746a711b68f40b69f3,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8282101641556910843, guid: 08362096452cdc746a711b68f40b69f3,
         type: 3}
@@ -15553,6 +16156,56 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 5450907207521968949, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959044136530950, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937215886549618315, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8414792334469844378, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: playerCam
@@ -15784,6 +16437,26 @@ PrefabInstance:
       propertyPath: raycastCamera
       value: 
       objectReference: {fileID: 1065970432}
+    - target: {fileID: 746258795812871093, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976875138063600774, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 976875138063600774, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 976875138063600774, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1792804531780444149, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
       propertyPath: m_Enabled
@@ -15794,6 +16467,36 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 'You are tasked with replacing the fuse and getting Scepa station back
         to full capacity! Dont forget to bring a fuse! <Placeholder>  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: far clip plane
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447534763252512267, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3835347629388608794, guid: 5ce571166fa086846b00e220b7ff33a9,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6457208973850022471, guid: 5ce571166fa086846b00e220b7ff33a9,
         type: 3}
