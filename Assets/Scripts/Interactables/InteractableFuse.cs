@@ -19,14 +19,6 @@ namespace Interactables
             if (!highlightTrigger) highlightTrigger = GetComponentInParent<HighlightTrigger>();
         }
 
-        public bool setColors = false;
-        private void OnValidate()
-        {
-            if (setColors)
-            {
-                // do the color thing
-            }
-        }
 
         public void SetHighlightEnabled(bool enable)
         {

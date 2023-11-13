@@ -67,6 +67,7 @@ namespace Interactables
                 transform.position = targetConstraintTransform.position;
             }
         }
+#if UNITY_EDITOR
 
         private void OnDrawGizmos()
         {
@@ -75,6 +76,7 @@ namespace Interactables
             Gizmos.DrawWireSphere(targetLocation.position, targetDistanceThreshold);
         }
 
+#endif
 
         public override void Interact(KitchenDoorController kDc)
         {

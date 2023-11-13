@@ -36,6 +36,7 @@ namespace Interactables
                 gameObject.SetActive(false);
             else mParticleSystem.Play();
         }
+#if UNITY_EDITOR
 
         private void OnDrawGizmos()
         {
@@ -48,6 +49,7 @@ namespace Interactables
             Gizmos.color = Color.red;
             Gizmos.DrawCube(stopPos, gizmoSize);
         }
+#endif
 
         private void OnValidate()
         {

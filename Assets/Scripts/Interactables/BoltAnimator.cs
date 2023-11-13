@@ -59,6 +59,7 @@ namespace Interactables
             mRigidbody.AddForce(Vector3.up * impulseForce, ForceMode.Impulse);
             doLerp = false;
         }
+#if UNITY_EDITOR
 
         private void OnDrawGizmos()
         {
@@ -66,6 +67,7 @@ namespace Interactables
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(endPos, .005f);
         }
+#endif
 
         public override void Interact(KitchenDoorController kDC)
         {

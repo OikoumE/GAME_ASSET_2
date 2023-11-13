@@ -37,11 +37,8 @@ namespace Interactables
             yield return new WaitForSeconds(1);
             fuseboxController.animateDoor = true;
             yield return new WaitForSeconds(1.5f);
-            Debug.Log("1");
             var pC = fuseboxController.GetPlayerController;
-            Debug.Log("2");
             fuseboxController.Interact(pC, audioSourceSettings);
-            Debug.Log("3");
         }
 
         public override void Interact(FuseboxController fC)

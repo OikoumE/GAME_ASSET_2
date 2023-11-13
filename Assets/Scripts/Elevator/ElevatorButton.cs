@@ -39,6 +39,7 @@ namespace Elevator
 
             LerpToCam();
         }
+#if UNITY_EDITOR
 
         private void OnDrawGizmos()
         {
@@ -46,6 +47,7 @@ namespace Elevator
             Gizmos.color = Color.red;
             Gizmos.DrawRay(toCamObject.transform.position, hitPoint);
         }
+#endif
 
 
         private void SetColliderState(bool state)

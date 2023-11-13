@@ -65,6 +65,7 @@ namespace Controllers
             GroundChecker();
         }
 
+#if UNITY_EDITOR
 
         private void OnDrawGizmos()
         {
@@ -81,6 +82,7 @@ namespace Controllers
             Gizmos.DrawSphere(position + Vector3.up, 0.25f);
             Gizmos.DrawSphere(position + Vector3.up * .25f, 0.25f);
         }
+#endif
 
         private void OnValidate()
         {

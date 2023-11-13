@@ -16,14 +16,14 @@ namespace StateMachine
         {
             SetColliderAsTrigger();
         }
-
+#if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             var pos = transform.position;
             Handles.Label(pos + Vector3.up * 0.5f, "StateTrigger: " + stateToTrigger);
             Gizmos.DrawSphere(pos, 0.1f);
         }
-
+#endif
         private void OnTriggerEnter(Collider other)
         {
             if (!triggerOnEnter) return;
