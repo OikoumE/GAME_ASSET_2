@@ -6,7 +6,7 @@ namespace Dialogue
 {
     public class DialogueTriggerReturnToShuttle : DialogueTrigger
     {
-        protected override void OnTriggerEnter(Collider other)
+        protected override void OnTriggerStay(Collider other)
         {
             var state = GameStateMachine.Instance.currentStateName;
 
@@ -14,7 +14,7 @@ namespace Dialogue
             playerController = iP.GetPlayerController();
 
             if (state != GameStateName.WireGameState) return;
-            base.OnTriggerEnter(other);
+            base.OnTriggerStay(other);
         }
     }
 }

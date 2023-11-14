@@ -7276,17 +7276,21 @@ PrefabInstance:
         Cosmic disturbances have been detected
         in orbit around Hah''ra IV.
 
+
+
         - Evacuations are complete.
 
         -
         Planet is in quarantine
 
 
+
         Stay clear at all costs!
 
 
-        - Board
-        of Directors, Space Traversal Agency'
+
+        -
+        Board of Directors, Space Traversal Agency'
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6457208973850022471, guid: 5ce571166fa086846b00e220b7ff33a9, type: 3}
@@ -15571,6 +15575,20 @@ PrefabInstance:
         type: 3}
       propertyPath: gameStateName
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693481518379347474, guid: d0a1e57ea4f48e240894c97059d04109,
+        type: 3}
+      propertyPath: dialogueText.dialogue
+      value: '
+
+        Look: Mouse.
+
+        Movement: W, A, S, D.
+
+        Interaction:
+        Left Mouse Button.
+
+        Flashlight (if equipped): E.'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

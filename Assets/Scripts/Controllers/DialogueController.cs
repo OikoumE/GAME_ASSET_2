@@ -24,18 +24,6 @@ namespace Controllers
             mCollider.isTrigger = true;
         }
 
-
-        protected virtual void OnTriggerEnter(Collider other)
-        {
-            if (requireSpecificGameState)
-                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
-                    return;
-            if (!other.TryGetComponent(out IPlayer iP)) return;
-            playerController = iP.GetPlayerController();
-            SetDialogueText();
-            SetDialogueVisibility(true);
-        }
-
         protected virtual void OnTriggerExit(Collider other)
         {
             if (requireSpecificGameState)
@@ -45,6 +33,18 @@ namespace Controllers
             SetDialogueVisibility(false);
             if (isOneShot)
                 mCollider.enabled = false;
+        }
+
+
+        protected virtual void OnTriggerStay(Collider other)
+        {
+            if (requireSpecificGameState)
+                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
+                    return;
+            if (!other.TryGetComponent(out IPlayer iP)) return;
+            playerController = iP.GetPlayerController();
+            SetDialogueText();
+            SetDialogueVisibility(true);
         }
 
 
