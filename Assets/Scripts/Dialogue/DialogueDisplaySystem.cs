@@ -9,7 +9,7 @@ namespace Dialogue
         [SerializeField] private GameObject dialogueTriggersParent;
         public bool updateTriggerList;
         [SerializeField] private DialogueTrigger[] dialogueTriggers;
-        private Image dialoguePanel;
+        private Image[] dialoguePanel;
         private TMP_Text titleTmp, dialogueTmp;
 
         private void Start()
@@ -45,7 +45,7 @@ namespace Dialogue
         {
             var textComponents = GetComponentsInChildren<TMP_Text>();
             (titleTmp, dialogueTmp) = (textComponents[0], textComponents[1]);
-            dialoguePanel = GetComponentInChildren<Image>();
+            dialoguePanel = GetComponentsInChildren<Image>();
         }
 
         public void SetDialogueDisplayText(string title, string dialogue)
@@ -58,7 +58,7 @@ namespace Dialogue
         {
             titleTmp.enabled = enable;
             dialogueTmp.enabled = enable;
-            dialoguePanel.enabled = enable;
+            foreach (var image in dialoguePanel) image.enabled = enable;
         }
     }
 }
