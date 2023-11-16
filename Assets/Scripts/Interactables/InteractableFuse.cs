@@ -10,6 +10,7 @@ namespace Interactables
     {
         [SerializeField] private HighlightEffect highlightEffect;
         [SerializeField] private HighlightTrigger highlightTrigger;
+        [SerializeField] private GameObject imageObj;
         private InteractableFuse[] fuses;
 
         private void Start()
@@ -41,6 +42,7 @@ namespace Interactables
                 interactableFuse.SetHighlightEnabled(false);
             }
 
+            imageObj.SetActive(true);
             gameObject.SetActive(false);
         }
 

@@ -27,6 +27,7 @@ namespace Controllers
             playerController = GetComponentInParent<PlayerController>();
             buttonMeshRenderer = button.gameObject.GetComponent<MeshRenderer>();
             spotLight = GetComponentInChildren<Light>();
+
             Init();
         }
 
@@ -51,6 +52,19 @@ namespace Controllers
             isIn = false;
             SetButtonState(false);
         }
+
+        public void SetFlashLightTurnedOn(bool enable)
+        {
+            if (enable)
+            {
+                if (!isIn) AnimateIn();
+            }
+            else
+            {
+                StartCoroutine(StartAnimateOutDelayed());
+            }
+        }
+
 
         private void Animate()
         {

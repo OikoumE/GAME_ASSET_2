@@ -55,6 +55,7 @@ MonoBehaviour:
   fixedCam: {fileID: 7937215886549618315}
   lerpSpeed: 1
   isInteractable: 1
+  turnOffFlashLight: 1
   lerpAlpha: 0
   audioSettings:
     clickSettings:

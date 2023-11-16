@@ -8,6 +8,7 @@ namespace Interactables
     public class ReplaceFuseInteract : Interactable
     {
         [SerializeField] private AudioSourceSettings audioSourceSettings;
+        [SerializeField] private GameObject imageObj;
         private BoxCollider boxCollider;
         private FuseAnimator brokenFuse, insertFuse;
 
@@ -28,6 +29,7 @@ namespace Interactables
             if (brokenFuse && brokenFuse.Done)
                 hasRemovedFuse = true;
             if (!insertFuse || !insertFuse.Done) return;
+            imageObj.SetActive(false);
             StartCoroutine(CloseFuseBoxDoor());
             CompletelyDone = true;
         }

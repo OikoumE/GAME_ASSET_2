@@ -55,7 +55,6 @@ namespace Controllers
 
         private void FixedUpdate()
         {
-            Input.GetKeyDown(KeyCode.Space);
             if (!playerHasControl) return;
             var horizontalMovement = Input.GetAxisRaw("Horizontal");
             var verticalMovement = Input.GetAxisRaw("Vertical");
@@ -134,6 +133,8 @@ namespace Controllers
 
             if (!Input.GetMouseButtonDown(0) || !playerHasControl || !hitInteractable || isOutOfRange) return;
             interactableObject.Interact(this, lerpAudioSourceSettings);
+            if (interactableObject.turnOffFlashLight)
+                flashLightController.SetFlashLightTurnedOn(false);
         }
 
 

@@ -1,6 +1,7 @@
 using System;
 using Controllers;
 using Elevator;
+using UnityEditor;
 using UnityEngine;
 
 namespace StateMachine
@@ -22,7 +23,8 @@ namespace StateMachine
         FuseBoxState,
         WireGameState,
         ExitInShuttleState,
-        GameOverState
+        GameOverState,
+        GamePauseState
     }
 
     public class GameStateMachine : MonoBehaviour
@@ -33,19 +35,24 @@ namespace StateMachine
         public WireGameAudioController wireGameAudioController;
         public MainMenuHandler mainMenuHandler;
 
-
         public bool ENABLECHEAT;
         [SerializeField] public GameStateName currentStateName;
+
+        [SerializeField] private GameObject start, resume, menu;
 
         public readonly GameBaseState
             gameMenuState = new GameMenuState(),
             gameIntroState = new GameIntroState(),
+            gamePauseState = new GamePauseState(),
             fuseBoxState = new FuseBoxState(),
             wireGameState = new WireGameState(),
             exitInShuttleState = new ExitInShuttleState(),
             gameOverState = new GameOverState();
 
         private GameBaseState currentState;
+        private bool isPaused;
+
+        public GameStateName PrevState { get; private set; }
 
         public static GameStateMachine Instance { get; private set; }
 
@@ -69,7 +76,7 @@ namespace StateMachine
         private void Update()
         {
             CursorLockHandler();
-            currentState.UpdateState(this);
+            currentState?.UpdateState(this);
         }
 
         private void OnValidate()
@@ -84,7 +91,21 @@ namespace StateMachine
 
         private void CursorLockHandler()
         {
-            if (Input.GetKeyDown(KeyCode.Escape)) ToggleCursorLockMode();
+            if (!Input.GetKeyDown(KeyCode.Escape)) return;
+            OpenPauseMenu();
+        }
+
+        public void OpenPauseMenu()
+        {
+            isPaused = !isPaused;
+            var cursorLock = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
+            SetCursorLockMode(cursorLock);
+
+            start.SetActive(false);
+            resume.SetActive(isPaused);
+            menu.SetActive(isPaused);
+            playerController.playerHasControl = !isPaused;
+            Time.timeScale = isPaused ? 0 : 1;
         }
 
         public void ToggleCursorLockMode()
@@ -109,6 +130,9 @@ namespace StateMachine
             if (!lightController) throw new Exception("MISSING ASSIGNMENT OF: lightController");
             if (!wireGameAudioController) throw new Exception("MISSING ASSIGNMENT OF: wireGameAudioController");
             if (!mainMenuHandler) throw new Exception("MISSING ASSIGNMENT OF: mainMenuHandler");
+
+
+            PrevState = gameIntroState.gameStateName;
         }
 
         /// <summary>
@@ -118,12 +142,17 @@ namespace StateMachine
         public void SetCursorLockMode(CursorLockMode state)
         {
             Cursor.lockState = state;
+            if (Cursor.lockState == CursorLockMode.Locked) Cursor.visible = false;
         }
 
         public void ExitGame()
         {
-            //TODO
             Debug.Log("EXIT GAME");
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
         }
 
         public bool IsCurrentState(GameStateName checkState)
@@ -133,7 +162,12 @@ namespace StateMachine
 
         public void SetState(GameBaseState newState)
         {
-            currentState?.ExitState(this);
+            if (currentState != null)
+            {
+                PrevState = currentState.gameStateName;
+                currentState.ExitState(this);
+            }
+
             currentState = newState;
             currentState.EnterState(this);
         }

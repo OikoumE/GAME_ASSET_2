@@ -26,6 +26,8 @@ namespace Interactables
         [Header("WireGame Settings")] [SerializeField] [HideInInspector]
         public int numberOfConnectedWires;
 
+        [SerializeField] private Light pLight;
+
         [SerializeField] [Range(0, 10)] private float waitAfterComplete = 1f;
         [SerializeField] private List<BoxCollider> wireTargetColliders;
 
@@ -43,7 +45,6 @@ namespace Interactables
         [SerializeField] private Transform drillTargetPosition;
         private readonly Vector3 drillInHandPosition = new(0.217634f, -0.2045913f, 0.7481999f);
         private readonly Vector3 drillOutOfCamPosition = new(0.279000014f, -0.177000001f, 0.256999999f);
-
 
         private bool animateDrill;
         private bool animateDrillRetract;
@@ -78,6 +79,7 @@ namespace Interactables
             doorMeshRb.isKinematic = true;
             doorMeshRb.useGravity = false;
             doorRotateStartPos = doorRotatePoint.position;
+            pLight.enabled = false;
             SetCamController();
             if (!doorMesh || !kitchenDoorRayCollider) throw new Exception("check component references!");
             if (wireTargetColliders.Count < 6) throw new Exception("Set wireTargetColliders");
@@ -180,6 +182,7 @@ namespace Interactables
         )
         {
             if (!pC.hasPickedDrill) return;
+            pLight.enabled = !InteractModeEnabled;
             base.Interact(pC, audioSourceSettings, interruptAudio);
         }
 
@@ -248,6 +251,7 @@ namespace Interactables
                 fromCam.enabled = false;
             }
 
+            pLight.intensity = lerpAlpha;
             if (lerpAlpha <= 1) return;
             // we are done lerp-ing
             lerpCam.enabled = false; //toggle between lerpCam and toCam

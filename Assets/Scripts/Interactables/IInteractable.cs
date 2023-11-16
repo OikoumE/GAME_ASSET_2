@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using Controllers;
-using Elevator;
 using StateMachine;
 using UnityEngine;
 
@@ -21,7 +20,8 @@ namespace Interactables
         [Header("Interactable Settings")] public Camera lerpCam;
         public Camera fixedCam;
         public float lerpSpeed = 1f;
-        public bool isInteractable = true;
+        public bool isInteractable = true, turnOffFlashLight;
+
 
         [HideInInspector] public float lerpAlpha;
         protected bool doLerp;
