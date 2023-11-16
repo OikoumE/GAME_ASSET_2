@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace StateMachine
 {
     public class GameOverState : GameBaseState
@@ -6,12 +8,14 @@ namespace StateMachine
 
         public override void UpdateState(GameStateMachine gameStateMachine)
         {
-            //TODO something
+            Time.timeScale = 0;
+            gameStateMachine.playerController.playerHasControl = false;
         }
 
         public override void EnterState(GameStateMachine gameStateMachine)
         {
             gameStateMachine.currentStateName = gameStateName;
+            gameStateMachine.OpenPauseMenu();
         }
 
         public override void ExitState(GameStateMachine gameStateMachine)
