@@ -8,20 +8,22 @@ namespace StateMachine
     {
         [SerializeField] private GameStateName stateToTrigger, specificState;
         [SerializeField] private bool requireSpecificState, triggerOnEnter, triggerOnExit;
+        [SerializeField] private Vector3 triggerSize = Vector3.one;
 
-
-        private Collider mCollider;
+        private BoxCollider mCollider;
 
         private void Awake()
         {
-            SetColliderAsTrigger();
+            SetColliderAsValues();
         }
 #if UNITY_EDITOR
         private void OnDrawGizmos()
         {
             var pos = transform.position;
-            Handles.Label(pos + Vector3.up * 0.5f, "StateTrigger: " + stateToTrigger);
-            Gizmos.DrawSphere(pos, 0.1f);
+            var anyState = requireSpecificState ? specificState.ToString() : "Any";
+            Handles.Label(pos + Vector3.up * (triggerSize.y / 2),
+                "StateTrigger: " + anyState + " => " + stateToTrigger);
+            Gizmos.DrawWireCube(pos, triggerSize);
         }
 #endif
         private void OnTriggerEnter(Collider other)
@@ -50,14 +52,15 @@ namespace StateMachine
 
         private void OnValidate()
         {
-            SetColliderAsTrigger();
+            SetColliderAsValues();
         }
 
 
-        private void SetColliderAsTrigger()
+        private void SetColliderAsValues()
         {
-            if (!mCollider) mCollider = GetComponent<Collider>();
+            if (!mCollider) mCollider = GetComponent<BoxCollider>();
             mCollider.isTrigger = true;
+            mCollider.size = triggerSize;
         }
     }
 }
