@@ -3,7 +3,37 @@ guid: 8d5a2de1b1dc19f4c96b833da2da066c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Plate1Mat
+    second: {fileID: 2100000, guid: 5c68534491af4674fa045facf98c051b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Plate1_Scepa_RiceMat
+    second: {fileID: 2100000, guid: 5c68534491af4674fa045facf98c051b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Plate1_Scepa_Shrooms_Shroom1Mat
+    second: {fileID: 2100000, guid: 5c68534491af4674fa045facf98c051b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Plate1_Scepa_Shrooms_Shroom2Mat
+    second: {fileID: 2100000, guid: 5c68534491af4674fa045facf98c051b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Plate1_Scepa_Shrooms_Shroom3Mat
+    second: {fileID: 2100000, guid: 5c68534491af4674fa045facf98c051b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Plate1_Scepa_SteakMat
+    second: {fileID: 2100000, guid: 5c68534491af4674fa045facf98c051b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

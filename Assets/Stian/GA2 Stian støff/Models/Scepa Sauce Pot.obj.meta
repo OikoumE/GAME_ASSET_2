@@ -3,7 +3,17 @@ guid: 96384eff8bc1cf1439d9fee1255d9126
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sauce_handle_Scepa_Sauce_PotMat
+    second: {fileID: 2100000, guid: f42a0f2335ced7d4984027456e7423c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sauce_pot_Scepa_Sauce_PotMat
+    second: {fileID: 2100000, guid: f42a0f2335ced7d4984027456e7423c9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

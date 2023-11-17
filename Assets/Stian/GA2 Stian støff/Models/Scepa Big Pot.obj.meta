@@ -3,7 +3,22 @@ guid: 9f6fef1027d250d4d8d6c01e871dc9f8
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cooking_pot_Scepa_Cooking_PotMat
+    second: {fileID: 2100000, guid: 9e8950a1a5f61bd4389582b10477a52d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Left_pot_handle_Scepa_Cooking_PotMat
+    second: {fileID: 2100000, guid: 9e8950a1a5f61bd4389582b10477a52d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Right_pot_handle_Scepa_Cooking_PotMat
+    second: {fileID: 2100000, guid: 9e8950a1a5f61bd4389582b10477a52d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

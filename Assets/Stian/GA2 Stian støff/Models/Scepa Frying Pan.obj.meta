@@ -3,7 +3,17 @@ guid: ac9bad862f00b7546aa8cabb27b6656b
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frying_pan_Scepa_frying_panMat
+    second: {fileID: 2100000, guid: 3cc3762bc3529ed4399ae0c888482430, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frying_pan_handle_Scepa_frying_panMat
+    second: {fileID: 2100000, guid: 3cc3762bc3529ed4399ae0c888482430, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

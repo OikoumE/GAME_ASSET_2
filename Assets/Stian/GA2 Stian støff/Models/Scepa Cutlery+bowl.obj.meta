@@ -3,7 +3,27 @@ guid: b7c9be8adbf6d2d448f6b780e0c2bb82
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Fork_Scepa_Fork1Mat
+    second: {fileID: 2100000, guid: 3df02d1bb19b1ae499095c586751e7f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Knife_Scepa_Knife1Mat
+    second: {fileID: 2100000, guid: 3df02d1bb19b1ae499095c586751e7f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Spoon_Scepa_Spoon1Mat
+    second: {fileID: 2100000, guid: 3df02d1bb19b1ae499095c586751e7f5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Scepa_Udon_BowlMat
+    second: {fileID: 2100000, guid: 3df02d1bb19b1ae499095c586751e7f5, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

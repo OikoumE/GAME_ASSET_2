@@ -652,6 +652,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1765078300310752858, guid: 3d13cd4d9f24b994ba2ab67554e77574,
+        type: 3}
+      propertyPath: m_Name
+      value: SHADOWMAKERS
+      objectReference: {fileID: 0}
     - target: {fileID: 2108340150709669423, guid: 3d13cd4d9f24b994ba2ab67554e77574,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -747,7 +752,15 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4107658449044583185, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 7027762778553168563, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 1727977518633426735, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 3037728478658236605, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 5781528511957866758, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 4280257797075506052, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 2006890263831853073, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
+    - {fileID: 4284697389329158965, guid: 3d13cd4d9f24b994ba2ab67554e77574, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

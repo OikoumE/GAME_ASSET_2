@@ -3,7 +3,12 @@ guid: 1fe567430ce5fbd4190d8414ab2763d7
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pCylinder6_Scepa_PitcherMat
+    second: {fileID: 2100000, guid: bba3223c1923edc4084dbabca35dc079, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

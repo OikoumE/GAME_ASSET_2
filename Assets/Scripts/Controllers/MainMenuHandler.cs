@@ -10,19 +10,28 @@ namespace Controllers
     {
         [SerializeField] private Camera mainMenuCamera;
         [SerializeField] private float fadeToBlackSpeed = 1f, lerpFadeAlpha, lerpMod;
-        [SerializeField] private Image fadeToBlack;
+        [SerializeField] private Image fadeToBlack, fadeToBlack2;
         [DoNotSerialize] public bool isGameStarting, doLerp;
         [SerializeField] private GameObject menuContainer;
+
+        [SerializeField] private Animation mAnimation;
+        private bool gameOver;
+        private AnimationClip shuttleIntro, shuttleOutro;
 
         private void Start()
         {
             fadeToBlack.enabled = false;
+            shuttleIntro = mAnimation.GetClip("shuttleIntro");
+            shuttleOutro = mAnimation.GetClip("shuttleOutro");
         }
 
         private void Update()
         {
             var isMainMenuState = GameStateMachine.Instance.IsCurrentState(GameStateName.GameMenuState);
-            if (!isMainMenuState) return;
+            var isGameOverState = GameStateMachine.Instance.IsCurrentState(GameStateName.GameOverState);
+            if (!isMainMenuState && !isGameOverState) return;
+
+
             LerpFadeToBlack();
 
 
@@ -33,6 +42,7 @@ namespace Controllers
                 if (!isGameStarting)
                 {
                     isGameStarting = true;
+                    if (gameOver) return;
                     StartCoroutine(FadeToIntro());
                 }
                 else
@@ -54,12 +64,27 @@ namespace Controllers
             doLerp = true;
         }
 
-        public void StartGame()
+        public void StartGame(bool done)
         {
-            fadeToBlack.enabled = true;
-            GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked);
-            doLerp = true;
+            mAnimation.Play();
+            gameOver = done;
+            if (done) fadeToBlack = fadeToBlack2;
+
+            StartCoroutine(StartFadeToBlackDelayed(isGameStarting));
         }
+
+        private IEnumerator StartFadeToBlackDelayed(bool skipWait = false)
+        {
+            if (!skipWait) yield return new WaitForSeconds(mAnimation.clip.length);
+            fadeToBlack.enabled = true;
+            lerpMod = 0;
+            isGameStarting = false;
+            GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked);
+            lerpFadeAlpha = 0;
+            doLerp = true;
+            mAnimation.clip = shuttleOutro;
+        }
+
 
         private void LerpFadeToBlack()
         {
