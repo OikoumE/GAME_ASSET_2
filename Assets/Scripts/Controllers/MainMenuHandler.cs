@@ -15,11 +15,14 @@ namespace Controllers
         [SerializeField] private GameObject menuContainer;
 
         [SerializeField] private Animation mAnimation;
+        [SerializeField] private AudioClip startResumeClick, exitClick;
+        private AudioSource audioSource;
         private bool gameOver;
         private AnimationClip shuttleIntro, shuttleOutro;
 
         private void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             fadeToBlack.enabled = false;
             shuttleIntro = mAnimation.GetClip("shuttleIntro");
             shuttleOutro = mAnimation.GetClip("shuttleOutro");
@@ -51,6 +54,19 @@ namespace Controllers
                     fadeToBlack.enabled = false;
                 }
             }
+        }
+
+
+        public void PlayStartResumeClickAudio()
+        {
+            audioSource.clip = startResumeClick;
+            audioSource.Play();
+        }
+
+        public void PlayExitClickAudio()
+        {
+            audioSource.clip = exitClick;
+            audioSource.Play();
         }
 
         private IEnumerator FadeToIntro()
