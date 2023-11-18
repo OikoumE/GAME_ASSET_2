@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using Controllers;
 using Elevator;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -35,10 +37,14 @@ namespace StateMachine
         public WireGameAudioController wireGameAudioController;
         public MainMenuHandler mainMenuHandler;
 
+        public List<CameraController> cameraControllers;
+
         public bool ENABLECHEAT;
         [SerializeField] public GameStateName currentStateName;
 
         [SerializeField] private GameObject start, resume, menu;
+
+        [SerializeField] private TMP_InputField inputField;
 
         public readonly GameBaseState
             gameMenuState = new GameMenuState(),
@@ -71,6 +77,7 @@ namespace StateMachine
         private void Start()
         {
             SetState(gameMenuState);
+            if (cameraControllers == null) throw new Exception("ASSIGN CAMERA CONTROLLERS");
         }
 
         private void Update()
@@ -86,6 +93,17 @@ namespace StateMachine
                 Debug.Log(currentStateName);
                 SetState(currentStateName);
             }
+        }
+
+        public void SetAllCameraSens()
+        {
+            if (inputField.text.Length == 0) return;
+            var inputtedSens = float.Parse(inputField.text);
+            if (inputtedSens > 100) inputField.text = "100";
+            else if (inputtedSens < 0.1) inputField.text = "0.1";
+            else
+                foreach (var cameraController in cameraControllers)
+                    cameraController.MouseSensMultiplier = inputtedSens / 5000;
         }
 
 
@@ -131,7 +149,7 @@ namespace StateMachine
             if (!wireGameAudioController) throw new Exception("MISSING ASSIGNMENT OF: wireGameAudioController");
             if (!mainMenuHandler) throw new Exception("MISSING ASSIGNMENT OF: mainMenuHandler");
 
-
+            inputField.text = "50";
             PrevState = gameIntroState.gameStateName;
         }
 
@@ -142,7 +160,8 @@ namespace StateMachine
         public void SetCursorLockMode(CursorLockMode state)
         {
             Cursor.lockState = state;
-            if (Cursor.lockState == CursorLockMode.Locked) Cursor.visible = false;
+            if (state == CursorLockMode.Locked) Cursor.visible = false;
+            else Cursor.visible = true;
         }
 
         public void ExitGame()

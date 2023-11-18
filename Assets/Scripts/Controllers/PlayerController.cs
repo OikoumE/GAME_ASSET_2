@@ -95,6 +95,7 @@ namespace Controllers
 
         public void SetCrossHairEnabled(bool enable)
         {
+            
             crossHair.enabled = enable;
         }
 

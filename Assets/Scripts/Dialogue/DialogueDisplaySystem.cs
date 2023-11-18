@@ -38,6 +38,7 @@ namespace Dialogue
 
         private void GetAllTriggers()
         {
+            if (dialogueTriggers.Length == 0) return;
             dialogueTriggers = dialogueTriggersParent.GetComponentsInChildren<DialogueTrigger>(true);
         }
 

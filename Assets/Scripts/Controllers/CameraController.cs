@@ -20,11 +20,11 @@ namespace Controllers
 
         [SerializeField] public ClampRotation clampRotation;
         [SerializeField] private float initialWaitBeforeControl;
-
-        private readonly float mouseSensMultiplier = 0.01f;
         private bool hasWaitedForControl;
+
         private float xRot, yRot, mouseX, mouseY;
 
+        public float MouseSensMultiplier { get; set; } = 0.01f;
 
         public Camera PlayerCam => cameraToControl;
         public Color32 IsInteractableCrossHairColor => isInteractableCrossHairColor;
@@ -55,13 +55,14 @@ namespace Controllers
             return Vector3.Distance(pointA, pointB) > interactDistanceThreshold;
         }
 
+
         protected void InputHandler()
         {
             if (!playerHasControl) return;
             mouseX = Input.GetAxisRaw("Mouse X");
             mouseY = Input.GetAxisRaw("Mouse Y");
-            yRot += mouseX * sensX * mouseSensMultiplier;
-            xRot -= mouseY * sensY * mouseSensMultiplier;
+            yRot += mouseX * sensX * MouseSensMultiplier;
+            xRot -= mouseY * sensY * MouseSensMultiplier;
             xRot = Mathf.Clamp(xRot, clampRotation.xMin, clampRotation.xMax);
 
             if (playerToControl)
