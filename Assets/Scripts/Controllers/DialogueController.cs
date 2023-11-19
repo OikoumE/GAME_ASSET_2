@@ -29,7 +29,6 @@ namespace Controllers
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.cyan;
-
             Gizmos.DrawWireSphere(transform.position, 0.5f);
             Handles.Label(transform.position, gameObject.name);
         }
