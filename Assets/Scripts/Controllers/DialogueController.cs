@@ -2,6 +2,7 @@ using System;
 using Dialogue;
 using StateMachine;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 
 namespace Controllers
@@ -23,6 +24,16 @@ namespace Controllers
             mCollider = GetComponent<Collider>();
             mCollider.isTrigger = true;
         }
+
+#if UNITY_EDITOR
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.cyan;
+
+            Gizmos.DrawWireSphere(transform.position, 0.5f);
+            Handles.Label(transform.position, gameObject.name);
+        }
+#endif
 
         protected virtual void OnTriggerExit(Collider other)
         {

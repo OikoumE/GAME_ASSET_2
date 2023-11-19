@@ -14,18 +14,17 @@ namespace Controllers
         [DoNotSerialize] public bool isGameStarting, doLerp;
         [SerializeField] private GameObject menuContainer;
 
-        [SerializeField] private Animation mAnimation;
+        [SerializeField] private AnimateShuttle animateShuttle;
         [SerializeField] private AudioClip startResumeClick, exitClick;
         private AudioSource audioSource;
+
         private bool gameOver;
-        private AnimationClip shuttleIntro, shuttleOutro;
+        private bool hasPressedStart;
 
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
             fadeToBlack.enabled = false;
-            shuttleIntro = mAnimation.GetClip("shuttleIntro");
-            shuttleOutro = mAnimation.GetClip("shuttleOutro");
         }
 
         private void Update()
@@ -33,11 +32,7 @@ namespace Controllers
             var isMainMenuState = GameStateMachine.Instance.IsCurrentState(GameStateName.GameMenuState);
             var isGameOverState = GameStateMachine.Instance.IsCurrentState(GameStateName.GameOverState);
             if (!isMainMenuState && !isGameOverState) return;
-
-
             LerpFadeToBlack();
-
-
             if (lerpFadeAlpha >= 1 && doLerp)
             {
                 doLerp = false;
@@ -59,6 +54,7 @@ namespace Controllers
 
         public void PlayStartResumeClickAudio()
         {
+            if (doLerp) return;
             audioSource.clip = startResumeClick;
             audioSource.Play();
         }
@@ -82,23 +78,30 @@ namespace Controllers
 
         public void StartGame(bool done)
         {
-            mAnimation.Play();
+            if (hasPressedStart) return;
+            hasPressedStart = true;
+            animateShuttle.Play();
             gameOver = done;
             if (done) fadeToBlack = fadeToBlack2;
-
+            StartCoroutine(ReEnableStartButton());
             StartCoroutine(StartFadeToBlackDelayed(isGameStarting));
+        }
+
+        private IEnumerator ReEnableStartButton()
+        {
+            yield return new WaitForSeconds(5); //TODO fix
+            hasPressedStart = false;
         }
 
         private IEnumerator StartFadeToBlackDelayed(bool skipWait = false)
         {
-            if (!skipWait) yield return new WaitForSeconds(mAnimation.clip.length);
+            if (!skipWait) yield return new WaitForSeconds(1); //TODO fix
             fadeToBlack.enabled = true;
             lerpMod = 0;
             isGameStarting = false;
             GameStateMachine.Instance.SetCursorLockMode(CursorLockMode.Locked);
             lerpFadeAlpha = 0;
             doLerp = true;
-            mAnimation.clip = shuttleOutro;
         }
 
 

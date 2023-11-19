@@ -18,6 +18,10 @@ namespace Interactables
             fuses = FindObjectsOfType<InteractableFuse>();
             if (!highlightEffect) highlightEffect = GetComponentInParent<HighlightEffect>();
             if (!highlightTrigger) highlightTrigger = GetComponentInParent<HighlightTrigger>();
+
+            if (isInteractable) return;
+            highlightEffect.enabled = false;
+            highlightTrigger.enabled = false;
         }
 
 
@@ -33,6 +37,7 @@ namespace Interactables
             bool interruptAudio = true
         )
         {
+            if (!isInteractable) return;
             if (pC.hasPickedFuse) return;
             pC.hasPickedFuse = true;
             foreach (var interactableFuse in fuses)

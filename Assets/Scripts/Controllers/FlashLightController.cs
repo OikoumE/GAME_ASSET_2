@@ -1,4 +1,5 @@
 using System.Collections;
+using StateMachine;
 using UnityEngine;
 
 namespace Controllers
@@ -34,6 +35,7 @@ namespace Controllers
         private void Update()
         {
             if (!playerController.hasFlashLight) return;
+            if (!GameStateMachine.Instance.playerController.playerHasControl) return;
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (isIn) StartCoroutine(StartAnimateOutDelayed());

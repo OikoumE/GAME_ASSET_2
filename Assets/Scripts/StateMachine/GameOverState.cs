@@ -6,14 +6,12 @@ namespace StateMachine
 
         public override void UpdateState(GameStateMachine gameStateMachine)
         {
-            // Time.timeScale = 0;
             gameStateMachine.playerController.playerHasControl = false;
         }
 
         public override void EnterState(GameStateMachine gameStateMachine)
         {
             gameStateMachine.currentStateName = gameStateName;
-            // gameStateMachine.OpenPauseMenu();
             gameStateMachine.mainMenuHandler.StartGame(true);
         }
 

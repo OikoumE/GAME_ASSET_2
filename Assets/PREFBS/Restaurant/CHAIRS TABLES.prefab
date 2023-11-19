@@ -1717,6 +1717,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c70b475b0cce907469f0b7f17eff2f59,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c70b475b0cce907469f0b7f17eff2f59,
         type: 3}
       propertyPath: m_Name
@@ -1741,10 +1746,115 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8216251309363092225}
     m_Modifications:
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_Name
       value: Fully Decked Table - meat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -1870,6 +1980,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c70b475b0cce907469f0b7f17eff2f59,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c70b475b0cce907469f0b7f17eff2f59,
         type: 3}
       propertyPath: m_Name
@@ -1894,10 +2009,115 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5976449476574667517}
     m_Modifications:
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_Name
       value: Fully Decked Table - meat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2042,10 +2262,115 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3096949109639398676}
     m_Modifications:
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_Name
       value: Fully Decked Table - meat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2126,6 +2451,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -2.185
       objectReference: {fileID: 0}
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1109438176467891374, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2150,6 +2480,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 8.475
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2878807276874252251, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2195,6 +2565,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.596
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2246,6 +2621,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 15.869
       objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5106991159156586194, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2271,6 +2661,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 82.814
       objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6749755372961308454, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2280,6 +2685,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.464
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7320643056331629479, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2341,6 +2751,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -150.209
       objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7947088305010556327, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2375,6 +2790,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -57.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2519,10 +2949,115 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8216251309363092225}
     m_Modifications:
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_Name
       value: Fully Decked Table - meat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -2797,6 +3332,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 269.999
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c70b475b0cce907469f0b7f17eff2f59,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c70b475b0cce907469f0b7f17eff2f59,
         type: 3}
       propertyPath: m_Name
@@ -2952,6 +3492,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c70b475b0cce907469f0b7f17eff2f59,
         type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c70b475b0cce907469f0b7f17eff2f59,
+        type: 3}
       propertyPath: m_Materials.Array.data[2]
       value: 
       objectReference: {fileID: 2100000, guid: 4235220d881b65048a8d8ac0bdf60110, type: 2}
@@ -3053,10 +3598,115 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5976449476574667517}
     m_Modifications:
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_Name
       value: Fully Decked Table - meat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
@@ -3127,10 +3777,115 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3096949109639398676}
     m_Modifications:
+    - target: {fileID: 740748158826704591, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1365145487681548339, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1723244540504716363, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1788683485265406327, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1800982830001615083, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148999548767077587, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317965101858970952, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647102533421990378, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794882770232522297, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000030460456378024, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3302237671997966119, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}
       propertyPath: m_Name
       value: Fully Decked Table - meat (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4406386161550604845, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4426865806632844832, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4732312496866548894, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5145203447338259731, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398883642694795712, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5644921093462658073, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319972973361240580, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940792674921422004, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958117237602133684, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168013882176097752, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8186635571519341162, guid: f3c5edbafb158054196c5054f7fa49cb,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8273311225673963148, guid: f3c5edbafb158054196c5054f7fa49cb,
         type: 3}

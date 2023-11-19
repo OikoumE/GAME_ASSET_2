@@ -123,6 +123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scepa Pitcher (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8417983816026966316, guid: 1fe567430ce5fbd4190d8414ab2763d7,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -575,6 +580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Scepa Pitcher
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417983816026966316, guid: 1fe567430ce5fbd4190d8414ab2763d7,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
