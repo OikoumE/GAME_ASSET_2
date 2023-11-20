@@ -1,11 +1,14 @@
 using System;
 using Controllers;
 using StateMachine;
+using UnityEngine;
 
 namespace Interactables
 {
     public class InteractableDrill : Interactable
     {
+        [SerializeField] private GameObject imageObj;
+
         private void Start()
         {
         }
@@ -22,6 +25,7 @@ namespace Interactables
         {
             if (pC.hasPickedDrill) return;
             pC.hasPickedDrill = true;
+            imageObj.SetActive(true);
             gameObject.SetActive(false);
         }
 
