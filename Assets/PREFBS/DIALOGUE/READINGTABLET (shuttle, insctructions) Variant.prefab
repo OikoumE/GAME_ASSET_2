@@ -69,6 +69,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: READINGTABLET (shuttle, insctructions) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4921550699943831731, guid: bed44d22f51e73643b98c8d68b99c26c,
+        type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8473492043819046624, guid: bed44d22f51e73643b98c8d68b99c26c,
         type: 3}
       propertyPath: m_Enabled
@@ -375,6 +380,7 @@ MonoBehaviour:
   fixedCam: {fileID: 3447534763252512267}
   lerpSpeed: 1
   isInteractable: 1
+  turnOffFlashLight: 0
   lerpAlpha: 0
   audioSettings:
     clickSettings:

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Dialogue;
 using StateMachine;
 using Unity.VisualScripting;
@@ -15,6 +16,9 @@ namespace Controllers
         [SerializeField] protected bool enabledPreview;
         [SerializeField] private bool isOneShot;
         [SerializeField] protected DialogueText dialogueText = new();
+        private bool hasTriggeredDisable;
+
+        private bool isInTrigger;
         protected Collider mCollider;
         protected PlayerController playerController;
         [DoNotSerialize] public DialogueDisplaySystem DisplaySystem { get; set; }
@@ -41,20 +45,24 @@ namespace Controllers
                     return;
             if (!other.TryGetComponent(out IPlayer iP)) return;
             SetDialogueVisibility(false);
+            isInTrigger = false;
             if (isOneShot)
                 mCollider.enabled = false;
         }
-
 
         protected virtual void OnTriggerStay(Collider other)
         {
             if (requireSpecificGameState)
                 if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
                     return;
+            if (isInTrigger) return;
+            isInTrigger = true;
             if (!other.TryGetComponent(out IPlayer iP)) return;
             playerController = iP.GetPlayerController();
             SetDialogueText();
             SetDialogueVisibility(true);
+            if (!hasTriggeredDisable)
+                StartCoroutine(DisableDialogueDelayed());
         }
 
 
@@ -64,6 +72,14 @@ namespace Controllers
 
             if (enabledPreview) SetDialogueText();
             SetDialogueVisibility(enabledPreview);
+        }
+
+        private IEnumerator DisableDialogueDelayed()
+        {
+            hasTriggeredDisable = true;
+            yield return new WaitForSeconds(15);
+            SetDialogueVisibility(false);
+            hasTriggeredDisable = false;
         }
 
 

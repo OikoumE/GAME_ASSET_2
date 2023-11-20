@@ -64,7 +64,6 @@ namespace Controllers
         public void OnSettingsButton()
         {
             settingsMenu.SetActive(!settingsMenu.activeSelf);
-            Debug.Log("OnSettingsButton");
         }
 
         public void PlayExitClickAudio()
