@@ -50,7 +50,7 @@ public class SettingsMenuHandler : MonoBehaviour
             var height = resolutions[i].height;
             var refreshRate = resolutions[i].refreshRateRatio;
             if (Screen.width == width && Screen.height == height) currentResIndex = i;
-            options.Add($"{width} x {height} - {refreshRate}Hz");
+            options.Add($"{width}x{height}px - {refreshRate}Hz");
         }
 
         resolutionDropdown.ClearOptions();
