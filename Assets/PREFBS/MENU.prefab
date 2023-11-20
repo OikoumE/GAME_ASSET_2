@@ -559,8 +559,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8622667780176709648}
   - {fileID: 1736959692919055168}
+  - {fileID: 8622667780176709648}
   - {fileID: 3612299283568542770}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -587,9 +587,13 @@ MonoBehaviour:
   lerpFadeAlpha: 0
   lerpMod: 0
   fadeToBlack: {fileID: 0}
+  fadeToBlack2: {fileID: 0}
   isGameStarting: 0
   doLerp: 0
   menuContainer: {fileID: 0}
+  animateShuttle: {fileID: 0}
+  startResumeClick: {fileID: 0}
+  exitClick: {fileID: 0}
 --- !u!1 &4836176594635699158
 GameObject:
   m_ObjectHideFlags: 0

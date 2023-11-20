@@ -16,6 +16,8 @@ namespace Controllers
 
         [SerializeField] private AnimateShuttle animateShuttle;
         [SerializeField] private AudioClip startResumeClick, exitClick;
+
+        [SerializeField] private GameObject settingsMenu;
         private AudioSource audioSource;
 
         private bool gameOver;
@@ -57,6 +59,12 @@ namespace Controllers
             if (doLerp) return;
             audioSource.clip = startResumeClick;
             audioSource.Play();
+        }
+
+        public void OnSettingsButton()
+        {
+            settingsMenu.SetActive(!settingsMenu.activeSelf);
+            Debug.Log("OnSettingsButton");
         }
 
         public void PlayExitClickAudio()

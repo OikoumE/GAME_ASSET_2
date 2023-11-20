@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using Controllers;
 using Elevator;
-using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -44,7 +43,6 @@ namespace StateMachine
 
         [SerializeField] private GameObject start, resume, menu;
 
-        [SerializeField] private TMP_InputField inputField;
 
         public readonly GameBaseState
             gameMenuState = new GameMenuState(),
@@ -95,15 +93,10 @@ namespace StateMachine
             }
         }
 
-        public void SetAllCameraSens()
+        public void SetAllCameraSens(float value)
         {
-            if (inputField.text.Length == 0) return;
-            var inputtedSens = float.Parse(inputField.text);
-            if (inputtedSens > 100) inputField.text = "100";
-            else if (inputtedSens < 0.1) inputField.text = "0.1";
-            else
-                foreach (var cameraController in cameraControllers)
-                    cameraController.MouseSensMultiplier = inputtedSens / 5000;
+            foreach (var cameraController in cameraControllers)
+                cameraController.MouseSensMultiplier = value / 5000;
         }
 
 
@@ -149,7 +142,6 @@ namespace StateMachine
             if (!wireGameAudioController) throw new Exception("MISSING ASSIGNMENT OF: wireGameAudioController");
             if (!mainMenuHandler) throw new Exception("MISSING ASSIGNMENT OF: mainMenuHandler");
 
-            inputField.text = "50";
             PrevState = gameIntroState.gameStateName;
         }
 
