@@ -9,6 +9,7 @@ namespace Interactables
     {
         [SerializeField] private GameObject imageObj;
 
+        
         private void Start()
         {
         }
