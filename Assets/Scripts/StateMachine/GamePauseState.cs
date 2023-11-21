@@ -11,7 +11,8 @@ namespace StateMachine
         {
             if (!Input.GetKeyDown(KeyCode.Escape)) return;
             gameStateMachine.ToggleCursorLockMode();
-            gameStateMachine.SetState(gameStateMachine.PrevState);
+            var prevState = gameStateMachine.GetState(gameStateMachine.PrevState);
+            gameStateMachine.SetState(prevState);
         }
 
         public override void EnterState(GameStateMachine gameStateMachine)

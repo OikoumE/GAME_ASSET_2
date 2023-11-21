@@ -11,12 +11,12 @@ namespace StateMachine
 
             //TODO condition
             //todo make trigger for gameOverState (in shuttle, by seat)
-            // if (mGsm) mGsm.SetState(mGsm.gameOverState);
         }
 
         public override void EnterState(GameStateMachine gameStateMachine)
         {
             gameStateMachine.currentStateName = gameStateName;
+            gameStateMachine.ductTapeDialogueTrigger.DuctTapeSolution();
         }
 
         public override void ExitState(GameStateMachine gameStateMachine)

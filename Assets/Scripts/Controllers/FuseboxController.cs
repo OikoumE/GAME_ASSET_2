@@ -41,7 +41,8 @@ namespace Controllers
 
         protected override void Update()
         {
-            var currentStateIsFuseBox = GameStateMachine.Instance.IsCurrentState(GameStateName.FuseBoxState);
+            var checkState = GameStateMachine.Instance.GetState(GameStateName.FuseBoxState);
+            var currentStateIsFuseBox = GameStateMachine.Instance.IsCurrentState(checkState);
             if (!currentStateIsFuseBox) return;
             base.Update();
             if (cameraHasControl) // enables easy disabling of camera control

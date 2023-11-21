@@ -5,7 +5,7 @@ public class AnimateShuttle : MonoBehaviour
     [SerializeField] private Vector3 startPos, stopPos = new(-7.09000015f, 2.004555f, 74.69292f);
     [SerializeField] private float lerpSpeed = 1;
     [SerializeField] private bool doLerp, isDone;
-
+    [SerializeField] private AudioSource audioSource;
 
     private Vector3 fromPos, toPos;
     private float lerpAlpha;
@@ -39,5 +39,6 @@ public class AnimateShuttle : MonoBehaviour
     public void Play()
     {
         doLerp = true;
+        audioSource.Play();
     }
 }

@@ -14,8 +14,9 @@ namespace Controllers
         [SerializeField] private bool requireSpecificGameState;
         [SerializeField] private GameStateName gameStateName;
         [SerializeField] protected bool enabledPreview;
-        [SerializeField] private bool isOneShot;
+        [SerializeField] private bool isOneShot, hasShot, useDelayDisable;
         [SerializeField] protected DialogueText dialogueText = new();
+
         private bool hasTriggeredDisable;
 
         private bool isInTrigger;
@@ -41,30 +42,40 @@ namespace Controllers
         protected virtual void OnTriggerExit(Collider other)
         {
             if (requireSpecificGameState)
-                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
+            {
+                var checkState = GameStateMachine.Instance.GetState(gameStateName);
+                if (!GameStateMachine.Instance.IsCurrentState(checkState))
                     return;
+            }
+
             if (!other.TryGetComponent(out IPlayer iP)) return;
             SetDialogueVisibility(false);
             isInTrigger = false;
             if (isOneShot)
                 mCollider.enabled = false;
+            hasShot = true;
         }
 
         protected virtual void OnTriggerStay(Collider other)
         {
             if (requireSpecificGameState)
-                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
+            {
+                var checkState = GameStateMachine.Instance.GetState(gameStateName);
+                if (!GameStateMachine.Instance.IsCurrentState(checkState))
                     return;
+            }
+
+            if (hasShot && isOneShot) return;
             if (isInTrigger) return;
             isInTrigger = true;
             if (!other.TryGetComponent(out IPlayer iP)) return;
             playerController = iP.GetPlayerController();
             SetDialogueText();
             SetDialogueVisibility(true);
+            if (!useDelayDisable) return;
             if (!hasTriggeredDisable)
                 StartCoroutine(DisableDialogueDelayed());
         }
-
 
         private void OnValidate()
         {
@@ -80,6 +91,7 @@ namespace Controllers
             yield return new WaitForSeconds(15);
             SetDialogueVisibility(false);
             hasTriggeredDisable = false;
+            hasShot = true;
         }
 
 

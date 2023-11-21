@@ -31,11 +31,13 @@ namespace StateMachine
             if (!triggerOnEnter) return;
             if (requireSpecificState)
             {
-                var isCurrentState = GameStateMachine.Instance.IsCurrentState(specificState);
+                var checkState = GameStateMachine.Instance.GetState(specificState);
+                var isCurrentState = GameStateMachine.Instance.IsCurrentState(checkState);
                 if (!isCurrentState) return;
             }
 
-            GameStateMachine.Instance.SetState(stateToTrigger);
+            var newState = GameStateMachine.Instance.GetState(stateToTrigger);
+            GameStateMachine.Instance.SetState(newState);
         }
 
         private void OnTriggerExit(Collider other)
@@ -43,11 +45,13 @@ namespace StateMachine
             if (!triggerOnExit) return;
             if (requireSpecificState)
             {
-                var isCurrentState = GameStateMachine.Instance.IsCurrentState(specificState);
+                var checkState = GameStateMachine.Instance.GetState(specificState);
+                var isCurrentState = GameStateMachine.Instance.IsCurrentState(checkState);
                 if (!isCurrentState) return;
             }
 
-            GameStateMachine.Instance.SetState(stateToTrigger);
+            var newState = GameStateMachine.Instance.GetState(stateToTrigger);
+            GameStateMachine.Instance.SetState(newState);
         }
 
         private void OnValidate()

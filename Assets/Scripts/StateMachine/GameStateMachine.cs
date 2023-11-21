@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Controllers;
+using Dialogue;
 using Elevator;
 using UnityEditor;
 using UnityEngine;
@@ -42,7 +44,7 @@ namespace StateMachine
         [SerializeField] public GameStateName currentStateName;
 
         [SerializeField] private GameObject start, resume, menu;
-
+        public DialogueTrigger ductTapeDialogueTrigger;
 
         public readonly GameBaseState
             gameMenuState = new GameMenuState(),
@@ -89,7 +91,7 @@ namespace StateMachine
             if (ENABLECHEAT)
             {
                 Debug.Log(currentStateName);
-                SetState(currentStateName);
+                SetState(GetState(currentStateName));
             }
         }
 
@@ -108,6 +110,8 @@ namespace StateMachine
 
         public void OpenPauseMenu()
         {
+            if (currentState == gameMenuState) return;
+            Debug.Log("check");
             isPaused = !isPaused;
             var cursorLock = isPaused ? CursorLockMode.None : CursorLockMode.Locked;
             SetCursorLockMode(cursorLock);
@@ -158,7 +162,13 @@ namespace StateMachine
 
         public void ExitGame()
         {
+            StartCoroutine(TriggerExitGameDelayed());
+        }
+
+        private static IEnumerator TriggerExitGameDelayed()
+        {
             Debug.Log("EXIT GAME");
+            yield return new WaitForSecondsRealtime(1);
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else
@@ -166,9 +176,10 @@ namespace StateMachine
 #endif
         }
 
-        public bool IsCurrentState(GameStateName checkState)
+        public bool IsCurrentState(GameBaseState checkState)
         {
-            return checkState == currentStateName;
+            return currentState == checkState;
+            // return checkState == currentStateName;
         }
 
         public void SetState(GameBaseState newState)
@@ -184,9 +195,9 @@ namespace StateMachine
         }
 
 
-        public void SetState(GameStateName newStateName)
+        public GameBaseState GetState(GameStateName newStateName)
         {
-            var newState = newStateName switch
+            return newStateName switch
             {
                 GameStateName.BaseState => gameMenuState,
                 GameStateName.GameMenuState => gameMenuState,
@@ -197,8 +208,6 @@ namespace StateMachine
                 GameStateName.GameOverState => gameOverState,
                 _ => throw new ArgumentOutOfRangeException(nameof(newStateName), newStateName, "NO CASE FOUND!")
             };
-
-            SetState(newState);
         }
     }
 }
