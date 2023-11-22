@@ -31,10 +31,8 @@ namespace Controllers
 
         private void Update()
         {
-            var checkState = GameStateMachine.Instance.GetState(GameStateName.GameMenuState);
-            var isMainMenuState = GameStateMachine.Instance.IsCurrentState(checkState);
-            checkState = GameStateMachine.Instance.GetState(GameStateName.GameOverState);
-            var isGameOverState = GameStateMachine.Instance.IsCurrentState(checkState);
+            var isMainMenuState = GameStateMachine.Instance.IsCurrentState(GameStateName.GameMenuState);
+            var isGameOverState = GameStateMachine.Instance.IsCurrentState(GameStateName.GameOverState);
             if (!isMainMenuState && !isGameOverState) return;
             LerpFadeToBlack();
             if (lerpFadeAlpha >= 1 && doLerp)

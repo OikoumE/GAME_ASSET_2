@@ -88,8 +88,7 @@ namespace Interactables
 
         protected override void Update()
         {
-            var checkState = GameStateMachine.Instance.GetState(GameStateName.WireGameState);
-            var currentStateIsWireGame = GameStateMachine.Instance.IsCurrentState(checkState);
+            var currentStateIsWireGame = GameStateMachine.Instance.IsCurrentState(GameStateName.WireGameState);
             if (!currentStateIsWireGame) return;
 
             base.Update(); // runs lerp

@@ -176,9 +176,10 @@ namespace StateMachine
 #endif
         }
 
-        public bool IsCurrentState(GameBaseState checkState)
+
+        public bool IsCurrentState(GameStateName newStateName)
         {
-            return currentState == checkState;
+            return currentState == GetState(newStateName);
         }
 
         public void SetState(GameBaseState newState)

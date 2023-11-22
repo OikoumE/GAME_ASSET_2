@@ -31,8 +31,7 @@ namespace StateMachine
             if (!triggerOnEnter) return;
             if (requireSpecificState)
             {
-                var checkState = GameStateMachine.Instance.GetState(specificState);
-                var isCurrentState = GameStateMachine.Instance.IsCurrentState(checkState);
+                var isCurrentState = GameStateMachine.Instance.IsCurrentState(specificState);
                 if (!isCurrentState) return;
             }
 
@@ -45,8 +44,7 @@ namespace StateMachine
             if (!triggerOnExit) return;
             if (requireSpecificState)
             {
-                var checkState = GameStateMachine.Instance.GetState(specificState);
-                var isCurrentState = GameStateMachine.Instance.IsCurrentState(checkState);
+                var isCurrentState = GameStateMachine.Instance.IsCurrentState(specificState);
                 if (!isCurrentState) return;
             }
 

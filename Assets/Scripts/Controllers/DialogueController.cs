@@ -42,11 +42,8 @@ namespace Controllers
         protected virtual void OnTriggerExit(Collider other)
         {
             if (requireSpecificGameState)
-            {
-                var checkState = GameStateMachine.Instance.GetState(gameStateName);
-                if (!GameStateMachine.Instance.IsCurrentState(checkState))
+                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
                     return;
-            }
 
             if (!other.TryGetComponent(out IPlayer iP)) return;
             SetDialogueVisibility(false);
@@ -59,11 +56,8 @@ namespace Controllers
         protected virtual void OnTriggerStay(Collider other)
         {
             if (requireSpecificGameState)
-            {
-                var checkState = GameStateMachine.Instance.GetState(gameStateName);
-                if (!GameStateMachine.Instance.IsCurrentState(checkState))
+                if (!GameStateMachine.Instance.IsCurrentState(gameStateName))
                     return;
-            }
 
             if (hasShot && isOneShot) return;
             if (isInTrigger) return;
