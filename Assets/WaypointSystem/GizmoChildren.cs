@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEditor;
 using UnityEngine;
 
 namespace WaypointSystem
 {
-// #if UNITY_EDITOR
-//     [ExecuteInEditMode]
-// #endif
+#if UNITY_EDITOR
+    [ExecuteInEditMode]
+#endif
     public class GizmoChildren : MonoBehaviour
     {
         [Header("Pathfinding Settings")] public GameObject player;
