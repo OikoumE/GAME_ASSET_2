@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
@@ -110,8 +111,12 @@ namespace WaypointSystem
 
         #endregion
 
+
+  
+
         #region FADE
 
+        
         private IEnumerator FadeInOut()
         {
             var material = lineRenderer.sharedMaterial;
